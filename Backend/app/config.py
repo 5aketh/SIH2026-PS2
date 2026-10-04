@@ -14,6 +14,7 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:4173",
+        "https://null-packwise.vercel.app",
     ]
     # Run `alembic upgrade head` and the idempotent seed loader on startup.
     auto_migrate: bool = True
