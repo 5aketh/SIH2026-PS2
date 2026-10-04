@@ -1,0 +1,169 @@
+{
+  "schedule_i___paper": [
+    {
+      "Product Type / Category": "Paper and Board Materials",
+      "Applicable Indian Standard (IS Code)": "IS 6615",
+      "Key Parameter / Intended Use": "General food grade packaging"
+    },
+    {
+      "Product Type / Category": "Greaseproof Paper",
+      "Applicable Indian Standard (IS Code)": "IS 6622",
+      "Key Parameter / Intended Use": "Oily and greasy foods"
+    },
+    {
+      "Product Type / Category": "Vegetable Parchment",
+      "Applicable Indian Standard (IS Code)": "IS 8572",
+      "Key Parameter / Intended Use": "Butter, cheese and high moisture food"
+    },
+    {
+      "Product Type / Category": "Glossy Finished Paper",
+      "Applicable Indian Standard (IS Code)": "IS 1776",
+      "Key Parameter / Intended Use": "Wrapper and outer labeling"
+    },
+    {
+      "Product Type / Category": "Multi-layer Paper Board",
+      "Applicable Indian Standard (IS Code)": "IS 14490",
+      "Key Parameter / Intended Use": "Cartons and dry food storage"
+    }
+  ],
+  "schedule_ii___metal": [
+    {
+      "Metal / Alloy Type": "Tinplate Containers",
+      "Applicable Indian Standard (IS Code)": "IS 1993 / IS 13955",
+      "Key Parameter / Intended Use": "Ghee, oils and processed foods (No single-use tin reuse)"
+    },
+    {
+      "Metal / Alloy Type": "Aluminium Finishes and Foil",
+      "Applicable Indian Standard (IS Code)": "IS 15392 / IS 15495",
+      "Key Parameter / Intended Use": "Wrapping, dairy, confectionery products"
+    },
+    {
+      "Metal / Alloy Type": "Stainless Steel Utensils",
+      "Applicable Indian Standard (IS Code)": "IS 5522",
+      "Key Parameter / Intended Use": "General food contact and processing"
+    },
+    {
+      "Metal / Alloy Type": "Round Open Top Sanitary Cans",
+      "Applicable Indian Standard (IS Code)": "IS 9396",
+      "Key Parameter / Intended Use": "Canned fruits, vegetables and meats"
+    },
+    {
+      "Metal / Alloy Type": "Aluminium Cans for Beverages",
+      "Applicable Indian Standard (IS Code)": "IS 14407",
+      "Key Parameter / Intended Use": "Carbonated liquids and juices"
+    }
+  ],
+  "schedule_iii___plastics": [
+    {
+      "Plastic Material / Substance": "Overall Migration Limit (All Plastics)",
+      "Standard / Limit Value": "60 mg/kg or 10 mg/dm2 max (IS 9845)",
+      "Remarks / Conditions": "Tested using simulants based on food type"
+    },
+    {
+      "Plastic Material / Substance": "Polyethylene (PE)",
+      "Standard / Limit Value": "Conforming to IS 10146 (Min 85% transparency for water)",
+      "Remarks / Conditions": "Used for packaged drinking water and general storage"
+    },
+    {
+      "Plastic Material / Substance": "Polyvinyl Chloride (PVC)",
+      "Standard / Limit Value": "Conforming to IS 10151",
+      "Remarks / Conditions": "Rigid or flexible food contact films"
+    },
+    {
+      "Plastic Material / Substance": "Polyethylene Terephthalate (PET/PBT)",
+      "Standard / Limit Value": "Conforming to IS 12252 (Min 85% transparency for water)",
+      "Remarks / Conditions": "Widely used for water, juices, and carbonated beverages"
+    },
+    {
+      "Plastic Material / Substance": "Polypropylene (PP)",
+      "Standard / Limit Value": "Conforming to IS 10910",
+      "Remarks / Conditions": "Microwavable containers and multi-layer films"
+    },
+    {
+      "Plastic Material / Substance": "Barium (Specific Migration)",
+      "Standard / Limit Value": "1.0 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Cobalt (Specific Migration)",
+      "Standard / Limit Value": "0.05 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Copper (Specific Migration)",
+      "Standard / Limit Value": "5.0 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Iron (Specific Migration)",
+      "Standard / Limit Value": "48.0 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Lithium (Specific Migration)",
+      "Standard / Limit Value": "0.6 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Manganese (Specific Migration)",
+      "Standard / Limit Value": "0.6 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Zinc (Specific Migration)",
+      "Standard / Limit Value": "25.0 mg/kg max",
+      "Remarks / Conditions": "Heavy metal restriction"
+    },
+    {
+      "Plastic Material / Substance": "Antimony (Specific Migration)",
+      "Standard / Limit Value": "0.04 mg/kg max",
+      "Remarks / Conditions": "Catalyst residues constraint"
+    },
+    {
+      "Plastic Material / Substance": "DEHP (Specific Migration)",
+      "Standard / Limit Value": "1.5 mg/kg max",
+      "Remarks / Conditions": "Plasticizer limitation"
+    }
+  ],
+  "schedule_iv___suggestive": [
+    {
+      "Food Product Category": "Milk and Milk Products",
+      "Suggestive Packaging Material": "LDPE/LLDPE pouches, glass bottles, food-grade tins, polystyrene cups",
+      "Specific Regulatory Conditions": "Must preserve pasteurization integrity"
+    },
+    {
+      "Food Product Category": "Edible Oils and Fats",
+      "Suggestive Packaging Material": "Tinplate containers, HDPE/PET bottles, multi-layer pouches",
+      "Specific Regulatory Conditions": "Strict ban on reusing old/used tin containers"
+    },
+    {
+      "Food Product Category": "Fruits and Vegetable Products",
+      "Suggestive Packaging Material": "Sanitary open-top cans, glass jars, hermetic bottles, cardboards",
+      "Specific Regulatory Conditions": "Tomato products require specific lacquered linings if acidic"
+    },
+    {
+      "Food Product Category": "Canned Meat Products",
+      "Suggestive Packaging Material": "Sanitary tinplate cans, lacquered cans",
+      "Specific Regulatory Conditions": "Must withstand thermal sterilization processing"
+    },
+    {
+      "Food Product Category": "Packaged Drinking Water",
+      "Suggestive Packaging Material": "PET bottles (min 85% transparency), sterile glass bottles, polycarbonate jars",
+      "Specific Regulatory Conditions": "Must be colourless, transparent and completely tamper-proof"
+    },
+    {
+      "Food Product Category": "Cereals and Pulses",
+      "Suggestive Packaging Material": "Jute bags (food grade), HDPE/PP woven sacks, paper bags",
+      "Specific Regulatory Conditions": "Must prevent moisture ingress and pest infestation"
+    },
+    {
+      "Food Product Category": "Baked Goods / Confectionery",
+      "Suggestive Packaging Material": "BOPP films, food grade paper board boxes, aluminum foil wraps",
+      "Specific Regulatory Conditions": "Materials must conform to printing ink standard IS 15495"
+    }
+  ],
+  "overall_migration_limits": {
+    "max_global_migration_mg_dm2": 60.0,
+    "max_global_migration_ppm": 10.0
+  }
+}

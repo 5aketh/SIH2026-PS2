@@ -18,10 +18,12 @@ class Settings(BaseSettings):
     # Run `alembic upgrade head` and the idempotent seed loader on startup.
     auto_migrate: bool = True
     # The shelf-life model only replaces the rule estimate when enabled AND an artifact exists.
-    ml_enabled: bool = False
+    ml_enabled: bool = True
     ml_artifact_path: Path = BACKEND_DIR / "artifacts" / "shelf_life_gbr.joblib"
 
 
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
+
+settings = get_settings()

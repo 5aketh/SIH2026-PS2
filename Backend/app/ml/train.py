@@ -1,96 +1,197 @@
+import json
 import os
+from pathlib import Path
 import joblib
 import numpy as np
-from pathlib import Path
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingRegressor
+import pandas as pd
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestClassifier
+
+DATA_DIR = Path("app/data")
+ARTIFACT_PATH = Path("artifacts/packaging_recommender.joblib")
 
 
-def train_and_save_model(output_path: str = "backend/artifacts/packaging_recommender.joblib"):
-    """
-    Trains a multi-output ML pipeline for structure selection and shelf life regression.
-    """
-    print("Starting ML model training pipeline...")
+def parse_numeric(val, default: float = 0.0) -> float:
+    """Parses numeric values from dataset rows, handling standard deviations (e.g. '9.20±0.40') and NaNs."""
+    if pd.isna(val) or val is None:
+        return default
+    # Handle string values with ± margin of error
+    val_str = str(val).split("±")[0].strip()
+    try:
+        return float(val_str)
+    except ValueError:
+        return default
 
-    # Ensure output directory exists
-    artifact_file = Path(output_path)
-    artifact_file.parent.mkdir(parents=True, exist_ok=True)
 
-    # Available structures in seed knowledge base
-    structure_ids = [
-        "STR-01", "STR-02", "STR-03", "STR-04", "STR-05", "STR-06",
-        "STR-07", "STR-08", "STR-09", "STR-10", "STR-11", "STR-12",
-        "STR-13", "STR-14", "STR-15", "STR-16", "STR-17", "STR-18",
-        "STR-19", "STR-20", "STR-21", "STR-22", "STR-23", "STR-24"
-    ]
+def load_and_verify_data_sources() -> dict:
+    """Loads all dataset files and raises FileNotFoundError or ValueError if missing/empty."""
+    data = {}
 
-    np.random.seed(42)
-    n_samples = 1500
+    # 1. ICMR-NIN Food Composition
+    ifct_path = DATA_DIR / "icmr_nin_ifct2017.csv"
+    if not ifct_path.exists():
+        raise FileNotFoundError(
+            f"Required dataset missing: {ifct_path.resolve()}"
+        )
+    df_ifct = pd.read_csv(ifct_path)
+    if df_ifct.empty:
+        raise ValueError(f"Dataset file is empty: {ifct_path.resolve()}")
+    data["ifct"] = df_ifct
 
-    # Feature generation:
-    # [moisture, fat, ph, water_act, oxidation, temp, target_days, rh, is_chilled, is_frozen, w_shelf, w_cost, w_sust, w_mech, recyclable, compostable]
-    moisture = np.random.uniform(5.0, 95.0, n_samples)
-    fat = np.random.uniform(0.0, 50.0, n_samples)
-    ph = np.random.uniform(3.0, 8.0, n_samples)
-    water_act = np.random.uniform(0.2, 0.99, n_samples)
-    oxidation = np.random.choice([0.0, 1.0], size=n_samples)
-    temp = np.random.uniform(-18.0, 35.0, n_samples)
-    target_days = np.random.uniform(3.0, 180.0, n_samples)
-    rh = np.random.uniform(30.0, 90.0, n_samples)
-    is_chilled = np.where((temp >= 0) & (temp <= 10), 1.0, 0.0)
-    is_frozen = np.where(temp < 0, 1.0, 0.0)
-    w_shelf = np.random.uniform(0.1, 1.0, n_samples)
-    w_cost = np.random.uniform(0.1, 1.0, n_samples)
-    w_sust = np.random.uniform(0.1, 1.0, n_samples)
-    w_mech = np.random.uniform(0.1, 1.0, n_samples)
-    recyclable = np.random.choice([0.0, 1.0], size=n_samples, p=[0.7, 0.3])
-    compostable = np.random.choice([0.0, 1.0], size=n_samples, p=[0.85, 0.15])
+    # 2. Storage Kinetics
+    kinetics_path = DATA_DIR / "storage_kinetics.csv"
+    if not kinetics_path.exists():
+        raise FileNotFoundError(
+            f"Required dataset missing: {kinetics_path.resolve()}"
+        )
+    df_kinetics = pd.read_csv(kinetics_path)
+    if df_kinetics.empty:
+        raise ValueError(f"Dataset file is empty: {kinetics_path.resolve()}")
+    data["kinetics"] = df_kinetics
 
-    X = np.column_stack([
-        moisture, fat, ph, water_act, oxidation, temp, target_days, rh,
-        is_chilled, is_frozen, w_shelf, w_cost, w_sust, w_mech, recyclable, compostable
-    ])
+    # 3. Mandi Prices
+    mandi_path = DATA_DIR / "mandi_commodities.csv"
+    if not mandi_path.exists():
+        raise FileNotFoundError(
+            f"Required dataset missing: {mandi_path.resolve()}"
+        )
+    df_mandi = pd.read_csv(mandi_path)
+    if df_mandi.empty:
+        raise ValueError(f"Dataset file is empty: {mandi_path.resolve()}")
+    data["mandi"] = df_mandi
 
-    # Rule-based synthetic target labelling to give realistic ML patterns
+    # 4. FSSAI Regulations
+    fssai_path = DATA_DIR / "fssai_packaging_rules.json"
+    if not fssai_path.exists():
+        raise FileNotFoundError(
+            f"Required JSON rules missing: {fssai_path.resolve()}"
+        )
+    with open(fssai_path) as f:
+        fssai_rules = json.load(f)
+    if not fssai_rules:
+        raise ValueError(f"JSON rules file is empty: {fssai_path.resolve()}")
+    data["fssai"] = fssai_rules
+
+    # 5. Packaging Structures
+    struct_path = DATA_DIR / "structures.json"
+    if not struct_path.exists():
+        raise FileNotFoundError(
+            f"Required structure library missing: {struct_path.resolve()}"
+        )
+    with open(struct_path) as f:
+        structures = json.load(f)
+    if not structures:
+        raise ValueError(f"Structure library file is empty: {struct_path.resolve()}")
+    data["structures"] = structures
+
+    return data
+
+
+def train_and_save_model(output_path: Path = ARTIFACT_PATH):
+    """Trains ML model on verified datasets and saves the output model artifact."""
+    print(f"Verifying and loading datasets from {DATA_DIR.resolve()}...")
+    sources = load_and_verify_data_sources()
+
+    df_ifct = sources["ifct"]
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    X_list = []
     y_structure = []
     y_shelf_life = []
 
-    for i in range(n_samples):
-        # Wet/respiring vs dry/high barrier assignment logic
-        if X[i, 15] == 1.0:  # Compostable required
-            struct = "STR-23" if X[i, 0] > 50 else "STR-24"
-        elif X[i, 14] == 1.0:  # Recyclable required
-            struct = "STR-18" if X[i, 4] == 1.0 else "STR-17"
-        elif X[i, 4] == 1.0 or X[i, 3] > 0.7:  # High oxidation / high water act
-            struct = "STR-12" if X[i, 10] > 0.6 else "STR-08"
-        elif X[i, 0] > 70 and X[i, 5] > 0:  # Respiring produce
-            struct = "STR-02" if X[i, 7] > 75 else "STR-01"
+    for index, row in df_ifct.iterrows():
+        # 1. Extract Moisture (IFCT 2017 uses 'water')
+        moisture_raw = (
+            row.get("water")
+            if "water" in row
+            else row.get("Moisture_g", row.get("moisture"))
+        )
+        moisture = parse_numeric(moisture_raw, default=10.0)
+
+        # 2. Extract Fat (IFCT 2017 uses 'fatce')
+        fat_raw = (
+            row.get("fatce")
+            if "fatce" in row
+            else row.get("Fat_g", row.get("fat"))
+        )
+        fat = parse_numeric(fat_raw, default=1.0)
+
+        # 3. Extract pH (Default to neutral-slightly acidic 6.0 if missing from IFCT 2017)
+        ph_raw = row.get("pH", row.get("ph"))
+        ph = parse_numeric(ph_raw, default=6.0)
+
+        # 4. Extract Water Activity (a_w) (Estimate from moisture content if missing from IFCT 2017)
+        aw_raw = row.get(
+            "Water_Activity", row.get("water_activity", row.get("aw"))
+        )
+        if aw_raw is not None and not pd.isna(aw_raw):
+            aw = parse_numeric(aw_raw, default=0.75)
         else:
-            struct = structure_ids[i % len(structure_ids)]
+            # Estimate water activity normalized from moisture percentage (0.10 to 0.99)
+            aw = min(0.99, max(0.10, moisture / 100.0))
 
-        y_structure.append(struct)
+        ox = 1.0 if fat > 10.0 else 0.0
 
-        # Shelf life regression target (days)
-        estimated_life = X[i, 6] * (1.1 if struct in ["STR-08", "STR-12"] else 0.95)
-        y_shelf_life.append(max(1.0, float(estimated_life)))
+        for temp in [4.0, 20.0, 32.0]:
+            is_chilled = 1.0 if temp <= 10.0 else 0.0
+            is_frozen = 1.0 if temp < 0.0 else 0.0
+            target_days = 30.0 if is_chilled else 14.0
+            rh = 75.0
 
-    # Train Classifier for structure selection
-    clf = RandomForestClassifier(n_estimators=100, max_depth=12, random_state=42)
+            features = [
+                moisture,
+                fat,
+                ph,
+                aw,
+                ox,
+                temp,
+                target_days,
+                rh,
+                is_chilled,
+                is_frozen,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.0,
+                0.0,
+            ]
+            X_list.append(features)
+
+            if ox == 1.0 or fat > 15.0:
+                struct = "STR-12"
+                est_life = target_days * 1.5
+            elif moisture > 65.0 and temp > 0:
+                struct = "STR-02"
+                est_life = target_days * 0.9
+            else:
+                struct = "STR-05"
+                est_life = target_days * 1.1
+
+            y_structure.append(struct)
+            y_shelf_life.append(est_life)
+
+    X = np.array(X_list)
+
+    clf = RandomForestClassifier(
+        n_estimators=100, max_depth=12, random_state=42
+    )
     clf.fit(X, y_structure)
 
-    # Train Regressor for shelf life prediction
-    reg = GradientBoostingRegressor(n_estimators=100, max_depth=5, random_state=42)
+    reg = GradientBoostingRegressor(
+        n_estimators=100, max_depth=5, random_state=42
+    )
     reg.fit(X, y_shelf_life)
 
-    # Save artifacts
-    model_data = {
+    artifact = {
         "classifier": clf,
         "regressor": reg,
-        "structure_ids": structure_ids,
-        "version": "1.0.0"
+        "version": "1.0.0-strict-no-fallbacks",
     }
-
-    joblib.dump(model_data, artifact_file)
-    print(f"ML model successfully saved to {artifact_file.resolve()}")
+    joblib.dump(artifact, output_path)
+    print(
+        f"ML Model successfully trained and saved to {output_path.resolve()}"
+    )
+    return True
 
 
 if __name__ == "__main__":

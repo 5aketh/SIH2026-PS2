@@ -1,114 +1,206 @@
-import uuid
-import joblib
 from pathlib import Path
-from app.ml.features import extract_features
+from typing import Any
+import joblib
+import numpy as np
+from app.config import get_settings
 
 
-class MLPredictor:
-    def __init__(self, model_path: str):
-        self.model_path = Path(model_path)
-        self.model_data = None
-        self.load_model()
+class PackagingPredictor:
+    """Wrapper class for managing and serving the trained ML models."""
 
-    def load_model(self):
-        if self.model_path.exists():
+    def __init__(self, model_path: Path):
+        if not model_path.exists():
+            raise FileNotFoundError(
+                f"Model artifact not found at {model_path.resolve()}"
+            )
+
+        artifact = joblib.load(model_path)
+
+        if isinstance(artifact, dict):
+            self.classifier = artifact.get("classifier")
+            self.regressor = artifact.get("regressor")
+            self.version = artifact.get("version", "1.0.0")
+        else:
+            self.regressor = artifact
+            self.classifier = None
+            self.version = "1.0.0"
+
+    def _unwrap_val(self, val: Any, default: float = 0.0) -> float:
+        """Recursively unpacks float values from primitives, Param objects, dicts, or strings."""
+        if val is None:
+            return default
+
+        # Primitive int / float
+        if isinstance(val, (int, float)):
+            return float(val)
+
+        # Numeric string
+        if isinstance(val, str):
             try:
-                self.model_data = joblib.load(self.model_path)
-            except Exception as e:
-                print(f"Error loading ML model from {self.model_path}: {e}")
-                self.model_data = None
+                return float(val)
+            except ValueError:
+                return default
 
-    def is_ready(self) -> bool:
-        return self.model_data is not None
+        # Dictionary: e.g. {"value": 94.0, "unit": "%"} or {"val": 94.0}
+        if isinstance(val, dict):
+            for key in ("value", "val", "numeric_value", "amount", "default"):
+                if key in val:
+                    return self._unwrap_val(val[key], default)
+            return default
 
-    def predict(self, scenario, seed_structures: dict) -> dict:
-        if not self.is_ready():
-            raise RuntimeError("ML model is not loaded or unavailable.")
+        # Objects / Param instances: e.g. Param(value=94.0) or Param(val=94.0)
+        for attr in ("value", "val", "numeric_value", "amount", "default"):
+            if hasattr(val, attr):
+                inner = getattr(val, attr)
+                if inner is not None and inner != val:
+                    return self._unwrap_val(inner, default)
 
-        features = extract_features(scenario)
+        try:
+            return float(val)
+        except (TypeError, ValueError):
+            return default
 
-        clf = self.model_data["classifier"]
-        reg = self.model_data["regressor"]
+    def _get_val(self, obj: Any, *keys: str, default: Any = None) -> Any:
+        """Helper to extract attribute or dictionary key gracefully."""
+        if obj is None:
+            return default
 
-        predicted_struct_id = clf.predict(features)[0]
-        predicted_shelf_life = float(reg.predict(features)[0])
+        for key in keys:
+            # Check object attribute access
+            if hasattr(obj, key):
+                val = getattr(obj, key)
+                if val is not None:
+                    return val
+            # Check dictionary key access
+            if isinstance(obj, dict) and key in obj:
+                val = obj[key]
+                if val is not None:
+                    return val
+        return default
 
-        target_days = float(getattr(scenario.conditions, "target_shelf_life_days", 14))
+    def extract_features(self, sc: Any, ev: Any = None) -> list[float]:
+        """Extracts 16-element feature vector matching train.py schema."""
+        # Extract commodity profile
+        commodity = self._get_val(sc, "commodity", default=sc)
+        profile = self._get_val(commodity, "profile", default=commodity)
 
-        # Look up structure from seed database dict or fallback to first structure
-        rec_structure = seed_structures.get(predicted_struct_id)
-        if not rec_structure:
-            rec_structure = list(seed_structures.values())[0]
+        moisture = self._unwrap_val(
+            self._get_val(profile, "moisturePct", "moisture_pct", "moisture"),
+            default=10.0,
+        )
+        fat = self._unwrap_val(
+            self._get_val(profile, "fatPct", "fat_pct", "fat"), default=1.0
+        )
+        ph = self._unwrap_val(
+            self._get_val(profile, "ph", "pH"), default=6.0
+        )
 
-        # Select distinct alternative structures for frontend comparison view
-        all_struct_keys = list(seed_structures.keys())
-        alt_keys = [k for k in all_struct_keys if k != predicted_struct_id][:3]
-        alternatives = [seed_structures[k] for k in alt_keys]
+        # Water activity (safely unwrapped)
+        aw_val = self._get_val(
+            profile, "waterActivity", "water_activity", "aw", default=None
+        )
+        if aw_val is not None:
+            aw = self._unwrap_val(aw_val, default=0.7)
+        else:
+            aw = min(0.99, max(0.10, moisture / 100.0))
 
-        # Complete response matching frontend SPEC.md schema
-        return {
-            "analysisId": f"ml-{uuid.uuid4().hex[:8]}",
-            "recommendation": rec_structure,
-            "shelfLife": {
-                "targetDays": target_days,
-                "estimatedDays": round(predicted_shelf_life, 1),
-                "meetsTarget": predicted_shelf_life >= target_days,
-                "limitingFactor": "Calculated via machine learning pattern inference."
-            },
-            "costAndImpact": {
-                "costPerPack": round(float(rec_structure.get("costPerKg", 2.50)) * 0.02, 3),
-                "costBand": "Medium",
-                "carbonFootprintGrams": round(float(rec_structure.get("carbonFootprint", 3.2)) * 15, 1),
-                "recyclabilityIndex": rec_structure.get("recyclability", "Recyclable"),
-                "eprCategory": rec_structure.get("eprCategory", "Category 1")
-            },
-            "requirements": [
-                {
-                    "parameter": "Oxygen Barrier (OTR)",
-                    "target": "< 50 cc/m²/day",
-                    "status": "PASS",
-                    "provenance": "model-estimated"
-                },
-                {
-                    "parameter": "Moisture Barrier (WVTR)",
-                    "target": "< 5 g/m²/day",
-                    "status": "PASS",
-                    "provenance": "model-estimated"
-                }
-            ],
-            "why": {
-                "reasons": [
-                    f"Selected {rec_structure.get('name', 'Recommended Structure')} using ML classifier.",
-                    "Optimized for target shelf life, barrier specs, and user weightings."
-                ]
-            },
-            "alternatives": alternatives,
-            "risks": [
-                {
-                    "name": "Oxidation & Shelf Life Decay",
-                    "level": "medium",
-                    "description": "Monitored and mitigated by predicted material barrier profile."
-                }
-            ],
-            "specifications": {
-                "layers": rec_structure.get("layers", []),
-                "totalThicknessUm": rec_structure.get("totalThicknessUm", 60)
-            },
-            "freshProduceMode": False,
-            "confidence": {
-                "level": "high",
-                "reasons": ["Prediction produced by machine-learning recommendation engine."]
-            },
-            "rejected": [],
-            "warnings": [],
-            "assumptions": ["Assumed standard ambient handling unless chilling specified."],
-            "inputsUsed": {
-                "commodity": getattr(scenario.commodity, "name", "Custom Food"),
-                "storageType": getattr(scenario.conditions, "storage_type", "ambient"),
-                "temperatureC": getattr(scenario.conditions, "temperature_c", 20)
-            },
-            "trace": [
-                {"stage": "ML Inference", "status": "complete",
-                 "message": f"Predicted optimal structure {predicted_struct_id}."}
-            ]
-        }
+        ox = 1.0 if fat > 10.0 else 0.0
+
+        # Extract storage conditions
+        conditions = self._get_val(sc, "conditions", default=sc)
+
+        temp = self._unwrap_val(
+            self._get_val(conditions, "temperatureC", "temperature_c", "temp"),
+            default=20.0,
+        )
+        target = self._unwrap_val(
+            self._get_val(
+                conditions, "targetShelfLifeDays", "target_days", "targetDays"
+            ),
+            default=14.0,
+        )
+        rh = self._unwrap_val(
+            self._get_val(
+                conditions, "relativeHumidityPct", "relative_humidity_pct", "rh"
+            ),
+            default=75.0,
+        )
+
+        is_chilled = 1.0 if temp <= 10.0 else 0.0
+        is_frozen = 1.0 if temp < 0.0 else 0.0
+
+        features = [
+            moisture,
+            fat,
+            ph,
+            aw,
+            ox,
+            temp,
+            target,
+            rh,
+            is_chilled,
+            is_frozen,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.0,
+            0.0,
+        ]
+        return features
+
+    def predict_shelf_life(self, features: list | np.ndarray) -> float:
+        """Predicts shelf life in days."""
+        if self.regressor is None:
+            raise ValueError("Regressor model is not loaded in artifact.")
+
+        X = np.array(features)
+        if X.ndim == 1:
+            X = X.reshape(1, -1)
+
+        preds = self.regressor.predict(X)
+        return float(preds[0])
+
+    def predict_structure(self, features: list | np.ndarray) -> str:
+        """Predicts recommended packaging structure ID (e.g., 'STR-05')."""
+        if self.classifier is None:
+            raise ValueError("Classifier model is not loaded in artifact.")
+
+        X = np.array(features)
+        if X.ndim == 1:
+            X = X.reshape(1, -1)
+
+        preds = self.classifier.predict(X)
+        return str(preds[0])
+
+    def predict(self, features: list | np.ndarray) -> dict:
+        """Returns predictions for both structure and shelf life."""
+        result = {}
+        if self.classifier:
+            result["structure"] = self.predict_structure(features)
+        if self.regressor:
+            result["shelf_life"] = self.predict_shelf_life(features)
+        return result
+
+    def __call__(self, sc: Any, ev: Any = None) -> tuple[float, float]:
+        """Allows pipeline.apply_predictor(ev, sc, predictor) to call the instance directly.
+
+        Returns (days, band) tuple expected by pipeline unpacking logic.
+        """
+        features = self.extract_features(sc, ev)
+        days = self.predict_shelf_life(features)
+        band = 0.30  # Default ±30% uncertainty/confidence margin
+        return days, band
+
+
+_predictor_instance = None
+
+
+def get_predictor() -> PackagingPredictor:
+    """Returns a singleton instance of PackagingPredictor."""
+    global _predictor_instance
+    if _predictor_instance is None:
+        settings = get_settings()
+        model_path = Path(settings.ml_artifact_path)
+        _predictor_instance = PackagingPredictor(model_path)
+    return _predictor_instance
