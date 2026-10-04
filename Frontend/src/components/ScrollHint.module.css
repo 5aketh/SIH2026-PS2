@@ -1,0 +1,15 @@
+.hint { display: none; }
+
+:global(.is-animated) .hint {
+  display: flex; justify-content: center; flex: none; z-index: 2;
+  flex-direction: column; align-items: center;
+  padding: var(--sp-2) 0 var(--sp-5);
+  color: var(--muted); font-size: 14px;
+  opacity: calc(1 - var(--hint));
+  gap: var(--sp-1);
+}
+.hint span { display: inline-block; animation: hint-bounce 1.8s ease-in-out infinite;}
+
+.arrow {display: inline-block; font-size: 150%; transform: scaleY(1.8);}
+@keyframes hint-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { .hint span { animation: none; } }

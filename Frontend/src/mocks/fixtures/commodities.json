@@ -1,0 +1,824 @@
+[
+ {
+  "commodityId": "ALPHONSO_MANGO",
+  "name": "Alphonso mango",
+  "category": "fresh_produce",
+  "moisturePct": {
+   "value": 83.53,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 0.4,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 4.6,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "high",
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.98,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "moistureCriticalPct": {
+   "value": 76,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "o2WindowPct": {
+   "value": [
+    3,
+    5
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "co2WindowPct": {
+   "value": [
+    5,
+    8
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "chillThresholdC": {
+   "value": 13,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "mango",
+   "hapus",
+   "aam",
+   "mavu",
+   "alphonso"
+  ],
+  "source": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them."
+ },
+ {
+  "commodityId": "BANANA_GENERIC",
+  "name": "Banana",
+  "category": "fresh_produce",
+  "moisturePct": {
+   "value": 75,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 0.3,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "medium",
+   "provenance": "rule-derived",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.98,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "o2WindowPct": {
+   "value": [
+    2,
+    5
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "co2WindowPct": {
+   "value": [
+    2,
+    5
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "chillThresholdC": {
+   "value": 13,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "kela",
+   "vazhai",
+   "bananas"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "BASMATI_RICE",
+  "name": "Basmati rice",
+  "category": "dry_goods",
+  "moisturePct": {
+   "value": 12,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 0.9,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 6.5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "low",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.6,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awCritical": {
+   "value": 0.72,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "moistureCriticalPct": {
+   "value": 14,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "aliases": [
+   "rice",
+   "chawal",
+   "arisi"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "BISCUITS_GENERIC",
+  "name": "Biscuits",
+  "category": "snack",
+  "moisturePct": {
+   "value": 3,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 20,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 6.5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.3,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awCritical": {
+   "value": 0.5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "moistureCriticalPct": {
+   "value": 5.5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "aliases": [
+   "cookies",
+   "biscuit"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "CHILLED_MUTTON",
+  "name": "Chilled mutton",
+  "category": "meat_seafood",
+  "moisturePct": {
+   "value": 74,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 6.5,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 5.7,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.99,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "moistureCriticalPct": {
+   "value": 70,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "mutton",
+   "goat meat",
+   "lamb",
+   "red meat"
+  ],
+  "source": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them."
+ },
+ {
+  "commodityId": "CHICKEN_FRESH",
+  "name": "Fresh chicken",
+  "category": "meat_seafood",
+  "moisturePct": {
+   "value": 75,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 4,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 6,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.99,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "aliases": [
+   "chicken",
+   "poultry",
+   "murgh",
+   "kozhi"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "FISH_FRESH",
+  "name": "Fresh fish",
+  "category": "meat_seafood",
+  "moisturePct": {
+   "value": 78,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 2,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 6.8,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "high",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.99,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "aliases": [
+   "fish",
+   "machli",
+   "meen",
+   "seafood"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "GROUNDNUT_OIL",
+  "name": "Groundnut oil",
+  "category": "other",
+  "moisturePct": {
+   "value": 0.1,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 99.9,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": null,
+   "provenance": null,
+   "confidence": null
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "high",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "aliases": [
+   "peanut oil",
+   "edible oil",
+   "moongphali tel",
+   "kadalai ennai"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "MILK_POWDER",
+  "name": "Milk powder",
+  "category": "dairy",
+  "moisturePct": {
+   "value": 3.5,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 26.5,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 6.6,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "high",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.22,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "awCritical": {
+   "value": 0.45,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "moistureCriticalPct": {
+   "value": 6.2,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "spray-dried milk powder",
+   "dairy whitener",
+   "milk powder"
+  ],
+  "source": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them."
+ },
+ {
+  "commodityId": "MULTIGRAIN_BREAD",
+  "name": "Multigrain bread",
+  "category": "other",
+  "moisturePct": {
+   "value": 36,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 4.2,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 5.6,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "low",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.95,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "moistureCriticalPct": {
+   "value": 28,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "bread",
+   "bakery",
+   "pav"
+  ],
+  "source": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them."
+ },
+ {
+  "commodityId": "PANEER_FRESH",
+  "name": "Paneer",
+  "category": "dairy",
+  "moisturePct": {
+   "value": 52.03,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 24.8,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 5.8,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.99,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "moistureCriticalPct": {
+   "value": 55,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "cottage cheese",
+   "paneer fresh"
+  ],
+  "source": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them."
+ },
+ {
+  "commodityId": "POTATO_CHIPS",
+  "name": "Potato chips",
+  "category": "snack",
+  "moisturePct": {
+   "value": 2,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 34,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 6.1,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "high",
+   "provenance": "rule-derived",
+   "confidence": "medium"
+  },
+  "awInitial": {
+   "value": 0.18,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "awCritical": {
+   "value": 0.45,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "moistureCriticalPct": {
+   "value": 4.5,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "chips",
+   "wafers",
+   "crisps",
+   "spiced potato chips"
+  ],
+  "source": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them."
+ },
+ {
+  "commodityId": "ONION_RED",
+  "name": "Red onion",
+  "category": "fresh_produce",
+  "moisturePct": {
+   "value": 86,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 0.1,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 5.5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "low",
+   "provenance": "rule-derived",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "low",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.97,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "o2WindowPct": {
+   "value": [
+    1,
+    3
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "co2WindowPct": {
+   "value": [
+    5,
+    10
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "onion",
+   "pyaz",
+   "kanda",
+   "vengayam",
+   "bhima dark red"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "SPINACH_GENERIC",
+  "name": "Spinach",
+  "category": "fresh_produce",
+  "moisturePct": {
+   "value": 92,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 0.7,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 6,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "high",
+   "provenance": "rule-derived",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.99,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "o2WindowPct": {
+   "value": [
+    7,
+    10
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "co2WindowPct": {
+   "value": [
+    5,
+    10
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "palak",
+   "keerai"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ },
+ {
+  "commodityId": "TOMATO_GENERIC",
+  "name": "Tomato",
+  "category": "fresh_produce",
+  "moisturePct": {
+   "value": 94,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "fatPct": {
+   "value": 0.2,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "ph": {
+   "value": 4.5,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "respirationClass": {
+   "value": "high",
+   "provenance": "rule-derived",
+   "confidence": "medium"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "rule-derived",
+   "confidence": "medium"
+  },
+  "awInitial": {
+   "value": 0.99,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "o2WindowPct": {
+   "value": [
+    3,
+    5
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "co2WindowPct": {
+   "value": [
+    2,
+    3
+   ],
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "chillThresholdC": {
+   "value": 10,
+   "provenance": "source-backed",
+   "confidence": "medium"
+  },
+  "aliases": [
+   "tamatar",
+   "thakkali",
+   "tomatoes"
+  ],
+  "source": "PackWise team report, example food record for tomato (moisture 94 %, pH 4.5, fat 0.2 %)."
+ },
+ {
+  "commodityId": "WHEAT_FLOUR",
+  "name": "Wheat flour (atta)",
+  "category": "dry_goods",
+  "moisturePct": {
+   "value": 12,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "fatPct": {
+   "value": 1.7,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "ph": {
+   "value": 6,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "respirationClass": {
+   "value": "none",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "oxidationSensitivity": {
+   "value": "medium",
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awInitial": {
+   "value": 0.6,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "awCritical": {
+   "value": 0.7,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "moistureCriticalPct": {
+   "value": 14.5,
+   "provenance": "prototype estimate",
+   "confidence": "prototype"
+  },
+  "aliases": [
+   "atta",
+   "flour",
+   "wheat"
+  ],
+  "source": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use."
+ }
+]

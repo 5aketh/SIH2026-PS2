@@ -1,0 +1,187 @@
+{
+  "_note": "otrRef: cc/m²·day·atm at 23 °C, 0 %RH; wvtrRef: g/m²·day at 38 °C, 90 %RH; both at refThicknessUm. fixedBarrier = barrier set by a coating, metal or EVOH core, so it does not scale with gauge. Ea values (kJ/mol) are prototype estimates for typical polymer behaviour.",
+  "materials": [
+    {
+      "id": "LDPE", "name": "LDPE film", "family": "polyethylene", "polymerClass": "PE",
+      "densityGcm3": 0.920, "refThicknessUm": 50, "otrRef": 4200, "wvtrRef": 18.0,
+      "sealability": "medium", "eprCategory": "II", "costInrPerKg": [115, 130], "carbonKgPerKg": 2.05,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 42, "eaH2O": 45, "sealRangeC": [105, 130], "gelboPinholes": [0, 2], "toughness": 1.0,
+        "standards": ["IS 10146", "US FDA 21 CFR 177.1520", "EU 10/2011"],
+        "applications": ["Produce and bread bags", "General-purpose sealant ply", "Milk pouches"] }
+    },
+    {
+      "id": "HDPE", "name": "HDPE film", "family": "polyethylene", "polymerClass": "PE",
+      "densityGcm3": 0.955, "refThicknessUm": 40, "otrRef": 1600, "wvtrRef": 4.5,
+      "sealability": "medium", "eprCategory": "II", "costInrPerKg": [120, 135], "carbonKgPerKg": 1.95,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 40, "eaH2O": 45, "sealRangeC": [125, 145], "gelboPinholes": [4, 8], "toughness": 1.4,
+        "standards": ["IS 10146", "US FDA 21 CFR 177.1520"],
+        "applications": ["Cereal and flour liners", "Dry-goods bags"] }
+    },
+    {
+      "id": "BOPP", "name": "BOPP film", "family": "polypropylene", "polymerClass": "PP",
+      "densityGcm3": 0.905, "refThicknessUm": 20, "otrRef": 1800, "wvtrRef": 4.8,
+      "sealability": "low", "eprCategory": "II", "costInrPerKg": [140, 160], "carbonKgPerKg": 2.10,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 38, "eaH2O": 42, "sealRangeC": [110, 140], "gelboPinholes": [2, 5], "toughness": 1.3,
+        "standards": ["IS 10910", "US FDA 21 CFR 177.1520"],
+        "applications": ["Printed outer ply for snack packs", "Bakery and confectionery wraps"] }
+    },
+    {
+      "id": "BOPET", "name": "BOPET film", "family": "polyester", "polymerClass": "PET",
+      "densityGcm3": 1.400, "refThicknessUm": 12, "otrRef": 110, "wvtrRef": 25.0,
+      "sealability": "none", "eprCategory": "II", "costInrPerKg": [150, 175], "carbonKgPerKg": 2.80,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 30, "eaH2O": 35, "sealRangeC": null, "gelboPinholes": [1, 3], "toughness": 2.0,
+        "standards": ["IS 12252", "US FDA 21 CFR 177.1630"],
+        "applications": ["Printable, heat-resistant outer ply", "Laminate stiffness"] }
+    },
+    {
+      "id": "EVOH_COEX", "name": "PE/EVOH/PE coextruded barrier film", "family": "evoh", "polymerClass": "PE",
+      "densityGcm3": 0.985, "refThicknessUm": 50, "otrRef": 2.5, "wvtrRef": 5.2,
+      "sealability": "medium", "eprCategory": "II", "costInrPerKg": [320, 380], "carbonKgPerKg": 3.45,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 35, "eaH2O": 45, "sealRangeC": [110, 135], "gelboPinholes": [5, 12], "toughness": 1.2,
+        "fixedBarrier": true, "barrierPly": true, "humiditySensitive": true, "protectedCore": true,
+        "notes": "OTR range 1.5–3.5 in the Blueprint; midpoint used. EVOH core under 5 % keeps the film in the PE recycling stream.",
+        "standards": ["IS 10146", "US FDA 21 CFR 177.1360"],
+        "applications": ["High oxygen barrier for meat, cheese and sauces", "Recycle-ready PE barrier pouches"] }
+    },
+    {
+      "id": "MET_PET", "name": "Metallised PET (12 µm)", "family": "metallised", "polymerClass": "PET",
+      "densityGcm3": 1.400, "refThicknessUm": 12, "otrRef": 1.5, "wvtrRef": 1.15, "metallized": true,
+      "sealability": "none", "eprCategory": "III", "costInrPerKg": [220, 260], "carbonKgPerKg": 3.60,
+      "provenance": "prototype estimate", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 30, "eaH2O": 35, "sealRangeC": null, "gelboPinholes": [15, 35], "toughness": 2.0,
+        "fixedBarrier": true, "barrierPly": true, "lightBarrier": "high",
+        "notes": "Barrier, cost and carbon taken from the Blueprint's Met-PET/PE (12/40) row and attributed to the metallised ply.",
+        "standards": ["IS 12252", "US FDA 21 CFR 177.1630"],
+        "applications": ["Snack, coffee and milk-powder laminates", "Light and oxygen barrier ply"] }
+    },
+    {
+      "id": "AL_FOIL", "name": "Aluminium foil (9 µm)", "family": "foil", "polymerClass": "AL",
+      "densityGcm3": 2.700, "refThicknessUm": 9, "otrRef": 0.05, "wvtrRef": 0.05, "nonPlastic": true,
+      "sealability": "none", "eprCategory": "III", "costInrPerKg": [340, 420], "carbonKgPerKg": 8.20,
+      "provenance": "prototype estimate", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 0, "eaH2O": 0, "sealRangeC": null, "gelboPinholes": [45, 120], "toughness": 0.5,
+        "fixedBarrier": true, "barrierPly": true, "lightBarrier": "high", "acidSensitive": true,
+        "notes": "Near-total barrier until flex-cracking. Cost, carbon and Gelbo figures from the Blueprint's PET/Al/PE laminate row.",
+        "standards": ["IS 15392 (foil for packaging)", "EU 10/2011 (adjacent plastics)"],
+        "applications": ["Long-life powders, spices and retort pouches"] }
+    },
+    {
+      "id": "PLA", "name": "PLA film (compostable)", "family": "bio-based", "polymerClass": "PLA",
+      "densityGcm3": 1.240, "refThicknessUm": 30, "otrRef": 550, "wvtrRef": 185.0, "compostable": true,
+      "sealability": "medium", "eprCategory": "IV", "costInrPerKg": [280, 350], "carbonKgPerKg": 1.40,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 35, "eaH2O": 30, "sealRangeC": [80, 105], "gelboPinholes": [8, 18], "toughness": 0.6,
+        "brittleCold": true,
+        "standards": ["IS 17088 (compostable plastics)", "EU 10/2011"],
+        "applications": ["Breathable produce film", "Compostable windows and wraps"] }
+    },
+    {
+      "id": "PBS_PHA", "name": "PBS/PHA bio-blend film", "family": "bio-based", "polymerClass": "PBS",
+      "densityGcm3": 1.250, "refThicknessUm": 40, "otrRef": 320, "wvtrRef": 45.0, "compostable": true,
+      "sealability": "medium", "eprCategory": "IV", "costInrPerKg": [420, 540], "carbonKgPerKg": 1.65,
+      "provenance": "source-backed", "sourceId": "BLUEPRINT_MATERIALS",
+      "props": { "eaO2": 35, "eaH2O": 35, "sealRangeC": [90, 115], "gelboPinholes": [3, 6], "toughness": 0.9,
+        "brittleCold": true,
+        "standards": ["IS 17088 (compostable plastics)"],
+        "applications": ["Compostable sealant ply", "Produce film"] }
+    },
+    {
+      "id": "MLLDPE", "name": "Metallocene LLDPE sealant (mLLDPE)", "family": "polyethylene", "polymerClass": "PE",
+      "densityGcm3": 0.918, "refThicknessUm": 50, "otrRef": 4000, "wvtrRef": 16.0,
+      "sealability": "high", "eprCategory": "II", "costInrPerKg": [140, 160], "carbonKgPerKg": 2.10,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 42, "eaH2O": 45, "sealRangeC": [95, 125], "gelboPinholes": [0, 2], "toughness": 1.6,
+        "contaminationTolerant": true,
+        "notes": "High hot-tack sealant that seals through oil and powder contamination (Blueprint Challenge 2).",
+        "standards": ["IS 10146", "US FDA 21 CFR 177.1520"],
+        "applications": ["Sealant ply for oily snacks, spices and wet foods", "Vacuum pouches"] }
+    },
+    {
+      "id": "IONOMER", "name": "Ionomer sealant film (Surlyn-type)", "family": "ionomer", "polymerClass": "PE",
+      "densityGcm3": 0.940, "refThicknessUm": 50, "otrRef": 5000, "wvtrRef": 20.0,
+      "sealability": "high", "eprCategory": "II", "costInrPerKg": [380, 450], "carbonKgPerKg": 2.60,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 42, "eaH2O": 45, "sealRangeC": [90, 120], "gelboPinholes": [0, 3], "toughness": 1.4,
+        "contaminationTolerant": true, "acidResistant": true, "greaseResistant": true,
+        "notes": "Seals through oil, grease and particulates; resists acidic and fatty products (Blueprint failure-mode matrix).",
+        "standards": ["US FDA 21 CFR 177.1330", "EU 10/2011"],
+        "applications": ["Pickles, oily curries, paneer and processed meat", "Contamination-tolerant seals"] }
+    },
+    {
+      "id": "CPP", "name": "Cast polypropylene (CPP)", "family": "polypropylene", "polymerClass": "PP",
+      "densityGcm3": 0.900, "refThicknessUm": 30, "otrRef": 2300, "wvtrRef": 8.0,
+      "sealability": "medium", "eprCategory": "II", "costInrPerKg": [140, 160], "carbonKgPerKg": 2.00,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 38, "eaH2O": 42, "sealRangeC": [125, 150], "gelboPinholes": [1, 4], "toughness": 1.1,
+        "acidResistant": true, "greaseResistant": true,
+        "standards": ["IS 10910", "US FDA 21 CFR 177.1520"],
+        "applications": ["Retort and hot-fill sealant", "Mono-PP laminates"] }
+    },
+    {
+      "id": "BOPA", "name": "Biaxially oriented nylon (BOPA)", "family": "polyamide", "polymerClass": "PA",
+      "densityGcm3": 1.140, "refThicknessUm": 15, "otrRef": 30, "wvtrRef": 260.0,
+      "sealability": "none", "eprCategory": "II", "costInrPerKg": [300, 360], "carbonKgPerKg": 9.00,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 35, "eaH2O": 30, "sealRangeC": null, "gelboPinholes": [0, 3], "toughness": 3.0,
+        "humiditySensitive": true, "flexToughener": true,
+        "notes": "Puncture and flex-crack resistant; oxygen barrier drops at high humidity.",
+        "standards": ["US FDA 21 CFR 177.1500", "EU 10/2011"],
+        "applications": ["Vacuum pouches for meat and cheese", "Export produce with rough transit"] }
+    },
+    {
+      "id": "MET_BOPP", "name": "Metallised BOPP, heat-sealable (20 µm)", "family": "metallised", "polymerClass": "PP",
+      "densityGcm3": 0.905, "refThicknessUm": 20, "otrRef": 20, "wvtrRef": 0.4, "metallized": true,
+      "sealability": "medium", "eprCategory": "III", "costInrPerKg": [170, 200], "carbonKgPerKg": 2.40,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 30, "eaH2O": 35, "sealRangeC": [110, 135], "gelboPinholes": [10, 25], "toughness": 1.3,
+        "fixedBarrier": true, "barrierPly": true, "lightBarrier": "high",
+        "standards": ["IS 10910"],
+        "applications": ["Chips and namkeen packs", "Biscuit wraps"] }
+    },
+    {
+      "id": "COATED_BOPP", "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)", "family": "coated", "polymerClass": "PP",
+      "densityGcm3": 0.910, "refThicknessUm": 20, "otrRef": 8.0, "wvtrRef": 3.5,
+      "sealability": "none", "eprCategory": "II", "costInrPerKg": [210, 250], "carbonKgPerKg": 2.30,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 30, "eaH2O": 40, "sealRangeC": null, "gelboPinholes": [5, 10], "toughness": 1.3,
+        "fixedBarrier": true, "barrierPly": true,
+        "standards": ["IS 10910"],
+        "applications": ["Recyclable mono-PP barrier laminates"] }
+    },
+    {
+      "id": "BOPE", "name": "Biaxially oriented PE (BOPE)", "family": "polyethylene", "polymerClass": "PE",
+      "densityGcm3": 0.930, "refThicknessUm": 25, "otrRef": 2600, "wvtrRef": 6.0,
+      "sealability": "low", "eprCategory": "II", "costInrPerKg": [150, 170], "carbonKgPerKg": 2.10,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 40, "eaH2O": 45, "sealRangeC": [120, 140], "gelboPinholes": [1, 3], "toughness": 1.5,
+        "standards": ["IS 10146"],
+        "applications": ["Printable outer ply for recyclable mono-PE packs"] }
+    },
+    {
+      "id": "ANTIFOG_LDPE", "name": "Anti-fog LDPE/mLLDPE film", "family": "polyethylene", "polymerClass": "PE",
+      "densityGcm3": 0.920, "refThicknessUm": 30, "otrRef": 7000, "wvtrRef": 30.0,
+      "sealability": "medium", "eprCategory": "II", "costInrPerKg": [135, 150], "carbonKgPerKg": 2.10,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 42, "eaH2O": 45, "sealRangeC": [100, 125], "gelboPinholes": [0, 2], "toughness": 1.1,
+        "antiFog": true,
+        "notes": "Contains migratory anti-fog additive (polyglycerol fatty-acid esters) to stop condensation fogging.",
+        "standards": ["IS 10146"],
+        "applications": ["Fresh-cut vegetables", "Leafy greens", "Laser micro-perforated produce packs"] }
+    },
+    {
+      "id": "ANTIFOG_BOPP", "name": "Anti-fog heat-sealable BOPP", "family": "polypropylene", "polymerClass": "PP",
+      "densityGcm3": 0.905, "refThicknessUm": 25, "otrRef": 1450, "wvtrRef": 3.9,
+      "sealability": "medium", "eprCategory": "II", "costInrPerKg": [155, 175], "carbonKgPerKg": 2.15,
+      "provenance": "prototype estimate", "sourceId": "PROTOTYPE_ENGINEERING",
+      "props": { "eaO2": 38, "eaH2O": 42, "sealRangeC": [115, 140], "gelboPinholes": [2, 5], "toughness": 1.3,
+        "antiFog": true,
+        "standards": ["IS 10910"],
+        "applications": ["Micro-perforated MAP packs for tomatoes, mangoes and berries"] }
+    }
+  ]
+}

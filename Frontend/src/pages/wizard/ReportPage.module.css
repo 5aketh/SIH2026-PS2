@@ -1,0 +1,23 @@
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+.headActions { display: flex; gap: var(--sp-3); flex-wrap: wrap; }
+.exportStatus { margin-top: var(--sp-3); min-height: 1.5em; font-size: 14px; color: var(--accent); }
+.gap { margin-top: var(--sp-5); }
+.recName { font-size: clamp(1.35rem, 2.6vw, 1.85rem); letter-spacing: -0.02em; }
+
+.compareHead { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; align-items: flex-start; }
+.picker { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.pick {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  min-height: 36px; padding: 0 var(--sp-3); border-radius: 999px; cursor: pointer; font-size: 14px;
+  border: 1px solid var(--border-strong); color: var(--muted);
+}
+.pick:has(input:checked) { background: var(--accent-tint); border-color: var(--accent); color: var(--text); }
+.pick input { accent-color: var(--accent); margin: 0; }
+
+.flag { margin-top: var(--sp-3); color: var(--warn); font-size: 14px; font-weight: 500; }
+.inputsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-7); margin-top: var(--sp-2); }
+@media (max-width: 860px) { .inputsGrid { grid-template-columns: 1fr; gap: var(--sp-5); } }
+.subhead { margin-top: var(--sp-5); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.badgeCell { text-align: right !important; }
+.source { margin-top: var(--sp-3); font-size: 13px; color: var(--muted); }
+.disclaimer { margin-top: var(--sp-6); font-size: 13px; color: var(--muted); }

@@ -1,0 +1,5 @@
+.custom { background: var(--bg-alt); padding: var(--sp-9) 0; scroll-margin-top: var(--nav-h); border-top: 1px solid var(--border); }
+.grid { display: grid; grid-template-columns: 5fr 7fr; gap: var(--sp-8); align-items: start; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; gap: var(--sp-7); } }
+.custom h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+.sub { margin-top: var(--sp-3); color: var(--muted); }

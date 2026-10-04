@@ -1,0 +1,104 @@
+/* ---------- Recommendation header ---------- */
+.recHeader {
+  padding: clamp(20px, 3vw, 32px); border-radius: var(--r-card);
+  background: linear-gradient(var(--accent-tint), var(--accent-tint)), var(--surface);
+  border: 1px solid var(--border-strong); box-shadow: var(--shadow-md);
+}
+.eyebrow { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.eyebrow strong { color: var(--text); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 14px; }
+.recTitleRow { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-3) var(--sp-4); margin-top: var(--sp-3); }
+.recTitle { font-size: clamp(1.6rem, 3.4vw, 2.4rem); letter-spacing: -0.03em; }
+.verdict { margin-top: var(--sp-2); font-size: clamp(1.05rem, 1.8vw, 1.2rem); max-width: 70ch; }
+.basis { margin-top: var(--sp-3); color: var(--muted); font-size: 15px; }
+.analysisId { margin-top: var(--sp-1); color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; opacity: .8; }
+
+/* ---------- Panels ---------- */
+.panel {
+  padding: clamp(20px, 3vw, 28px); border-radius: var(--r-card);
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+.panelTitle { font-size: 1.25rem; display: flex; align-items: center; gap: var(--sp-2); }
+.panelSub { margin-top: var(--sp-1); color: var(--muted); font-size: 14px; }
+.empty { margin-top: var(--sp-4); color: var(--muted); font-style: italic; }
+.na { color: var(--muted); font-style: italic; font-size: 14px; }
+
+/* ---------- Tables ---------- */
+/* position: relative so absolutely positioned descendants (e.g. .sr-only labels) are clipped by the scroller. */
+.tableWrap { position: relative; margin-top: var(--sp-4); }
+/* Scroll only where tables can outgrow the panel; elsewhere tooltips must not be clipped. */
+@media (max-width: 900px) { .tableWrap { overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+.table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.table th, .table td { text-align: left; padding: var(--sp-3) var(--sp-3); border-bottom: 1px solid var(--border); vertical-align: middle; }
+.table thead th { font-size: 12px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 0; }
+.table tbody th { font-weight: 500; }
+.table tbody tr:last-child > * { border-bottom: 0; }
+.table tr > :first-child { padding-left: 0; }
+.table tr > :last-child { padding-right: 0; }
+
+.compare { min-width: 640px; }
+.compare thead th { vertical-align: bottom; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--text); }
+.compare tbody td { vertical-align: top; }
+.colTag { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+.colTag[data-alt] { color: var(--muted); }
+.colName { display: block; font-weight: 500; }
+.cell { display: grid; gap: 6px; }
+.cellBadges { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Narrow screens: each requirement row becomes a small card so provenance stays visible. */
+@media (max-width: 560px) {
+  .reqTable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .reqTable, .reqTable tbody { display: block; }
+  .reqTable tr { display: flex; flex-wrap: wrap; align-items: center; gap: 6px var(--sp-2); padding: var(--sp-3) 0; border-bottom: 1px solid var(--border); }
+  .reqTable tbody tr:last-child { border-bottom: 0; }
+  .reqTable tr > * { display: block; padding: 0 !important; border: 0 !important; }
+  .reqTable th { flex-basis: 100%; }
+  .reqTable td:nth-child(2) { flex-basis: 100%; color: var(--muted); }
+}
+
+/* ---------- Why this? ---------- */
+.why { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; gap: var(--sp-3); }
+.why li { position: relative; padding-left: var(--sp-5); }
+.why li::before {
+  content: ""; position: absolute; left: 4px; top: .6em; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+/* ---------- Alternatives ---------- */
+.alts { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--sp-3); }
+.alt {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: var(--sp-4); border-radius: var(--r-control);
+  background: var(--bg); border: 1px solid var(--border);
+}
+.altTitle { font-size: 1rem; }
+.altText { margin-top: var(--sp-1); color: var(--muted); font-size: 14px; flex: 1; }
+.altBtn { margin-top: var(--sp-3); }
+
+/* ---------- Fresh produce ---------- */
+.freshDot { width: 10px; height: 10px; border-radius: 50%; background: var(--cat); box-shadow: 0 0 0 3px var(--cat-tint); }
+.facts { margin: var(--sp-4) 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--sp-3); }
+.facts div { min-width: 0; }
+.facts dt { font-size: 13px; color: var(--muted); }
+.facts dd { margin: 2px 0 0; font-weight: 500; }
+.mapFlag { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+.mapFlag::before { content: "✕"; font-size: 12px; }
+.mapFlag[data-ok] { color: var(--produce); }
+.mapFlag[data-ok]::before { content: "✓"; }
+.template {
+  margin-top: var(--sp-5); padding: var(--sp-4); border-radius: var(--r-control);
+  border: 1px dashed var(--border-strong); background: var(--bg);
+}
+.templateTitle { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.templateNote { margin-top: var(--sp-2); font-size: 14px; }
+.template .facts { margin-top: var(--sp-3); }
+.slot {
+  display: inline-block; padding: 2px 10px; border-radius: 6px; font-weight: 400; font-size: 13px; text-transform: none;
+  color: var(--muted); border: 1px dashed var(--border-strong); font-style: italic;
+}
+
+@media print {
+  .tableWrap { overflow: visible; }
+  .compare { min-width: 0; }
+  .recHeader, .panel { box-shadow: none; }
+}

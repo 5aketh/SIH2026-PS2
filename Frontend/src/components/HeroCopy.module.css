@@ -1,0 +1,21 @@
+.copy { position: relative; z-index: 2; text-align: center; padding-top: clamp(48px, 9vh, 88px); }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: 6px 14px; border-radius: 999px;
+  border: 1px solid var(--border-strong); background: var(--surface);
+  font-size: 13px; color: var(--muted);
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
+.copy h1 { margin-top: var(--sp-5); font-size: clamp(2.2rem, 5vw, 3.75rem); letter-spacing: -0.035em; }
+.sub { margin: var(--sp-4) auto 0; max-width: 560px; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.125rem); }
+.ctas { margin-top: var(--sp-6); display: flex; gap: var(--sp-3); justify-content: center; flex-wrap: wrap; }
+
+:global(.is-animated) .copy {
+  flex: none;
+  padding-top: clamp(24px, 6vh, 72px);
+  /* Fades out steeply so it's gone before the categories heading arrives. */
+  opacity: max(0, calc(1 - var(--out) * 2));
+  transform: translateY(calc(var(--out) * -48px));
+}
+/* data-out is set on the stage by the unpack engine. */
+:global(.is-animated) [data-out] .copy { visibility: hidden; }

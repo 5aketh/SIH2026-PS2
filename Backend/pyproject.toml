@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packwise-backend"
+version = "0.1.0"
+description = "PackWise decision engine: food + conditions -> packaging requirements -> explainable recommendation."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "sqlalchemy>=2.0",
+  "alembic>=1.13",
+  "psycopg[binary]>=3.2",
+  "numpy>=1.26",
+  "reportlab>=4.2",
+]
+
+[project.optional-dependencies]
+ml = ["scikit-learn>=1.5", "joblib>=1.4"]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.setuptools.package-data]
+app = ["seed/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

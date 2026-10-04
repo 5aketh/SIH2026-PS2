@@ -1,0 +1,9 @@
+.layer { display: none; }
+
+:global(.is-animated) .layer { display: block; position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+.token {
+  position: absolute; left: 0; top: 0;
+  opacity: 0; visibility: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .22);
+  will-change: transform, opacity;
+}

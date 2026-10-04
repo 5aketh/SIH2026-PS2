@@ -1,0 +1,73 @@
+.scene {
+  position: relative; z-index: 1;
+  height: 340px;
+  display: grid; place-items: center;
+  perspective: 900px;
+}
+.cam {
+  --W: 200px; --D: 140px; --H: 130px; --F: 70px; --FS: 64px;
+  --sc: calc(var(--s) * (1 - var(--shrink) * var(--fold)));
+  position: relative; width: 0; height: 0;
+  transform-style: preserve-3d;
+  transform:
+    rotateX(calc(-24deg - 66deg * var(--fold)))
+    rotateY(calc(-32deg + 32deg * var(--fold)))
+    scale3d(var(--sc), var(--sc), var(--sc));
+}
+.floor {
+  position: absolute;
+  left: calc(var(--W) / -2); top: calc(var(--D) / -2);
+  width: var(--W); height: var(--D);
+  transform-style: preserve-3d;
+  transform: translateY(calc(var(--H) / 2)) rotateX(90deg);
+}
+.floor::after {
+  content: ""; position: absolute; inset: -18px; border-radius: 24px;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, .38), transparent);
+  transform: translateZ(-2px);
+  opacity: calc(1 - var(--fold));
+}
+.wall, .flap { position: absolute; transform-style: preserve-3d; }
+.front { left: 0; top: 100%; width: var(--W); height: var(--H); transform-origin: 50% 0; transform: rotateX(calc(90deg * (1 - var(--fold)))); }
+.back  { left: 0; bottom: 100%; width: var(--W); height: var(--H); transform-origin: 50% 100%; transform: rotateX(calc(-90deg * (1 - var(--fold)))); }
+.left  { right: 100%; top: 0; width: calc(var(--H) - 2px); height: var(--D); transform-origin: 100% 50%; transform: rotateY(calc(90deg * (1 - var(--fold)))); }
+.right { left: 100%; top: 0; width: calc(var(--H) - 2px); height: var(--D); transform-origin: 0 50%; transform: rotateY(calc(-90deg * (1 - var(--fold)))); }
+
+.front > .flap, .back > .flap { --a: calc(90deg * (1 - var(--lid)) - 30deg * var(--lid) * (1 - var(--fold))); }
+.left > .flap, .right > .flap { --a: calc(90deg * (1 - var(--side)) - 30deg * var(--side) * (1 - var(--fold))); }
+.front > .flap { left: 0; top: 100%; width: 100%; height: var(--F); transform-origin: 50% 0; transform: rotateX(var(--a)); }
+.back > .flap  { left: 0; bottom: 100%; width: 100%; height: var(--F); transform-origin: 50% 100%; transform: rotateX(calc(-1 * var(--a))); }
+.left > .flap  { right: 100%; top: 0; width: var(--FS); height: 100%; transform-origin: 100% 50%; transform: rotateY(var(--a)); }
+.right > .flap { left: 100%; top: 0; width: var(--FS); height: 100%; transform-origin: 0 50%; transform: rotateY(calc(-1 * var(--a))); }
+
+.face {
+  position: absolute; inset: 0;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+/* The div's front side is the inside of the box; outer faces are flipped. */
+.faceIn {
+  background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,0) 60%), var(--box-floor);
+  box-shadow: inset 0 0 0 1px var(--box-edge);
+}
+.faceOut { transform: rotateX(180deg); box-shadow: inset 0 0 0 1px var(--box-edge); }
+.front > .faceOut, .back > .faceOut { background: var(--box-front); }
+.left > .faceOut, .right > .faceOut { background: var(--box-side); }
+.flap > .faceOut { background: var(--box-flap); }
+.floor > .faceIn { background: var(--box-floor); }
+
+.print {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 6px;
+  color: var(--box-ink); font-weight: 500; font-size: 20px; letter-spacing: -0.02em; opacity: .85;
+}
+.print svg { width: 22px; height: 22px; }
+.marks { position: absolute; right: 10px; bottom: 8px; color: var(--box-ink); font-size: 11px; letter-spacing: .08em; opacity: .6; }
+.tape { position: absolute; left: 0; right: 0; height: 16px; background: var(--box-tape); }
+.front > .flap .tape { top: 0; }
+.back > .flap .tape { bottom: 0; }
+.marker { position: absolute; left: 50%; top: 50%; width: 2px; height: 2px; transform: translateZ(var(--H)); visibility: hidden; }
+
+@media (max-width: 560px) {
+  .scene { height: 280px; }
+}
+
+:global(.is-animated) .scene { flex: 1 1 auto; min-height: 0; height: auto; opacity: calc(1 - var(--out)); }

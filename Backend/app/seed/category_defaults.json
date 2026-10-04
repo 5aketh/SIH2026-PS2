@@ -1,0 +1,113 @@
+{
+  "_note": "Fallbacks used when a commodity record or the request lacks a value. Everything here is a prototype estimate unless a sourceId says otherwise.",
+  "categories": {
+    "fresh_produce": {
+      "pack": { "netWeightG": 1000, "areaM2": 0.12, "freeVolumeMl": 1500, "format": "1 kg retail bag" },
+      "awInitial": 0.98,
+      "allowedMoistureLossPct": 5,
+      "mapProfile": "emap",
+      "mechanicalScale": 0.35,
+      "storage": {
+        "_todo": "Verify: assumes fresh produce is never frozen as-is (frozen vegetables are blanched first). Prototype rule, not source-backed.",
+        "allowed": ["chilled", "ambient"],
+        "messages": {
+          "frozen": "Frozen storage isn't supported for {name}: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product."
+        }
+      }
+    },
+    "dry_goods": {
+      "pack": { "netWeightG": 1000, "areaM2": 0.10, "format": "1 kg pouch" },
+      "awInitial": 0.60,
+      "awCritical": 0.70,
+      "allowedMoistureLossPct": 3,
+      "mapProfile": null,
+      "mechanicalScale": 1.0
+    },
+    "snack": {
+      "pack": { "netWeightG": 100, "areaM2": 0.06, "format": "100 g pillow pouch" },
+      "awInitial": 0.25,
+      "awCritical": 0.45,
+      "allowedMoistureLossPct": 3,
+      "mapProfile": "n2_flush",
+      "mechanicalScale": 1.0
+    },
+    "dairy": {
+      "pack": { "netWeightG": 200, "areaM2": 0.04, "format": "200 g pouch" },
+      "awInitial": 0.97,
+      "awCritical": 0.45,
+      "allowedMoistureLossPct": 2,
+      "microbialShelfLifeDays": [7, 4],
+      "mapProfile": "dairy_fresh",
+      "mechanicalScale": 1.0,
+      "storage": {
+        "_todo": "Dairy covers shelf-stable foods (milk powder) too, so every storage type stays allowed here; fresh dairy restricts itself with an allowedStorage param.",
+        "messages": {
+          "ambient": "{name} is a perishable fresh dairy food and isn't safe stored at ambient temperature. Choose chilled or frozen storage."
+        }
+      }
+    },
+    "meat_seafood": {
+      "pack": { "netWeightG": 500, "areaM2": 0.08, "format": "500 g pouch / tray lid" },
+      "awInitial": 0.99,
+      "allowedMoistureLossPct": 2,
+      "microbialShelfLifeDays": [5, 4],
+      "mapProfile": "poultry",
+      "mechanicalScale": 1.0,
+      "storage": {
+        "_todo": "Verify: assumes raw meat and seafood are always kept cold (food-safety practice). Prototype rule, not source-backed.",
+        "allowed": ["chilled", "frozen"],
+        "messages": {
+          "ambient": "Raw meat and seafood such as {name} aren't safe stored at ambient temperature. Choose chilled or frozen storage."
+        }
+      }
+    },
+    "other": {
+      "pack": { "netWeightG": 500, "areaM2": 0.08, "format": "500 g pouch" },
+      "awInitial": null,
+      "awCritical": 0.70,
+      "allowedMoistureLossPct": 3,
+      "mapProfile": null,
+      "mechanicalScale": 1.0
+    }
+  },
+  "respiration": {
+    "_note": "O2 uptake at 20 °C by respiration class (mL O2/kg·h). Prototype estimates within published ranges.",
+    "rateO2At20": { "none": 0, "low": 5, "medium": 15, "high": 30 },
+    "q10": 2.5,
+    "shelfLifeQ10": 2.2,
+    "acpPct": 1.5,
+    "rq": 1.0,
+    "airShelfLifeDays20": { "low": 30, "medium": 7, "high": 5 }
+  },
+  "oxygenBudgetMgPerKg": {
+    "_note": "Tolerable O2 gain over shelf life (mg O2 per kg food), placed inside the ranges Robertson (2016) lists.",
+    "sourceId": "ROBERTSON_2016",
+    "low": 2000,
+    "medium": 500,
+    "high": 200
+  },
+  "mapProfiles": {
+    "sourceId": "ROBERTSON_2016",
+    "emap": { "label": "Equilibrium MAP set by film permeance and micro-perforation", "o2": null, "co2": null, "n2": null },
+    "n2_flush": { "label": "N₂ flush, residual O₂ below 2 %", "o2": "< 2 %", "co2": "0 %", "n2": "balance" },
+    "red_meat": { "label": "High-O₂ MAP 70–80 % O₂ / 20–30 % CO₂, or vacuum skin", "o2": "70–80 %", "co2": "20–30 %", "n2": "0 %" },
+    "poultry": { "label": "30 % CO₂ / 70 % N₂", "o2": "0 %", "co2": "30 %", "n2": "70 %" },
+    "fish": { "label": "40 % CO₂ / 30 % O₂ / 30 % N₂ (white fish); 60 % CO₂ / 40 % N₂ (fatty fish)", "o2": "30 %", "co2": "40 %", "n2": "30 %" },
+    "dairy_fresh": { "label": "Vacuum, or 30 % CO₂ / 70 % N₂", "o2": "0 %", "co2": "30 %", "n2": "70 %" },
+    "bakery": { "label": "50 % CO₂ / 50 % N₂ flush", "o2": "0 %", "co2": "50 %", "n2": "50 %" }
+  },
+  "mechanical": {
+    "_note": "Required mechanical index (0-100) and maximum Gelbo flex pinholes (ASTM F392) by transport stress. Prototype estimates.",
+    "low": { "index": 25, "pinholes": 150 },
+    "medium": { "index": 45, "pinholes": 60 },
+    "high": { "index": 65, "pinholes": 20 }
+  },
+  "costs": {
+    "_note": "Conversion overhead in INR per m² and EPR fee in INR per kg by category. Prototype estimates.",
+    "conversionBaseInrPerM2": 1.0,
+    "conversionPerLaminationInrPerM2": 1.5,
+    "perforationInrPerPack": 0.25,
+    "eprFeeInrPerKg": { "II": 5, "III": 12, "IV": 3 },
+    "costBandInrPerM2": { "low": 10, "medium": 20 }
+  }
+}

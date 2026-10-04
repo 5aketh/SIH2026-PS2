@@ -1,0 +1,8 @@
+/* Tinted icon square, shared by the category cards and the flying tokens. */
+.tile {
+  width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center;
+  color: var(--cat);
+  background: linear-gradient(var(--cat-tint), var(--cat-tint)), var(--surface);
+  border: 1px solid var(--cat-line);
+}
+.tile svg { width: 24px; height: 24px; }

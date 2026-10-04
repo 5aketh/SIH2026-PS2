@@ -1,0 +1,251 @@
+{
+  "_note": "A bare value inherits `defaults` (prototype estimate). Values with their own provenance name their source. Keys shown in the wizard: moisturePct, fatPct, ph, respirationClass, oxidationSensitivity. The rest feed the engine.",
+  "defaults": { "provenance": "prototype estimate", "confidence": "prototype", "sourceId": "PROTOTYPE_LIT" },
+  "commodities": [
+    {
+      "id": "TOMATO_GENERIC",
+      "name": "Tomato",
+      "category": "fresh_produce",
+      "aliases": ["tamatar", "thakkali", "tomatoes"],
+      "sourceId": "TEAM_REPORT",
+      "params": {
+        "moisturePct": { "value": 94.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "TEAM_REPORT" },
+        "ph": { "value": 4.5, "provenance": "source-backed", "confidence": "medium", "sourceId": "TEAM_REPORT" },
+        "fatPct": { "value": 0.2, "provenance": "source-backed", "confidence": "medium", "sourceId": "TEAM_REPORT" },
+        "respirationClass": { "value": "high", "provenance": "rule-derived", "confidence": "medium", "sourceId": "TEAM_REPORT" },
+        "oxidationSensitivity": { "value": "medium", "provenance": "rule-derived", "confidence": "medium", "sourceId": "TEAM_REPORT" },
+        "awInitial": 0.99,
+        "o2WindowPct": { "value": [3, 5], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "co2WindowPct": { "value": [2, 3], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "chillThresholdC": { "value": 10, "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "airShelfLifeDays20": { "value": 8, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_IMPACT" }
+      }
+    },
+    {
+      "id": "ALPHONSO_MANGO",
+      "name": "Alphonso mango",
+      "category": "fresh_produce",
+      "aliases": ["mango", "hapus", "aam", "mavu", "alphonso"],
+      "sourceId": "BLUEPRINT_MATRIX",
+      "params": {
+        "moisturePct": { "value": 83.53, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "moistureCriticalPct": { "value": 76.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awInitial": { "value": 0.98, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "fatPct": { "value": 0.4, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "ph": { "value": 4.6, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "respirationClass": { "value": "high", "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "oxidationSensitivity": "medium",
+        "o2WindowPct": { "value": [3, 5], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "co2WindowPct": { "value": [5, 8], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "chillThresholdC": { "value": 13, "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "airShelfLifeDays20": { "value": 11, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_IMPACT" }
+      }
+    },
+    {
+      "id": "SPINACH_GENERIC",
+      "name": "Spinach",
+      "category": "fresh_produce",
+      "aliases": ["palak", "keerai"],
+      "params": {
+        "moisturePct": 92.0, "fatPct": 0.7, "ph": 6.0,
+        "respirationClass": { "value": "high", "provenance": "rule-derived", "confidence": "prototype", "sourceId": "PROTOTYPE_LIT" },
+        "oxidationSensitivity": "medium",
+        "awInitial": 0.99,
+        "o2WindowPct": { "value": [7, 10], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "co2WindowPct": { "value": [5, 10], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "airShelfLifeDays20": 3
+      }
+    },
+    {
+      "id": "BANANA_GENERIC",
+      "name": "Banana",
+      "category": "fresh_produce",
+      "aliases": ["kela", "vazhai", "bananas"],
+      "params": {
+        "moisturePct": 75.0, "fatPct": 0.3, "ph": 5.0,
+        "respirationClass": { "value": "medium", "provenance": "rule-derived", "confidence": "prototype", "sourceId": "PROTOTYPE_LIT" },
+        "oxidationSensitivity": "medium",
+        "awInitial": 0.98,
+        "o2WindowPct": { "value": [2, 5], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "co2WindowPct": { "value": [2, 5], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "chillThresholdC": { "value": 13, "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "airShelfLifeDays20": 7
+      }
+    },
+    {
+      "id": "ONION_RED",
+      "name": "Red onion",
+      "category": "fresh_produce",
+      "aliases": ["onion", "pyaz", "kanda", "vengayam", "bhima dark red"],
+      "params": {
+        "moisturePct": 86.0, "fatPct": 0.1, "ph": 5.5,
+        "respirationClass": { "value": "low", "provenance": "rule-derived", "confidence": "prototype", "sourceId": "PROTOTYPE_LIT" },
+        "oxidationSensitivity": "low",
+        "awInitial": 0.97,
+        "o2WindowPct": { "value": [1, 3], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "co2WindowPct": { "value": [5, 10], "provenance": "source-backed", "confidence": "medium", "sourceId": "KADER_2002" },
+        "airShelfLifeDays20": 60
+      }
+    },
+    {
+      "id": "POTATO_CHIPS",
+      "name": "Potato chips",
+      "category": "snack",
+      "aliases": ["chips", "wafers", "crisps", "spiced potato chips"],
+      "sourceId": "BLUEPRINT_MATRIX",
+      "params": {
+        "moisturePct": { "value": 2.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "moistureCriticalPct": { "value": 4.5, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awInitial": { "value": 0.18, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "fatPct": { "value": 34.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "ph": { "value": 6.1, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "respirationClass": { "value": "none", "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "oxidationSensitivity": { "value": "high", "provenance": "rule-derived", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awCritical": 0.45,
+        "lightSensitive": { "value": true, "provenance": "rule-derived", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" }
+      }
+    },
+    {
+      "id": "BISCUITS_GENERIC",
+      "name": "Biscuits",
+      "category": "snack",
+      "aliases": ["cookies", "biscuit"],
+      "params": {
+        "moisturePct": 3.0, "fatPct": 20.0, "ph": 6.5,
+        "respirationClass": "none", "oxidationSensitivity": "medium",
+        "awInitial": 0.30, "awCritical": 0.50, "moistureCriticalPct": 5.5,
+        "mapProfile": null
+      }
+    },
+    {
+      "id": "BASMATI_RICE",
+      "name": "Basmati rice",
+      "category": "dry_goods",
+      "aliases": ["rice", "chawal", "arisi"],
+      "params": {
+        "moisturePct": 12.0, "fatPct": 0.9, "ph": 6.5,
+        "respirationClass": "none", "oxidationSensitivity": "low",
+        "awInitial": 0.60, "awCritical": 0.72, "moistureCriticalPct": 14.0
+      }
+    },
+    {
+      "id": "WHEAT_FLOUR",
+      "name": "Wheat flour (atta)",
+      "category": "dry_goods",
+      "aliases": ["atta", "flour", "wheat"],
+      "params": {
+        "moisturePct": 12.0, "fatPct": 1.7, "ph": 6.0,
+        "respirationClass": "none", "oxidationSensitivity": "medium",
+        "awInitial": 0.60, "awCritical": 0.70, "moistureCriticalPct": 14.5
+      }
+    },
+    {
+      "id": "PANEER_FRESH",
+      "name": "Paneer",
+      "category": "dairy",
+      "aliases": ["cottage cheese", "paneer fresh"],
+      "sourceId": "BLUEPRINT_MATRIX",
+      "params": {
+        "moisturePct": { "value": 52.03, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "moistureCriticalPct": { "value": 55.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awInitial": { "value": 0.99, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "fatPct": { "value": 24.8, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "ph": { "value": 5.8, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "respirationClass": { "value": "none", "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "oxidationSensitivity": "medium",
+        "microbialShelfLifeDays": [6, 4],
+        "mapProfile": "dairy_fresh",
+        "allowedStorage": { "value": ["chilled", "frozen"], "provenance": "prototype estimate", "confidence": "prototype", "_todo": "Verify: fresh paneer assumed unsafe at ambient; freezing is done commercially." }
+      }
+    },
+    {
+      "id": "MILK_POWDER",
+      "name": "Milk powder",
+      "category": "dairy",
+      "aliases": ["spray-dried milk powder", "dairy whitener", "milk powder"],
+      "sourceId": "BLUEPRINT_MATRIX",
+      "params": {
+        "moisturePct": { "value": 3.5, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "moistureCriticalPct": { "value": 6.2, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awInitial": { "value": 0.22, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "fatPct": { "value": 26.5, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "ph": { "value": 6.6, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "respirationClass": { "value": "none", "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "oxidationSensitivity": "high",
+        "awCritical": 0.45,
+        "lightSensitive": true,
+        "mapProfile": "n2_flush"
+      }
+    },
+    {
+      "id": "CHICKEN_FRESH",
+      "name": "Fresh chicken",
+      "category": "meat_seafood",
+      "aliases": ["chicken", "poultry", "murgh", "kozhi"],
+      "params": {
+        "moisturePct": 75.0, "fatPct": 4.0, "ph": 6.0,
+        "respirationClass": "none", "oxidationSensitivity": "medium",
+        "awInitial": 0.99, "microbialShelfLifeDays": [6, 4], "mapProfile": "poultry"
+      }
+    },
+    {
+      "id": "FISH_FRESH",
+      "name": "Fresh fish",
+      "category": "meat_seafood",
+      "aliases": ["fish", "machli", "meen", "seafood"],
+      "params": {
+        "moisturePct": 78.0, "fatPct": 2.0, "ph": 6.8,
+        "respirationClass": "none", "oxidationSensitivity": "high",
+        "awInitial": 0.99, "microbialShelfLifeDays": [5, 4], "mapProfile": "fish"
+      }
+    },
+    {
+      "id": "CHILLED_MUTTON",
+      "name": "Chilled mutton",
+      "category": "meat_seafood",
+      "aliases": ["mutton", "goat meat", "lamb", "red meat"],
+      "sourceId": "BLUEPRINT_MATRIX",
+      "params": {
+        "moisturePct": { "value": 74.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "moistureCriticalPct": { "value": 70.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awInitial": { "value": 0.99, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "fatPct": { "value": 6.5, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "ph": { "value": 5.7, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "respirationClass": { "value": "none", "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "oxidationSensitivity": "medium",
+        "microbialShelfLifeDays": [5, 4],
+        "mapProfile": "red_meat"
+      }
+    },
+    {
+      "id": "MULTIGRAIN_BREAD",
+      "name": "Multigrain bread",
+      "category": "other",
+      "aliases": ["bread", "bakery", "pav"],
+      "sourceId": "BLUEPRINT_MATRIX",
+      "params": {
+        "moisturePct": { "value": 36.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "moistureCriticalPct": { "value": 28.0, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "awInitial": { "value": 0.95, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "fatPct": { "value": 4.2, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "ph": { "value": 5.6, "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "respirationClass": { "value": "none", "provenance": "source-backed", "confidence": "medium", "sourceId": "BLUEPRINT_MATRIX" },
+        "oxidationSensitivity": "low",
+        "microbialShelfLifeDays": [5, 25],
+        "mapProfile": "bakery"
+      }
+    },
+    {
+      "id": "GROUNDNUT_OIL",
+      "name": "Groundnut oil",
+      "category": "other",
+      "aliases": ["peanut oil", "edible oil", "moongphali tel", "kadalai ennai"],
+      "params": {
+        "moisturePct": 0.1, "fatPct": 99.9,
+        "ph": { "value": null, "provenance": null, "confidence": null, "sourceId": null },
+        "respirationClass": "none", "oxidationSensitivity": "high",
+        "moistureSensitive": false, "lightSensitive": true
+      }
+    }
+  ]
+}

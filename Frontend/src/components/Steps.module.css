@@ -1,0 +1,9 @@
+.steps { list-style: none; margin: var(--sp-6) 0 0; padding: 0; display: grid; gap: var(--sp-5); counter-reset: step; }
+.steps li { display: grid; grid-template-columns: 32px 1fr; gap: var(--sp-4); counter-increment: step; }
+.steps li::before {
+  content: counter(step); width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 14px; font-weight: 500;
+  background: var(--accent-tint); color: var(--accent); border: 1px solid var(--border-strong);
+}
+.steps h3 { font-size: 1rem; margin-top: 5px; }
+.steps p { color: var(--muted); font-size: 15px; margin-top: 2px; }

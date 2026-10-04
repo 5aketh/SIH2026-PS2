@@ -1,0 +1,86 @@
+/* Key figures, risks, specification and assumptions panels on the result and report screens. */
+
+.head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-3); flex-wrap: wrap; }
+
+/* ---------- Key figures ---------- */
+.figures { margin: var(--sp-4) 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--sp-3); }
+.figure {
+  min-width: 0; padding: var(--sp-4); border-radius: var(--r-control);
+  background: var(--bg); border: 1px solid var(--border);
+}
+.figure dt { font-size: 13px; color: var(--muted); }
+.figure dd { margin: 0; }
+.value { display: block; margin-top: 2px; font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.detail { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
+
+/* ---------- Shelf-life verdict ---------- */
+.verdict {
+  margin-top: var(--sp-4); padding: var(--sp-4) var(--sp-5); border-radius: var(--r-control);
+  background: var(--bg); border: 1px solid var(--border); border-left: 4px solid var(--tone, var(--border-strong));
+}
+.verdict[data-ok="true"] { --tone: var(--produce); }
+.verdict[data-ok="false"] { --tone: var(--warn); }
+.verdictMain { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px var(--sp-3); }
+.verdictDays { font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.verdictLabel { color: var(--muted); }
+.verdictTarget { margin-top: var(--sp-1); font-weight: 500; color: var(--tone, var(--text)); }
+.verdictLimit { margin-top: var(--sp-3); padding-top: var(--sp-3); border-top: 1px solid var(--border); }
+.verdictLimit strong { font-weight: 500; }
+.verdictNote { margin-top: var(--sp-2); font-size: 14px; color: var(--warn); }
+
+/* ---------- Risks ---------- */
+.risks { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; gap: var(--sp-2); }
+.risk {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px var(--sp-3); align-items: center;
+  padding: var(--sp-3) var(--sp-4); border-radius: var(--r-control); background: var(--bg); border: 1px solid var(--border);
+  border-left: 3px solid var(--tone, var(--border-strong));
+}
+.risk[data-level="high"] { --tone: var(--danger); }
+.risk[data-level="medium"] { --tone: var(--warn); }
+.risk[data-level="low"] { --tone: var(--produce); }
+.riskTitle { font-weight: 500; }
+.riskLevel { font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--tone); }
+.riskDrivers { grid-column: 1 / -1; font-size: 14px; color: var(--muted); }
+
+/* ---------- Specification ---------- */
+.stack { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; gap: 4px; }
+.layer {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px var(--sp-3); align-items: center;
+  padding: var(--sp-2) var(--sp-3); border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) calc(var(--weight, 0.2) * 40%), var(--bg));
+  border: 1px solid var(--border);
+}
+.layerName { font-weight: 500; min-width: 0; }
+.layerGauge { font-variant-numeric: tabular-nums; font-size: 14px; }
+.layerRole { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.stackEnds { display: flex; justify-content: space-between; margin-top: var(--sp-1); font-size: 12px; color: var(--muted); }
+.specs { margin: var(--sp-5) 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--sp-3) var(--sp-5); }
+.specs div { min-width: 0; }
+.specs dt { font-size: 13px; color: var(--muted); }
+.specs dd { margin: 2px 0 0; }
+.specs small { display: block; color: var(--muted); font-size: 12px; }
+
+/* ---------- Assumptions / ruled out ---------- */
+.list { margin: var(--sp-3) 0 0; padding-left: var(--sp-5); display: grid; gap: var(--sp-1); color: var(--muted); font-size: 15px; }
+.subhead { margin-top: var(--sp-5); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.details { margin-top: var(--sp-5); border-top: 1px solid var(--border); padding-top: var(--sp-4); }
+.details summary { cursor: pointer; font-weight: 500; }
+.details summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.ruled { list-style: none; margin: var(--sp-3) 0 0; padding: 0; display: grid; gap: var(--sp-2); }
+.ruled li { padding: var(--sp-2) 0; border-bottom: 1px solid var(--border); }
+.ruled li:last-child { border-bottom: 0; }
+.ruledName { font-weight: 500; }
+.ruledStage { margin-left: var(--sp-2); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.ruledReason { font-size: 14px; color: var(--muted); }
+
+/* ---------- Alternative card facts ---------- */
+.altFacts { display: flex; flex-wrap: wrap; gap: 4px var(--sp-3); margin-top: var(--sp-2); font-size: 13px; color: var(--text); font-variant-numeric: tabular-nums; }
+.altFacts span { white-space: nowrap; }
+
+@media print {
+  .figure, .risk, .layer { break-inside: avoid; }
+}
+
+/* ---------- Result summary ---------- */
+.restsOn { margin-top: var(--sp-4); padding-top: var(--sp-2); border-top: 1px solid var(--border); }
+.restsOn .subhead { margin-top: var(--sp-3); }

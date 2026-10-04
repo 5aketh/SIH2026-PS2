@@ -1,0 +1,9 @@
+.gap { margin-top: var(--sp-5); }
+.split { margin-top: var(--sp-5); display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-5); align-items: start; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+.actions {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3);
+  margin-top: var(--sp-7); padding-top: var(--sp-5); border-top: 1px solid var(--border);
+}
+.warnList { margin: 0; padding-left: var(--sp-5); display: grid; gap: var(--sp-1); }
+.next { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-5); }

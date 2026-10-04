@@ -1,0 +1,2145 @@
+{
+ "fresh_produce": {
+  "engineVersion": "0.1.0",
+  "freshProduceMode": true,
+  "recommendation": {
+   "structure": "LDPE bag with macro-perforations (40 µm)",
+   "structureId": "MACRO_LDPE",
+   "confidence": "prototype",
+   "profile": "Best balance for your priorities (TOPSIS)",
+   "score": 0.866
+  },
+  "requirements": [
+   {
+    "label": "OTR target",
+    "value": "Controlled gas exchange: O₂ 3–5 % at 12 °C, never below 5.5 %",
+    "status": "PASS",
+    "provenance": "source-backed"
+   },
+   {
+    "label": "WVTR target",
+    "value": "Moderate: weight loss under 5 % over 20 days",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Thickness",
+    "value": "40 µm (LDPE 40)",
+    "status": "PASS",
+    "provenance": "prototype estimate"
+   },
+   {
+    "label": "Sealability",
+    "value": "Medium",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Mechanical protection",
+    "value": "Medium transport stress: index ≥ 15.75",
+    "status": "PASS",
+    "provenance": "prototype estimate"
+   },
+   {
+    "label": "MAP",
+    "value": "Equilibrium MAP: O₂ 3–5 %, CO₂ 2–3 %",
+    "status": "REVIEW",
+    "provenance": "source-backed"
+   },
+   {
+    "label": "Anti-fog",
+    "value": "Anti-fog inner surface (condensation risk)",
+    "status": "REVIEW",
+    "provenance": "rule-derived"
+   }
+  ],
+  "why": [
+   "High respiration (about 14 mL O₂/kg·h at 12 °C) means the 1000 g pack must let in roughly 2,200 mL O₂ a day, so gas exchange has to be engineered rather than blocked.",
+   "The target atmosphere (O₂ 3–5 %, CO₂ 2–3 %) is the published recommendation for tomato.",
+   "85 % RH with cold-chain temperature swings risks condensation, so the inner surface must be anti-fog.",
+   "Medium transport stress allows at most 60 Gelbo flex pinholes, which rules out the more crack-prone barrier laminates.",
+   "No candidate met every constraint and your 20-day target, so LDPE bag with macro-perforations (40 µm) is the closest option (estimated 11–20 days). Review the flagged requirements."
+  ],
+  "alternatives": [
+   {
+    "structure": "Unperforated LDPE bag (30 µm)",
+    "structureId": "PLAIN_LDPE",
+    "profile": "Lowest cost",
+    "tradeoffSummary": "Lowest cost: ≈42 % lower cost (₹0.53 vs ₹0.91 per pack); below your 20-day target (estimated 3.2 days, limited by CO₂ injury); lower footprint (7 vs 9 g CO₂e); needs review on otr target, thickness, mechanical protection.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "Controlled gas exchange: O₂ 3–5 % at 12 °C, never below 5.5 %",
+      "status": "REVIEW",
+      "provenance": "source-backed"
+     },
+     {
+      "label": "WVTR target",
+      "value": "Moderate: weight loss under 5 % over 20 days",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "30 µm (LDPE 30)",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "Medium",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "Medium transport stress: index ≥ 15.75",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "Equilibrium MAP: O₂ 3–5 %, CO₂ 2–3 %",
+      "status": "REVIEW",
+      "provenance": "source-backed"
+     },
+     {
+      "label": "Anti-fog",
+      "value": "Anti-fog inner surface (condensation risk)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 3.2,
+     "lowDays": 2.2,
+     "highDays": 4.1,
+     "failureMode": "CO₂ injury",
+     "mechanisms": {
+      "CO₂ injury": 3.2,
+      "dehydration (weight loss)": 2066.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 20,
+     "meetsTarget": false
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.53,
+     "costBand": "low",
+     "gramsPerPack": 3.3,
+     "gCo2ePerPack": 6.8,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.017,
+     "monoMaterial": true,
+     "recyclable": true,
+     "recyclabilityIndex": 90,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.443
+   },
+   {
+    "structure": "Micro-perforated anti-fog BOPP (25 µm)",
+    "structureId": "MP_ANTIFOG_BOPP",
+    "profile": "Lowest footprint",
+    "tradeoffSummary": "Lowest footprint: ≈10 % lower cost (₹0.82 vs ₹0.91 per pack); below your 20-day target (estimated 11 days, limited by CO₂ injury); lower footprint (6 vs 9 g CO₂e); needs review on otr target, map.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "Controlled gas exchange: O₂ 3–5 % at 12 °C, never below 5.5 %",
+      "status": "REVIEW",
+      "provenance": "source-backed"
+     },
+     {
+      "label": "WVTR target",
+      "value": "Moderate: weight loss under 5 % over 20 days",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "25 µm (AF-BOPP 25)",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "Medium",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "Medium transport stress: index ≥ 15.75",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "Equilibrium MAP: O₂ 3–5 %, CO₂ 2–3 %",
+      "status": "REVIEW",
+      "provenance": "source-backed"
+     },
+     {
+      "label": "Anti-fog",
+      "value": "Anti-fog inner surface (condensation risk)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 11.0,
+     "lowDays": 7.6,
+     "highDays": 14.0,
+     "failureMode": "CO₂ injury",
+     "mechanisms": {
+      "CO₂ injury": 11.0,
+      "dehydration (weight loss)": 3650.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 20,
+     "meetsTarget": false
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.82,
+     "costBand": "low",
+     "gramsPerPack": 2.7,
+     "gCo2ePerPack": 5.8,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.014,
+     "monoMaterial": true,
+     "recyclable": true,
+     "recyclabilityIndex": 90,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.721
+   },
+   {
+    "structure": "Micro-perforated anti-fog LDPE (30 µm)",
+    "structureId": "MP_ANTIFOG_LDPE",
+    "profile": "Balanced alternative",
+    "tradeoffSummary": "Balanced alternative: ≈8 % lower cost (₹0.84 vs ₹0.91 per pack); below your 20-day target (estimated 11 days, limited by CO₂ injury); lower footprint (7 vs 9 g CO₂e); needs review on otr target, map.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "Controlled gas exchange: O₂ 3–5 % at 12 °C, never below 5.5 %",
+      "status": "REVIEW",
+      "provenance": "source-backed"
+     },
+     {
+      "label": "WVTR target",
+      "value": "Moderate: weight loss under 5 % over 20 days",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "30 µm (AF-LDPE 30)",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "Medium",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "Medium transport stress: index ≥ 15.75",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "Equilibrium MAP: O₂ 3–5 %, CO₂ 2–3 %",
+      "status": "REVIEW",
+      "provenance": "source-backed"
+     },
+     {
+      "label": "Anti-fog",
+      "value": "Anti-fog inner surface (condensation risk)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 11.0,
+     "lowDays": 7.6,
+     "highDays": 14.0,
+     "failureMode": "CO₂ injury",
+     "mechanisms": {
+      "CO₂ injury": 11.0,
+      "dehydration (weight loss)": 1718.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 20,
+     "meetsTarget": false
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.84,
+     "costBand": "low",
+     "gramsPerPack": 3.3,
+     "gCo2ePerPack": 7.0,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.017,
+     "monoMaterial": true,
+     "recyclable": true,
+     "recyclabilityIndex": 90,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.717
+   }
+  ],
+  "freshProduce": {
+   "gasExchangeRequirement": "Controlled (breathable film)",
+   "mapSuitable": false,
+   "respirationRate": {
+    "mlO2PerKgH": 14.4,
+    "temperatureC": 12.0,
+    "provenance": "prototype estimate"
+   },
+   "perforation": {
+    "type": "macro",
+    "required": true,
+    "diameterUm": 5000,
+    "holesPerPack": 8,
+    "standard": "Mechanical vent holes",
+    "provenance": "prototype estimate"
+   },
+   "equilibrium": {
+    "o2Pct": 20.6,
+    "co2Pct": 0.4,
+    "o2PctWorstCase": 20.4,
+    "worstCaseTempC": 16.0,
+    "provenance": "rule-derived",
+    "note": "Steady-state estimate; verify with headspace gas analysis."
+   },
+   "configTemplate": {
+    "note": "O₂/CO₂ window is the published recommendation for tomato; the equilibrium values are steady-state estimates to verify with headspace gas analysis.",
+    "o2Target": "3–5 %",
+    "co2Target": "2–3 %"
+   }
+  },
+  "confidence": {
+   "level": "prototype",
+   "reasons": [
+    "Catalog food profile; engine constants are prototype estimates pending lab validation.",
+    "No candidate satisfied every requirement."
+   ]
+  },
+  "risks": [
+   {
+    "code": "RESPIRATION",
+    "title": "Respiration and headspace anoxia",
+    "level": "high",
+    "severity": 0.9,
+    "drivers": [
+     "high respiration class",
+     "12 °C storage"
+    ]
+   },
+   {
+    "code": "CONDENSATION",
+    "title": "Condensation and fogging",
+    "level": "medium",
+    "severity": 0.5,
+    "drivers": [
+     "85 % RH",
+     "temperature swings during cold chain"
+    ]
+   },
+   {
+    "code": "HANDLING",
+    "title": "Handling and transit damage",
+    "level": "medium",
+    "severity": 0.5,
+    "drivers": [
+     "medium transport stress",
+     "refrigerated transport"
+    ]
+   },
+   {
+    "code": "DEHYDRATION",
+    "title": "Dehydration and weight loss",
+    "level": "low",
+    "severity": 0.28,
+    "drivers": [
+     "aw 0.99 vs 85 % RH outside"
+    ]
+   }
+  ],
+  "specifications": {
+   "otr": {
+    "targetMax": null,
+    "candidate": 5200.0,
+    "atStorage": 2700.0,
+    "unit": "cc/m²·day·atm",
+    "testConditions": "23 °C, 0 % RH (ASTM D3985)"
+   },
+   "wvtr": {
+    "targetMax": 2598.021,
+    "candidate": 22.0,
+    "unit": "g/m²·day",
+    "testConditions": "38 °C, 90 % RH (ASTM F1249)"
+   },
+   "totalGaugeUm": 40.0,
+   "layers": [
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "thicknessUm": 40.0,
+     "function": "seal",
+     "role": "Heat-seal layer (105–130 °C)"
+    }
+   ],
+   "mechanicalIndex": 20,
+   "gelboPinholes": null,
+   "perforation": {
+    "type": "macro",
+    "required": true,
+    "diameterUm": 5000,
+    "holesPerPack": 8,
+    "standard": "Mechanical vent holes",
+    "provenance": "prototype estimate"
+   },
+   "mapFlush": null,
+   "sealStrength": {
+    "target": "≥ 10 N/15 mm (ASTM F88)",
+    "provenance": "prototype estimate"
+   },
+   "compliance": {
+    "foodContactStandards": [
+     "EU 10/2011",
+     "IS 10146",
+     "US FDA 21 CFR 177.1520"
+    ],
+    "migrationSimulant": "Acidic food: 3 % acetic acid (IS 9845)",
+    "overallMigrationLimit": "≤ 60 mg/kg food simulant or ≤ 10 mg/dm² (FSSAI Packaging Regulations 2018); confirm by test",
+    "eprCategory": "II"
+   },
+   "gasBalance": {
+    "o2Pct": 20.6,
+    "co2Pct": 0.4,
+    "o2PctWorstCase": 20.4,
+    "worstCaseTempC": 16.0,
+    "provenance": "rule-derived",
+    "note": "Steady-state estimate; verify with headspace gas analysis."
+   }
+  },
+  "shelfLife": {
+   "estimateDays": 15.0,
+   "lowDays": 11.0,
+   "highDays": 20.0,
+   "failureMode": "senescence and ripening",
+   "mechanisms": {
+    "senescence and ripening": 15.0,
+    "dehydration (weight loss)": 241.0
+   },
+   "provenance": "prototype estimate",
+   "targetDays": 20,
+   "meetsTarget": false
+  },
+  "costAndImpact": {
+   "inrPerPack": 0.91,
+   "costBand": "low",
+   "gramsPerPack": 4.4,
+   "gCo2ePerPack": 9.1,
+   "eprCategory": "II",
+   "eprFeeInrPerPack": 0.022,
+   "monoMaterial": true,
+   "recyclable": true,
+   "recyclabilityIndex": 90,
+   "provenance": "prototype estimate"
+  },
+  "rejected": [
+   {
+    "structure": "Micro-perforated PBS/PHA bio-blend (40 µm)",
+    "structureId": "MP_PBS_PHA",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 11 days (CO₂ injury) is below your 20-day target."
+    ]
+   },
+   {
+    "structure": "Micro-perforated compostable PLA film (30 µm)",
+    "structureId": "MP_PLA",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 11 days (CO₂ injury) is below your 20-day target."
+    ]
+   },
+   {
+    "structure": "Unperforated anti-fog BOPP (25 µm)",
+    "structureId": "PLAIN_ANTIFOG_BOPP",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 3.2 days (CO₂ injury) is below your 20-day target."
+    ]
+   },
+   {
+    "structure": "BOPA 15 / PE-EVOH-PE coex 50",
+    "structureId": "BOPA_EVOH",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "BOPA 15 / Ionomer 60",
+    "structureId": "BOPA_IONOMER",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "BOPA 15 / mLLDPE 60 (vacuum pouch)",
+    "structureId": "BOPA_MLLDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "HDPE 40 single-layer bag",
+    "structureId": "HDPE_MONO",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "LDPE 50 single-layer pouch",
+    "structureId": "LDPE_MONO",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "BOPE 25 / mLLDPE 50 (mono-PE)",
+    "structureId": "MONO_PE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE)",
+    "structureId": "MONO_PE_EVOH",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "Coated BOPP 20 / CPP 30 (mono-PP)",
+    "structureId": "MONO_PP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "BOPP 20 / Met-BOPP 20",
+    "structureId": "OPP_METOPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "PET 12 / Al foil 9 / CPP 50",
+    "structureId": "PET_AL_CPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen.",
+     "It's likely to crack when flexed in transport: up to 120 pinholes in a Gelbo flex test, more than the 60 allowed for medium transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / Al foil 9 / mLLDPE 50",
+    "structureId": "PET_AL_MLLDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen.",
+     "It's likely to crack when flexed in transport: up to 120 pinholes in a Gelbo flex test, more than the 60 allowed for medium transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / PE-EVOH-PE coex 50",
+    "structureId": "PET_EVOH",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "PET 12 / LDPE 50",
+    "structureId": "PET_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / Ionomer 50",
+    "structureId": "PET_METPET_IONOMER",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / LDPE 50",
+    "structureId": "PET_METPET_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / mLLDPE 50",
+    "structureId": "PET_METPET_MLLDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   },
+   {
+    "structure": "PLA 30 / PBS-PHA 40 (compostable laminate)",
+    "structureId": "PLA_PBS",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a sealed high-barrier pack, so the produce, which keeps breathing after harvest, would run out of oxygen."
+    ]
+   }
+  ],
+  "warnings": [
+   "No candidate reaches the 20-day target under these conditions; showing the closest options."
+  ],
+  "assumptions": [
+   "Pack format assumed: 1 kg retail bag (1000 g, 0.12 m² film area).",
+   "Transit excursion to 16 °C checked for produce gas balance.",
+   "Shelf-life, cost and footprint figures are prototype estimates (±30 % band) pending laboratory validation."
+  ],
+  "inputsUsed": {
+   "commodity": "Tomato",
+   "commodityId": "TOMATO_GENERIC",
+   "category": "fresh_produce",
+   "profile": {
+    "moisturePct": {
+     "value": 94,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "fatPct": {
+     "value": 0.2,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "ph": {
+     "value": 4.5,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "respirationClass": {
+     "value": "high",
+     "provenance": "rule-derived",
+     "confidence": "medium"
+    },
+    "oxidationSensitivity": {
+     "value": "medium",
+     "provenance": "rule-derived",
+     "confidence": "medium"
+    }
+   },
+   "engineParameters": {
+    "awInitial": {
+     "value": 0.99,
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    },
+    "o2WindowPct": {
+     "value": [
+      3,
+      5
+     ],
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "co2WindowPct": {
+     "value": [
+      2,
+      3
+     ],
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "chillThresholdC": {
+     "value": 10,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "airShelfLifeDays20": {
+     "value": 8,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "mapProfile": {
+     "value": "emap",
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    }
+   },
+   "pack": {
+    "netWeightG": 1000,
+    "areaM2": 0.12,
+    "format": "1 kg retail bag",
+    "provenance": "prototype estimate"
+   },
+   "conditions": {
+    "temperatureC": 12.0,
+    "relativeHumidityPct": 85.0,
+    "storageType": "chilled",
+    "targetShelfLifeDays": 20,
+    "transportMode": "refrigerated_transport",
+    "transportStress": "medium"
+   },
+   "priorities": {
+    "shelfLife": 0.8,
+    "cost": 0.4,
+    "sustainability": 0.7,
+    "mechanicalStrength": 0.5
+   },
+   "hardConstraints": []
+  },
+  "trace": [
+   {
+    "stage": "profile",
+    "detail": "Tomato: 5 of 5 food properties known"
+   },
+   {
+    "stage": "risks",
+    "detail": "4 risks assessed; highest: respiration and headspace anoxia (high)"
+   },
+   {
+    "stage": "requirements",
+    "detail": "7 packaging requirements set"
+   },
+   {
+    "stage": "filter",
+    "detail": "24 structures screened, 7 passed the hard checks"
+   },
+   {
+    "stage": "score",
+    "detail": "None reach the 20-day target; closest options ranked by your priorities"
+   },
+   {
+    "stage": "explain",
+    "detail": "5 reasons and 3 alternatives prepared"
+   }
+  ]
+ },
+ "dry": {
+  "engineVersion": "0.1.0",
+  "freshProduceMode": false,
+  "recommendation": {
+   "structure": "BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE)",
+   "structureId": "MONO_PE_EVOH",
+   "confidence": "prototype",
+   "profile": "Best balance for your priorities (TOPSIS)",
+   "score": 0.793
+  },
+  "requirements": [
+   {
+    "label": "OTR target",
+    "value": "≤ 6.7 cc/m²·day·atm (23 °C, 0 % RH)",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "WVTR target",
+    "value": "≤ 1.8 g/m²·day (38 °C, 90 % RH)",
+    "status": "REVIEW",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Light barrier",
+    "value": "High (opaque or metallised)",
+    "status": "REVIEW",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Thickness",
+    "value": "75 µm (BOPE 25 / PE-EVOH-PE 50)",
+    "status": "REVIEW",
+    "provenance": "prototype estimate"
+   },
+   {
+    "label": "Sealability",
+    "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+    "status": "REVIEW",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Mechanical protection",
+    "value": "High transport stress: index ≥ 65, ≤ 20 Gelbo pinholes",
+    "status": "REVIEW",
+    "provenance": "prototype estimate"
+   },
+   {
+    "label": "MAP",
+    "value": "N₂ flush, residual O₂ below 2 %",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   }
+  ],
+  "why": [
+   "Water activity 0.18 against 75 % RH outside means the product gains moisture and loses quality at aw 0.45, so WVTR must stay at or below 1.8 g/m²·day (38 °C, 90 % RH) for 120 days.",
+   "34 % fat with high oxidation sensitivity tolerates about 200 mg O₂/kg, so OTR must stay at or below 6.7 cc/m²·day·atm (23 °C) for 120 days.",
+   "Fat plus light sensitivity makes photo-oxidation likely, so an opaque or metallised layer is required.",
+   "34 % fat can contaminate the seal jaws, so the sealant must seal through contamination (mLLDPE or ionomer).",
+   "High transport stress allows at most 20 Gelbo flex pinholes, which rules out the more crack-prone barrier laminates.",
+   "No candidate met every constraint and your 120-day target, so BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE) is the closest option (estimated 58–108 days). Review the flagged requirements."
+  ],
+  "alternatives": [
+   {
+    "structure": "HDPE 40 single-layer bag",
+    "structureId": "HDPE_MONO",
+    "profile": "Lowest cost",
+    "tradeoffSummary": "Lowest cost: ≈75 % lower cost (₹0.35 vs ₹1.41 per pack); below your 120-day target (estimated 0.2 days, limited by lipid oxidation (rancidity)); lower footprint (4 vs 13 g CO₂e); needs review on otr target, wvtr target, light barrier.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "≤ 6.7 cc/m²·day·atm (23 °C, 0 % RH)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "WVTR target",
+      "value": "≤ 1.8 g/m²·day (38 °C, 90 % RH)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Light barrier",
+      "value": "High (opaque or metallised)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "40 µm (HDPE 40)",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "High transport stress: index ≥ 65, ≤ 20 Gelbo pinholes",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "N₂ flush, residual O₂ below 2 %",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 0.2,
+     "lowDays": 0.2,
+     "highDays": 0.3,
+     "failureMode": "lipid oxidation (rancidity)",
+     "mechanisms": {
+      "moisture gain (texture loss or caking)": 51.0,
+      "lipid oxidation (rancidity)": 0.2
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 120,
+     "meetsTarget": false
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.35,
+     "costBand": "low",
+     "gramsPerPack": 2.3,
+     "gCo2ePerPack": 4.5,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.011,
+     "monoMaterial": true,
+     "recyclable": true,
+     "recyclabilityIndex": 90,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.303
+   },
+   {
+    "structure": "Coated BOPP 20 / CPP 30 (mono-PP)",
+    "structureId": "MONO_PP",
+    "profile": "Lowest footprint",
+    "tradeoffSummary": "Lowest footprint: ≈54 % lower cost (₹0.64 vs ₹1.41 per pack); below your 120-day target (estimated 53 days, limited by lipid oxidation (rancidity)); lower footprint (6 vs 13 g CO₂e); needs review on otr target, wvtr target, light barrier.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "≤ 6.7 cc/m²·day·atm (23 °C, 0 % RH)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "WVTR target",
+      "value": "≤ 1.8 g/m²·day (38 °C, 90 % RH)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Light barrier",
+      "value": "High (opaque or metallised)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "50 µm (coated BOPP 20 / CPP 30)",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "High transport stress: index ≥ 65, ≤ 20 Gelbo pinholes",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "N₂ flush, residual O₂ below 2 %",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 53.0,
+     "lowDays": 37.0,
+     "highDays": 69.0,
+     "failureMode": "lipid oxidation (rancidity)",
+     "mechanisms": {
+      "moisture gain (texture loss or caking)": 91.0,
+      "lipid oxidation (rancidity)": 53.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 120,
+     "meetsTarget": false
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.64,
+     "costBand": "medium",
+     "gramsPerPack": 2.7,
+     "gCo2ePerPack": 5.8,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.014,
+     "monoMaterial": true,
+     "recyclable": true,
+     "recyclabilityIndex": 90,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.628
+   },
+   {
+    "structure": "BOPA 15 / mLLDPE 60 (vacuum pouch)",
+    "structureId": "BOPA_MLLDPE",
+    "profile": "Strongest",
+    "tradeoffSummary": "Strongest: ≈30 % lower cost (₹0.98 vs ₹1.41 per pack); below your 120-day target (estimated 5 days, limited by lipid oxidation (rancidity)); higher footprint (16 vs 13 g CO₂e); needs review on otr target, wvtr target, light barrier.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "≤ 6.7 cc/m²·day·atm (23 °C, 0 % RH)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "WVTR target",
+      "value": "≤ 1.8 g/m²·day (38 °C, 90 % RH)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Light barrier",
+      "value": "High (opaque or metallised)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "75 µm (BOPA 15 / mLLDPE 60)",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "High transport stress: index ≥ 65, ≤ 20 Gelbo pinholes",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "N₂ flush, residual O₂ below 2 %",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 5.0,
+     "lowDays": 3.5,
+     "highDays": 6.6,
+     "failureMode": "lipid oxidation (rancidity)",
+     "mechanisms": {
+      "moisture gain (texture loss or caking)": 18.0,
+      "lipid oxidation (rancidity)": 5.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 120,
+     "meetsTarget": false
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.98,
+     "costBand": "medium",
+     "gramsPerPack": 4.3,
+     "gCo2ePerPack": 16.2,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.022,
+     "monoMaterial": false,
+     "recyclable": false,
+     "recyclabilityIndex": 40,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.27
+   }
+  ],
+  "freshProduce": null,
+  "confidence": {
+   "level": "prototype",
+   "reasons": [
+    "Catalog food profile; engine constants are prototype estimates pending lab validation.",
+    "No candidate satisfied every requirement."
+   ]
+  },
+  "risks": [
+   {
+    "code": "OXIDATION",
+    "title": "Lipid oxidation (rancidity)",
+    "level": "high",
+    "severity": 0.85,
+    "drivers": [
+     "34 % fat",
+     "high oxidation sensitivity"
+    ]
+   },
+   {
+    "code": "HANDLING",
+    "title": "Handling and transit damage",
+    "level": "high",
+    "severity": 0.85,
+    "drivers": [
+     "high transport stress",
+     "ambient transport"
+    ]
+   },
+   {
+    "code": "LIGHT",
+    "title": "Photo-oxidation",
+    "level": "high",
+    "severity": 0.7,
+    "drivers": [
+     "34 % fat",
+     "light-sensitive product"
+    ]
+   },
+   {
+    "code": "MOISTURE_GAIN",
+    "title": "Moisture ingress",
+    "level": "medium",
+    "severity": 0.62,
+    "drivers": [
+     "aw 0.18 vs 75 % RH outside",
+     "quality limit at aw 0.45"
+    ]
+   },
+   {
+    "code": "SEAL_CONTAMINATION",
+    "title": "Seal contamination",
+    "level": "medium",
+    "severity": 0.6,
+    "drivers": [
+     "34 % fat",
+     "oil or liquid on seal jaws"
+    ]
+   }
+  ],
+  "specifications": {
+   "otr": {
+    "targetMax": 6.698,
+    "candidate": 2.5,
+    "atStorage": 4.5,
+    "unit": "cc/m²·day·atm",
+    "testConditions": "23 °C, 0 % RH (ASTM D3985)"
+   },
+   "wvtr": {
+    "targetMax": 1.827,
+    "candidate": 2.8,
+    "unit": "g/m²·day",
+    "testConditions": "38 °C, 90 % RH (ASTM F1249)"
+   },
+   "totalGaugeUm": 75.0,
+   "layers": [
+    {
+     "materialId": "BOPE",
+     "name": "Biaxially oriented PE (BOPE)",
+     "thicknessUm": 25.0,
+     "function": "print",
+     "role": "Strength, stiffness and printing support"
+    },
+    {
+     "materialId": "EVOH_COEX",
+     "name": "PE/EVOH/PE coextruded barrier film",
+     "thicknessUm": 50.0,
+     "function": "barrier",
+     "role": "Gas and moisture barrier"
+    }
+   ],
+   "mechanicalIndex": 49,
+   "gelboPinholes": 12.0,
+   "perforation": null,
+   "mapFlush": {
+    "label": "N₂ flush, residual O₂ below 2 %",
+    "o2": "< 2 %",
+    "co2": "0 %",
+    "n2": "balance"
+   },
+   "sealStrength": {
+    "target": "≥ 15 N/15 mm (ASTM F88)",
+    "provenance": "prototype estimate"
+   },
+   "compliance": {
+    "foodContactStandards": [
+     "IS 10146",
+     "US FDA 21 CFR 177.1360"
+    ],
+    "migrationSimulant": "Fatty food: n-heptane or rectified olive oil (IS 9845)",
+    "overallMigrationLimit": "≤ 60 mg/kg food simulant or ≤ 10 mg/dm² (FSSAI Packaging Regulations 2018); confirm by test",
+    "eprCategory": "II"
+   }
+  },
+  "shelfLife": {
+   "estimateDays": 83.0,
+   "lowDays": 58.0,
+   "highDays": 108.0,
+   "failureMode": "moisture gain (texture loss or caking)",
+   "mechanisms": {
+    "moisture gain (texture loss or caking)": 83.0,
+    "lipid oxidation (rancidity)": 125.0
+   },
+   "provenance": "prototype estimate",
+   "targetDays": 120,
+   "meetsTarget": false
+  },
+  "costAndImpact": {
+   "inrPerPack": 1.41,
+   "costBand": "high",
+   "gramsPerPack": 4.3,
+   "gCo2ePerPack": 13.1,
+   "eprCategory": "II",
+   "eprFeeInrPerPack": 0.022,
+   "monoMaterial": true,
+   "recyclable": true,
+   "recyclabilityIndex": 90,
+   "provenance": "prototype estimate"
+  },
+  "rejected": [
+   {
+    "structure": "BOPA 15 / PE-EVOH-PE coex 50",
+    "structureId": "BOPA_EVOH",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 45 days (moisture gain (texture loss or caking)) is below your 120-day target."
+    ]
+   },
+   {
+    "structure": "BOPA 15 / Ionomer 60",
+    "structureId": "BOPA_IONOMER",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 5 days (lipid oxidation (rancidity)) is below your 120-day target."
+    ]
+   },
+   {
+    "structure": "BOPE 25 / mLLDPE 50 (mono-PE)",
+    "structureId": "MONO_PE",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 0.2 days (lipid oxidation (rancidity)) is below your 120-day target."
+    ]
+   },
+   {
+    "structure": "PET 12 / PE-EVOH-PE coex 50",
+    "structureId": "PET_EVOH",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 53 days (moisture gain (texture loss or caking)) is below your 120-day target."
+    ]
+   },
+   {
+    "structure": "PLA 30 / PBS-PHA 40 (compostable laminate)",
+    "structureId": "PLA_PBS",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 2 days (lipid oxidation (rancidity)) is below your 120-day target."
+    ]
+   },
+   {
+    "structure": "LDPE 50 single-layer pouch",
+    "structureId": "LDPE_MONO",
+    "stage": "hard-constraint",
+    "reasons": [
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "LDPE bag with macro-perforations (40 µm)",
+    "structureId": "MACRO_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen.",
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "Micro-perforated anti-fog BOPP (25 µm)",
+    "structureId": "MP_ANTIFOG_BOPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Micro-perforated anti-fog LDPE (30 µm)",
+    "structureId": "MP_ANTIFOG_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Micro-perforated PBS/PHA bio-blend (40 µm)",
+    "structureId": "MP_PBS_PHA",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Micro-perforated compostable PLA film (30 µm)",
+    "structureId": "MP_PLA",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "BOPP 20 / Met-BOPP 20",
+    "structureId": "OPP_METOPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 25 pinholes in a Gelbo flex test, more than the 20 allowed for high transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / Al foil 9 / CPP 50",
+    "structureId": "PET_AL_CPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 120 pinholes in a Gelbo flex test, more than the 20 allowed for high transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / Al foil 9 / mLLDPE 50",
+    "structureId": "PET_AL_MLLDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 120 pinholes in a Gelbo flex test, more than the 20 allowed for high transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / LDPE 50",
+    "structureId": "PET_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / Ionomer 50",
+    "structureId": "PET_METPET_IONOMER",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 35 pinholes in a Gelbo flex test, more than the 20 allowed for high transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / LDPE 50",
+    "structureId": "PET_METPET_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer.",
+     "It's likely to crack when flexed in transport: up to 35 pinholes in a Gelbo flex test, more than the 20 allowed for high transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / mLLDPE 50",
+    "structureId": "PET_METPET_MLLDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 35 pinholes in a Gelbo flex test, more than the 20 allowed for high transport stress."
+    ]
+   },
+   {
+    "structure": "Unperforated anti-fog BOPP (25 µm)",
+    "structureId": "PLAIN_ANTIFOG_BOPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Unperforated LDPE bag (30 µm)",
+    "structureId": "PLAIN_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen.",
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   }
+  ],
+  "warnings": [
+   "No candidate reaches the 120-day target under these conditions; showing the closest options."
+  ],
+  "assumptions": [
+   "Pack format assumed: 100 g pillow pouch (100 g, 0.06 m² film area).",
+   "Shelf-life, cost and footprint figures are prototype estimates (±30 % band) pending laboratory validation."
+  ],
+  "inputsUsed": {
+   "commodity": "Potato chips",
+   "commodityId": "POTATO_CHIPS",
+   "category": "snack",
+   "profile": {
+    "moisturePct": {
+     "value": 2,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "fatPct": {
+     "value": 34,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "ph": {
+     "value": 6.1,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "respirationClass": {
+     "value": "none",
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "oxidationSensitivity": {
+     "value": "high",
+     "provenance": "rule-derived",
+     "confidence": "medium"
+    }
+   },
+   "engineParameters": {
+    "moistureCriticalPct": {
+     "value": 4.5,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "awInitial": {
+     "value": 0.18,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "awCritical": {
+     "value": 0.45,
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    },
+    "lightSensitive": {
+     "value": true,
+     "provenance": "rule-derived",
+     "confidence": "medium"
+    },
+    "mapProfile": {
+     "value": "n2_flush",
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    }
+   },
+   "pack": {
+    "netWeightG": 100,
+    "areaM2": 0.06,
+    "format": "100 g pillow pouch",
+    "provenance": "prototype estimate"
+   },
+   "conditions": {
+    "temperatureC": 30.0,
+    "relativeHumidityPct": 75.0,
+    "storageType": "ambient",
+    "targetShelfLifeDays": 120,
+    "transportMode": "ambient_transport",
+    "transportStress": "high"
+   },
+   "priorities": {
+    "shelfLife": 0.8,
+    "cost": 0.4,
+    "sustainability": 0.7,
+    "mechanicalStrength": 0.5
+   },
+   "hardConstraints": []
+  },
+  "trace": [
+   {
+    "stage": "profile",
+    "detail": "Potato chips: 5 of 5 food properties known"
+   },
+   {
+    "stage": "risks",
+    "detail": "5 risks assessed; highest: lipid oxidation (rancidity) (high)"
+   },
+   {
+    "stage": "requirements",
+    "detail": "7 packaging requirements set"
+   },
+   {
+    "stage": "filter",
+    "detail": "24 structures screened, 9 passed the hard checks"
+   },
+   {
+    "stage": "score",
+    "detail": "None reach the 120-day target; closest options ranked by your priorities"
+   },
+   {
+    "stage": "explain",
+    "detail": "6 reasons and 3 alternatives prepared"
+   }
+  ]
+ },
+ "generic": {
+  "engineVersion": "0.1.0",
+  "freshProduceMode": false,
+  "recommendation": {
+   "structure": "Coated BOPP 20 / CPP 30 (mono-PP)",
+   "structureId": "MONO_PP",
+   "confidence": "prototype",
+   "profile": "Best balance for your priorities (TOPSIS)",
+   "score": 0.633
+  },
+  "requirements": [
+   {
+    "label": "OTR target",
+    "value": "≤ 1,600 cc/m²·day·atm (23 °C, 0 % RH)",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "WVTR target",
+    "value": "≤ 1,800 g/m²·day (38 °C, 90 % RH) to keep weight loss under 2 %",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Thickness",
+    "value": "50 µm (coated BOPP 20 / CPP 30)",
+    "status": "REVIEW",
+    "provenance": "prototype estimate"
+   },
+   {
+    "label": "Sealability",
+    "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+    "status": "REVIEW",
+    "provenance": "rule-derived"
+   },
+   {
+    "label": "Mechanical protection",
+    "value": "Medium transport stress: index ≥ 45, ≤ 60 Gelbo pinholes",
+    "status": "REVIEW",
+    "provenance": "prototype estimate"
+   },
+   {
+    "label": "MAP",
+    "value": "Vacuum, or 30 % CO₂ / 70 % N₂",
+    "status": "PASS",
+    "provenance": "rule-derived"
+   }
+  ],
+  "why": [
+   "The product (aw 0.99) dries out at 80 % RH, so WVTR must stay at or below 1,800 g/m²·day to limit weight loss to 2 %.",
+   "24.8 % fat with medium oxidation sensitivity tolerates about 500 mg O₂/kg, so OTR must stay at or below 1,600 cc/m²·day·atm (23 °C) for 14 days.",
+   "Water activity 0.99 at 4 °C supports microbial growth. Vacuum in a hermetic barrier pack slows spoilage, but the cold chain stays essential.",
+   "24.8 % fat can contaminate the seal jaws, so the sealant must seal through contamination (mLLDPE or ionomer).",
+   "Medium transport stress allows at most 60 Gelbo flex pinholes, which rules out the more crack-prone barrier laminates.",
+   "Coated BOPP 20 / CPP 30 (mono-PP) passes every hard constraint and gives the best balance for your priorities (shelf life and sustainability): estimated shelf life 10–20 days against your 14-day target, at about ₹0.43 per pack."
+  ],
+  "alternatives": [
+   {
+    "structure": "BOPP 20 / Met-BOPP 20",
+    "structureId": "OPP_METOPP",
+    "profile": "Lowest cost",
+    "tradeoffSummary": "Lowest cost: ≈20 % lower cost (₹0.34 vs ₹0.43 per pack); EPR Category III instead of II; needs review on thickness, sealability, mechanical protection.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "≤ 1,600 cc/m²·day·atm (23 °C, 0 % RH)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "WVTR target",
+      "value": "≤ 1,800 g/m²·day (38 °C, 90 % RH) to keep weight loss under 2 %",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "40 µm (BOPP 20 / Met-BOPP 20)",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "Medium transport stress: index ≥ 45, ≤ 60 Gelbo pinholes",
+      "status": "REVIEW",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "Vacuum, or 30 % CO₂ / 70 % N₂",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 15.0,
+     "lowDays": 10.0,
+     "highDays": 20.0,
+     "failureMode": "microbial spoilage",
+     "mechanisms": {
+      "moisture loss (drying or freezer burn)": 3650.0,
+      "lipid oxidation (rancidity)": 978.0,
+      "microbial spoilage": 15.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 14,
+     "meetsTarget": true
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.34,
+     "costBand": "low",
+     "gramsPerPack": 1.4,
+     "gCo2ePerPack": 3.3,
+     "eprCategory": "III",
+     "eprFeeInrPerPack": 0.017,
+     "monoMaterial": true,
+     "recyclable": false,
+     "recyclabilityIndex": 25,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.479
+   },
+   {
+    "structure": "BOPA 15 / mLLDPE 60 (vacuum pouch)",
+    "structureId": "BOPA_MLLDPE",
+    "profile": "Strongest",
+    "tradeoffSummary": "Strongest: ≈53 % higher cost (₹0.66 vs ₹0.43 per pack); higher footprint (11 vs 4 g CO₂e).",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "≤ 1,600 cc/m²·day·atm (23 °C, 0 % RH)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "WVTR target",
+      "value": "≤ 1,800 g/m²·day (38 °C, 90 % RH) to keep weight loss under 2 %",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "75 µm (BOPA 15 / mLLDPE 60)",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "Medium transport stress: index ≥ 45, ≤ 60 Gelbo pinholes",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "Vacuum, or 30 % CO₂ / 70 % N₂",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 15.0,
+     "lowDays": 10.0,
+     "highDays": 20.0,
+     "failureMode": "microbial spoilage",
+     "mechanisms": {
+      "moisture loss (drying or freezer burn)": 2519.0,
+      "lipid oxidation (rancidity)": 112.0,
+      "microbial spoilage": 15.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 14,
+     "meetsTarget": true
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.66,
+     "costBand": "medium",
+     "gramsPerPack": 2.9,
+     "gCo2ePerPack": 10.8,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.014,
+     "monoMaterial": false,
+     "recyclable": false,
+     "recyclabilityIndex": 40,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.528
+   },
+   {
+    "structure": "BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE)",
+    "structureId": "MONO_PE_EVOH",
+    "profile": "Balanced alternative",
+    "tradeoffSummary": "Balanced alternative: ≈118 % higher cost (₹0.94 vs ₹0.43 per pack); higher footprint (9 vs 4 g CO₂e); needs review on sealability.",
+    "requirements": [
+     {
+      "label": "OTR target",
+      "value": "≤ 1,600 cc/m²·day·atm (23 °C, 0 % RH)",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "WVTR target",
+      "value": "≤ 1,800 g/m²·day (38 °C, 90 % RH) to keep weight loss under 2 %",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Thickness",
+      "value": "75 µm (BOPE 25 / PE-EVOH-PE 50)",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "Sealability",
+      "value": "High: contamination-tolerant sealant (mLLDPE or ionomer)",
+      "status": "REVIEW",
+      "provenance": "rule-derived"
+     },
+     {
+      "label": "Mechanical protection",
+      "value": "Medium transport stress: index ≥ 45, ≤ 60 Gelbo pinholes",
+      "status": "PASS",
+      "provenance": "prototype estimate"
+     },
+     {
+      "label": "MAP",
+      "value": "Vacuum, or 30 % CO₂ / 70 % N₂",
+      "status": "PASS",
+      "provenance": "rule-derived"
+     }
+    ],
+    "shelfLife": {
+     "estimateDays": 15.0,
+     "lowDays": 10.0,
+     "highDays": 20.0,
+     "failureMode": "microbial spoilage",
+     "mechanisms": {
+      "moisture loss (drying or freezer burn)": 3650.0,
+      "lipid oxidation (rancidity)": 3373.0,
+      "microbial spoilage": 15.0
+     },
+     "provenance": "prototype estimate",
+     "targetDays": 14,
+     "meetsTarget": true
+    },
+    "costAndImpact": {
+     "inrPerPack": 0.94,
+     "costBand": "high",
+     "gramsPerPack": 2.9,
+     "gCo2ePerPack": 8.7,
+     "eprCategory": "II",
+     "eprFeeInrPerPack": 0.014,
+     "monoMaterial": true,
+     "recyclable": true,
+     "recyclabilityIndex": 90,
+     "provenance": "prototype estimate"
+    },
+    "score": 0.572
+   }
+  ],
+  "freshProduce": null,
+  "confidence": {
+   "level": "prototype",
+   "reasons": []
+  },
+  "risks": [
+   {
+    "code": "MICROBIAL",
+    "title": "Microbial spoilage",
+    "level": "high",
+    "severity": 0.7,
+    "drivers": [
+     "aw 0.99",
+     "pH 5.8",
+     "4 °C"
+    ]
+   },
+   {
+    "code": "SEAL_CONTAMINATION",
+    "title": "Seal contamination",
+    "level": "medium",
+    "severity": 0.6,
+    "drivers": [
+     "24.8 % fat",
+     "oil or liquid on seal jaws"
+    ]
+   },
+   {
+    "code": "OXIDATION",
+    "title": "Lipid oxidation (rancidity)",
+    "level": "medium",
+    "severity": 0.55,
+    "drivers": [
+     "24.8 % fat",
+     "medium oxidation sensitivity"
+    ]
+   },
+   {
+    "code": "HANDLING",
+    "title": "Handling and transit damage",
+    "level": "medium",
+    "severity": 0.5,
+    "drivers": [
+     "medium transport stress",
+     "refrigerated transport"
+    ]
+   },
+   {
+    "code": "MOISTURE_LOSS",
+    "title": "Moisture loss (drying, freezer burn)",
+    "level": "medium",
+    "severity": 0.4,
+    "drivers": [
+     "aw 0.99 vs 80 % RH outside"
+    ]
+   }
+  ],
+  "specifications": {
+   "otr": {
+    "targetMax": 1584.37,
+    "candidate": 8.0,
+    "atStorage": 3.5,
+    "unit": "cc/m²·day·atm",
+    "testConditions": "23 °C, 0 % RH (ASTM D3985)"
+   },
+   "wvtr": {
+    "targetMax": 1846.045,
+    "candidate": 2.4,
+    "unit": "g/m²·day",
+    "testConditions": "38 °C, 90 % RH (ASTM F1249)"
+   },
+   "totalGaugeUm": 50.0,
+   "layers": [
+    {
+     "materialId": "COATED_BOPP",
+     "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+     "thicknessUm": 20.0,
+     "function": "barrier",
+     "role": "Gas and moisture barrier"
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "thicknessUm": 30.0,
+     "function": "seal",
+     "role": "Heat-seal layer (125–150 °C)"
+    }
+   ],
+   "mechanicalIndex": 30,
+   "gelboPinholes": 10.0,
+   "perforation": null,
+   "mapFlush": {
+    "label": "Vacuum, or 30 % CO₂ / 70 % N₂",
+    "o2": "0 %",
+    "co2": "30 %",
+    "n2": "70 %"
+   },
+   "sealStrength": {
+    "target": "≥ 15 N/15 mm (ASTM F88)",
+    "provenance": "prototype estimate"
+   },
+   "compliance": {
+    "foodContactStandards": [
+     "IS 10910",
+     "US FDA 21 CFR 177.1520"
+    ],
+    "migrationSimulant": "Fatty food: n-heptane or rectified olive oil (IS 9845)",
+    "overallMigrationLimit": "≤ 60 mg/kg food simulant or ≤ 10 mg/dm² (FSSAI Packaging Regulations 2018); confirm by test",
+    "eprCategory": "II"
+   }
+  },
+  "shelfLife": {
+   "estimateDays": 15.0,
+   "lowDays": 10.0,
+   "highDays": 20.0,
+   "failureMode": "microbial spoilage",
+   "mechanisms": {
+    "moisture loss (drying or freezer burn)": 3650.0,
+    "lipid oxidation (rancidity)": 2423.0,
+    "microbial spoilage": 15.0
+   },
+   "provenance": "prototype estimate",
+   "targetDays": 14,
+   "meetsTarget": true
+  },
+  "costAndImpact": {
+   "inrPerPack": 0.43,
+   "costBand": "medium",
+   "gramsPerPack": 1.8,
+   "gCo2ePerPack": 3.8,
+   "eprCategory": "II",
+   "eprFeeInrPerPack": 0.009,
+   "monoMaterial": true,
+   "recyclable": true,
+   "recyclabilityIndex": 90,
+   "provenance": "prototype estimate"
+  },
+  "rejected": [
+   {
+    "structure": "HDPE 40 single-layer bag",
+    "structureId": "HDPE_MONO",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 6 days (microbial spoilage) is below your 14-day target."
+    ]
+   },
+   {
+    "structure": "BOPE 25 / mLLDPE 50 (mono-PE)",
+    "structureId": "MONO_PE",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 6 days (microbial spoilage) is below your 14-day target."
+    ]
+   },
+   {
+    "structure": "PLA 30 / PBS-PHA 40 (compostable laminate)",
+    "structureId": "PLA_PBS",
+    "stage": "performance",
+    "reasons": [
+     "Estimated shelf life 7.8 days (microbial spoilage) is below your 14-day target."
+    ]
+   },
+   {
+    "structure": "LDPE 50 single-layer pouch",
+    "structureId": "LDPE_MONO",
+    "stage": "hard-constraint",
+    "reasons": [
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "LDPE bag with macro-perforations (40 µm)",
+    "structureId": "MACRO_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen.",
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "Micro-perforated anti-fog BOPP (25 µm)",
+    "structureId": "MP_ANTIFOG_BOPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Micro-perforated anti-fog LDPE (30 µm)",
+    "structureId": "MP_ANTIFOG_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Micro-perforated PBS/PHA bio-blend (40 µm)",
+    "structureId": "MP_PBS_PHA",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Micro-perforated compostable PLA film (30 µm)",
+    "structureId": "MP_PLA",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "PET 12 / Al foil 9 / CPP 50",
+    "structureId": "PET_AL_CPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 120 pinholes in a Gelbo flex test, more than the 60 allowed for medium transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / Al foil 9 / mLLDPE 50",
+    "structureId": "PET_AL_MLLDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's likely to crack when flexed in transport: up to 120 pinholes in a Gelbo flex test, more than the 60 allowed for medium transport stress."
+    ]
+   },
+   {
+    "structure": "PET 12 / LDPE 50",
+    "structureId": "PET_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / LDPE 50",
+    "structureId": "PET_METPET_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "Unperforated anti-fog BOPP (25 µm)",
+    "structureId": "PLAIN_ANTIFOG_BOPP",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen."
+    ]
+   },
+   {
+    "structure": "Unperforated LDPE bag (30 µm)",
+    "structureId": "PLAIN_LDPE",
+    "stage": "hard-constraint",
+    "reasons": [
+     "It's a breathable produce film, which gives a food that doesn't breathe no protection from moisture or oxygen.",
+     "Its plain LDPE seal layer can't seal through oil or moisture left on the seal area; this food needs an mLLDPE or ionomer seal layer."
+    ]
+   },
+   {
+    "structure": "BOPA 15 / PE-EVOH-PE coex 50",
+    "structureId": "BOPA_EVOH",
+    "stage": "optimisation",
+    "reasons": [
+     "Feasible, but another candidate scored better for your priorities."
+    ]
+   },
+   {
+    "structure": "BOPA 15 / Ionomer 60",
+    "structureId": "BOPA_IONOMER",
+    "stage": "optimisation",
+    "reasons": [
+     "Feasible, but another candidate scored better for your priorities."
+    ]
+   },
+   {
+    "structure": "PET 12 / PE-EVOH-PE coex 50",
+    "structureId": "PET_EVOH",
+    "stage": "optimisation",
+    "reasons": [
+     "Feasible, but another candidate scored better for your priorities."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / Ionomer 50",
+    "structureId": "PET_METPET_IONOMER",
+    "stage": "optimisation",
+    "reasons": [
+     "Feasible, but another candidate scored better for your priorities."
+    ]
+   },
+   {
+    "structure": "PET 12 / Met-PET 12 / mLLDPE 50",
+    "structureId": "PET_METPET_MLLDPE",
+    "stage": "optimisation",
+    "reasons": [
+     "Feasible, but another candidate scored better for your priorities."
+    ]
+   }
+  ],
+  "warnings": [],
+  "assumptions": [
+   "Pack format assumed: 200 g pouch (200 g, 0.04 m² film area).",
+   "Transit excursion to 8 °C checked for produce gas balance.",
+   "Shelf-life, cost and footprint figures are prototype estimates (±30 % band) pending laboratory validation."
+  ],
+  "inputsUsed": {
+   "commodity": "Paneer",
+   "commodityId": "PANEER_FRESH",
+   "category": "dairy",
+   "profile": {
+    "moisturePct": {
+     "value": 52.03,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "fatPct": {
+     "value": 24.8,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "ph": {
+     "value": 5.8,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "respirationClass": {
+     "value": "none",
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "oxidationSensitivity": {
+     "value": "medium",
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    }
+   },
+   "engineParameters": {
+    "moistureCriticalPct": {
+     "value": 55,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "awInitial": {
+     "value": 0.99,
+     "provenance": "source-backed",
+     "confidence": "medium"
+    },
+    "microbialShelfLifeDays": {
+     "value": [
+      6,
+      4
+     ],
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    },
+    "mapProfile": {
+     "value": "dairy_fresh",
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    },
+    "allowedStorage": {
+     "value": [
+      "chilled",
+      "frozen"
+     ],
+     "provenance": "prototype estimate",
+     "confidence": "prototype"
+    }
+   },
+   "pack": {
+    "netWeightG": 200,
+    "areaM2": 0.04,
+    "format": "200 g pouch",
+    "provenance": "prototype estimate"
+   },
+   "conditions": {
+    "temperatureC": 4.0,
+    "relativeHumidityPct": 80.0,
+    "storageType": "chilled",
+    "targetShelfLifeDays": 14,
+    "transportMode": "refrigerated_transport",
+    "transportStress": "medium"
+   },
+   "priorities": {
+    "shelfLife": 0.8,
+    "cost": 0.4,
+    "sustainability": 0.7,
+    "mechanicalStrength": 0.5
+   },
+   "hardConstraints": []
+  },
+  "trace": [
+   {
+    "stage": "profile",
+    "detail": "Paneer: 5 of 5 food properties known"
+   },
+   {
+    "stage": "risks",
+    "detail": "5 risks assessed; highest: microbial spoilage (high)"
+   },
+   {
+    "stage": "requirements",
+    "detail": "6 packaging requirements set"
+   },
+   {
+    "stage": "filter",
+    "detail": "24 structures screened, 12 passed the hard checks"
+   },
+   {
+    "stage": "score",
+    "detail": "9 reach the 14-day target; ranked by your priorities"
+   },
+   {
+    "stage": "explain",
+    "detail": "6 reasons and 3 alternatives prepared"
+   }
+  ]
+ }
+}

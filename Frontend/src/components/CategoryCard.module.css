@@ -1,0 +1,22 @@
+.card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: var(--sp-5); border-radius: var(--r-card);
+  background: var(--surface); border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: border-color .2s, box-shadow .2s, translate .2s;
+}
+.card:hover, .card:focus-within { border-color: var(--cat-line); box-shadow: var(--shadow-md); translate: 0 -2px; }
+.title { margin-top: var(--sp-4); font-size: 1.125rem; }
+.desc { margin-top: var(--sp-1); color: var(--muted); font-size: 15px; flex: 1; }
+.cta { margin-top: var(--sp-4); }
+.card .cta:hover { border-color: var(--cat); }
+
+/* ---------- Animated mode: --k, data-landed and data-measuring come from the unpack engine ---------- */
+:global(.is-animated) .card {
+  padding: 20px;
+  opacity: var(--k, 0);
+  transform: translateY(calc((1 - var(--k, 0)) * 28px));
+}
+:global(.is-animated) .icon { opacity: 0; }
+:global(.is-animated) .card[data-landed] .icon { opacity: 1; }
+:global(.is-animated) [data-measuring] .card { transform: none !important; }

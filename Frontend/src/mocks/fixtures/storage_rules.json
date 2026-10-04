@@ -1,0 +1,222 @@
+{
+ "categories": {
+  "fresh_produce": {
+   "allowedStorage": [
+    "chilled",
+    "ambient"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "frozen": "Frozen storage isn't supported for {name}: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product."
+   }
+  },
+  "dry_goods": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "snack": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "dairy": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "{name} is a perishable fresh dairy food and isn't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "meat_seafood": {
+   "allowedStorage": [
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "Raw meat and seafood such as {name} aren't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "other": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  }
+ },
+ "commodities": {
+  "ALPHONSO_MANGO": {
+   "allowedStorage": [
+    "chilled",
+    "ambient"
+   ],
+   "minTemperatureC": 13,
+   "messages": {
+    "frozen": "Frozen storage isn't supported for Alphonso mango: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product.",
+    "minTemperature": "Alphonso mango suffers chilling injury below 13 °C, so it has to be stored at 13 °C or warmer."
+   }
+  },
+  "BANANA_GENERIC": {
+   "allowedStorage": [
+    "chilled",
+    "ambient"
+   ],
+   "minTemperatureC": 13,
+   "messages": {
+    "frozen": "Frozen storage isn't supported for Banana: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product.",
+    "minTemperature": "Banana suffers chilling injury below 13 °C, so it has to be stored at 13 °C or warmer."
+   }
+  },
+  "BASMATI_RICE": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "BISCUITS_GENERIC": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "CHILLED_MUTTON": {
+   "allowedStorage": [
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "Raw meat and seafood such as Chilled mutton aren't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "CHICKEN_FRESH": {
+   "allowedStorage": [
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "Raw meat and seafood such as Fresh chicken aren't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "FISH_FRESH": {
+   "allowedStorage": [
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "Raw meat and seafood such as Fresh fish aren't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "GROUNDNUT_OIL": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "MILK_POWDER": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "Milk powder is a perishable fresh dairy food and isn't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "MULTIGRAIN_BREAD": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "PANEER_FRESH": {
+   "allowedStorage": [
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "ambient": "Paneer is a perishable fresh dairy food and isn't safe stored at ambient temperature. Choose chilled or frozen storage."
+   }
+  },
+  "POTATO_CHIPS": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  },
+  "ONION_RED": {
+   "allowedStorage": [
+    "chilled",
+    "ambient"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "frozen": "Frozen storage isn't supported for Red onion: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product."
+   }
+  },
+  "SPINACH_GENERIC": {
+   "allowedStorage": [
+    "chilled",
+    "ambient"
+   ],
+   "minTemperatureC": null,
+   "messages": {
+    "frozen": "Frozen storage isn't supported for Spinach: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product."
+   }
+  },
+  "TOMATO_GENERIC": {
+   "allowedStorage": [
+    "chilled",
+    "ambient"
+   ],
+   "minTemperatureC": 10,
+   "messages": {
+    "frozen": "Frozen storage isn't supported for Tomato: freezing ruptures the cells of fresh produce. Frozen vegetables are blanched first, which makes them a different product.",
+    "minTemperature": "Tomato suffers chilling injury below 10 °C, so it has to be stored at 10 °C or warmer."
+   }
+  },
+  "WHEAT_FLOUR": {
+   "allowedStorage": [
+    "ambient",
+    "chilled",
+    "frozen"
+   ],
+   "minTemperatureC": null,
+   "messages": {}
+  }
+ }
+}

@@ -1,0 +1,815 @@
+[
+ {
+  "structureId": "BOPA_EVOH",
+  "name": "BOPA 15 / PE-EVOH-PE coex 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 65.0,
+  "layers": [
+   {
+    "materialId": "BOPA",
+    "name": "Biaxially oriented nylon (BOPA)",
+    "thicknessUm": 15.0,
+    "function": "structural",
+    "role": "Puncture and flex-crack resistance"
+   },
+   {
+    "materialId": "EVOH_COEX",
+    "name": "PE/EVOH/PE coextruded barrier film",
+    "thicknessUm": 50.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   }
+  ],
+  "otrTest": 2.31,
+  "wvtrTest": 5.1,
+  "mechanicalIndex": 52,
+  "gelboPinholes": 6.0,
+  "eprCategory": "II",
+  "monoMaterial": false,
+  "recyclabilityIndex": 40,
+  "applications": [
+   "MAP and vacuum meat with long chilled life",
+   "Rough transport"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "BOPA_IONOMER",
+  "name": "BOPA 15 / Ionomer 60",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 75.0,
+  "layers": [
+   {
+    "materialId": "BOPA",
+    "name": "Biaxially oriented nylon (BOPA)",
+    "thicknessUm": 15.0,
+    "function": "structural",
+    "role": "Puncture and flex-crack resistance"
+   },
+   {
+    "materialId": "IONOMER",
+    "name": "Ionomer sealant film (Surlyn-type)",
+    "thicknessUm": 60.0,
+    "function": "seal",
+    "role": "Heat-seal layer (90–120 °C)"
+   }
+  ],
+  "otrTest": 29.8,
+  "wvtrTest": 15.7,
+  "mechanicalIndex": 64,
+  "gelboPinholes": 1.5,
+  "eprCategory": "II",
+  "monoMaterial": false,
+  "recyclabilityIndex": 40,
+  "applications": [
+   "Paneer, curd and marinated meat"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "BOPA_MLLDPE",
+  "name": "BOPA 15 / mLLDPE 60 (vacuum pouch)",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 75.0,
+  "layers": [
+   {
+    "materialId": "BOPA",
+    "name": "Biaxially oriented nylon (BOPA)",
+    "thicknessUm": 15.0,
+    "function": "structural",
+    "role": "Puncture and flex-crack resistance"
+   },
+   {
+    "materialId": "MLLDPE",
+    "name": "Metallocene LLDPE sealant (mLLDPE)",
+    "thicknessUm": 60.0,
+    "function": "seal",
+    "role": "Heat-seal layer (95–125 °C)"
+   }
+  ],
+  "otrTest": 29.7,
+  "wvtrTest": 12.7,
+  "mechanicalIndex": 70,
+  "gelboPinholes": 1.5,
+  "eprCategory": "II",
+  "monoMaterial": false,
+  "recyclabilityIndex": 40,
+  "applications": [
+   "Vacuum-packed meat, fish and paneer"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "HDPE_MONO",
+  "name": "HDPE 40 single-layer bag",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 40.0,
+  "layers": [
+   {
+    "materialId": "HDPE",
+    "name": "HDPE film",
+    "thicknessUm": 40.0,
+    "function": "seal",
+    "role": "Heat-seal layer (125–145 °C)"
+   }
+  ],
+  "otrTest": 1600.0,
+  "wvtrTest": 4.5,
+  "mechanicalIndex": 28,
+  "gelboPinholes": 8.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Rice, flour and grain liners"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "LDPE_MONO",
+  "name": "LDPE 50 single-layer pouch",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 50.0,
+  "layers": [
+   {
+    "materialId": "LDPE",
+    "name": "LDPE film",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (105–130 °C)"
+   }
+  ],
+  "otrTest": 4200.0,
+  "wvtrTest": 18.0,
+  "mechanicalIndex": 25,
+  "gelboPinholes": 2.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Short shelf-life dry goods, milk pouches"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MACRO_LDPE",
+  "name": "LDPE bag with macro-perforations (40 µm)",
+  "gasMode": "breathable",
+  "perforation": "macro",
+  "totalGaugeUm": 40.0,
+  "layers": [
+   {
+    "materialId": "LDPE",
+    "name": "LDPE film",
+    "thicknessUm": 40.0,
+    "function": "seal",
+    "role": "Heat-seal layer (105–130 °C)"
+   }
+  ],
+  "otrTest": 5250.0,
+  "wvtrTest": 22.5,
+  "mechanicalIndex": 20,
+  "gelboPinholes": 2.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Onions, potatoes, low-respiration produce"
+  ],
+  "notes": "Open vents: no modified atmosphere develops.",
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MONO_PE",
+  "name": "BOPE 25 / mLLDPE 50 (mono-PE)",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 75.0,
+  "layers": [
+   {
+    "materialId": "BOPE",
+    "name": "Biaxially oriented PE (BOPE)",
+    "thicknessUm": 25.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "MLLDPE",
+    "name": "Metallocene LLDPE sealant (mLLDPE)",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (95–125 °C)"
+   }
+  ],
+  "otrTest": 1580.0,
+  "wvtrTest": 4.36,
+  "mechanicalIndex": 59,
+  "gelboPinholes": 3.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Recyclable packs for grains, flour and frozen foods"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MONO_PE_EVOH",
+  "name": "BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE)",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 75.0,
+  "layers": [
+   {
+    "materialId": "BOPE",
+    "name": "Biaxially oriented PE (BOPE)",
+    "thicknessUm": 25.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "EVOH_COEX",
+    "name": "PE/EVOH/PE coextruded barrier film",
+    "thicknessUm": 50.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   }
+  ],
+  "otrTest": 2.5,
+  "wvtrTest": 2.79,
+  "mechanicalIndex": 49,
+  "gelboPinholes": 12.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Recyclable oxygen-barrier pouches"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MONO_PP",
+  "name": "Coated BOPP 20 / CPP 30 (mono-PP)",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 50.0,
+  "layers": [
+   {
+    "materialId": "COATED_BOPP",
+    "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+    "thicknessUm": 20.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   },
+   {
+    "materialId": "CPP",
+    "name": "Cast polypropylene (CPP)",
+    "thicknessUm": 30.0,
+    "function": "seal",
+    "role": "Heat-seal layer (125–150 °C)"
+   }
+  ],
+  "otrTest": 7.97,
+  "wvtrTest": 2.43,
+  "mechanicalIndex": 30,
+  "gelboPinholes": 10.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Recyclable snack and biscuit packs"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MP_ANTIFOG_BOPP",
+  "name": "Micro-perforated anti-fog BOPP (25 µm)",
+  "gasMode": "breathable",
+  "perforation": "micro",
+  "totalGaugeUm": 25.0,
+  "layers": [
+   {
+    "materialId": "ANTIFOG_BOPP",
+    "name": "Anti-fog heat-sealable BOPP",
+    "thicknessUm": 25.0,
+    "function": "seal",
+    "role": "Heat-seal layer (115–140 °C)"
+   }
+  ],
+  "otrTest": 1450.0,
+  "wvtrTest": 3.9,
+  "mechanicalIndex": 16,
+  "gelboPinholes": 5.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Tomatoes, mangoes, capsicum"
+  ],
+  "notes": "Laser micro-perforations sized for equilibrium MAP.",
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MP_ANTIFOG_LDPE",
+  "name": "Micro-perforated anti-fog LDPE (30 µm)",
+  "gasMode": "breathable",
+  "perforation": "micro",
+  "totalGaugeUm": 30.0,
+  "layers": [
+   {
+    "materialId": "ANTIFOG_LDPE",
+    "name": "Anti-fog LDPE/mLLDPE film",
+    "thicknessUm": 30.0,
+    "function": "seal",
+    "role": "Heat-seal layer (100–125 °C)"
+   }
+  ],
+  "otrTest": 7000.0,
+  "wvtrTest": 30.0,
+  "mechanicalIndex": 16,
+  "gelboPinholes": 2.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Leafy greens, fresh-cut vegetables"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MP_PBS_PHA",
+  "name": "Micro-perforated PBS/PHA bio-blend (40 µm)",
+  "gasMode": "breathable",
+  "perforation": "micro",
+  "totalGaugeUm": 40.0,
+  "layers": [
+   {
+    "materialId": "PBS_PHA",
+    "name": "PBS/PHA bio-blend film",
+    "thicknessUm": 40.0,
+    "function": "seal",
+    "role": "Heat-seal layer (90–115 °C)"
+   }
+  ],
+  "otrTest": 320.0,
+  "wvtrTest": 45.0,
+  "mechanicalIndex": 18,
+  "gelboPinholes": 6.0,
+  "eprCategory": "IV",
+  "monoMaterial": false,
+  "recyclabilityIndex": 60,
+  "applications": [
+   "Compostable produce packs"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "MP_PLA",
+  "name": "Micro-perforated compostable PLA film (30 µm)",
+  "gasMode": "breathable",
+  "perforation": "micro",
+  "totalGaugeUm": 30.0,
+  "layers": [
+   {
+    "materialId": "PLA",
+    "name": "PLA film (compostable)",
+    "thicknessUm": 30.0,
+    "function": "seal",
+    "role": "Heat-seal layer (80–105 °C)"
+   }
+  ],
+  "otrTest": 550.0,
+  "wvtrTest": 185.0,
+  "mechanicalIndex": 9,
+  "gelboPinholes": 18.0,
+  "eprCategory": "IV",
+  "monoMaterial": false,
+  "recyclabilityIndex": 60,
+  "applications": [
+   "Premium produce with a compostable claim"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "OPP_METOPP",
+  "name": "BOPP 20 / Met-BOPP 20",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 40.0,
+  "layers": [
+   {
+    "materialId": "BOPP",
+    "name": "BOPP film",
+    "thicknessUm": 20.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "MET_BOPP",
+    "name": "Metallised BOPP, heat-sealable (20 µm)",
+    "thicknessUm": 20.0,
+    "function": "seal",
+    "role": "Heat-seal layer (110–135 °C)"
+   }
+  ],
+  "otrTest": 19.8,
+  "wvtrTest": 0.369,
+  "mechanicalIndex": 26,
+  "gelboPinholes": 25.0,
+  "eprCategory": "III",
+  "monoMaterial": true,
+  "recyclabilityIndex": 25,
+  "applications": [
+   "Chips and biscuits (short to medium shelf life)"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_AL_CPP",
+  "name": "PET 12 / Al foil 9 / CPP 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 71.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "AL_FOIL",
+    "name": "Aluminium foil (9 µm)",
+    "thicknessUm": 9.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   },
+   {
+    "materialId": "CPP",
+    "name": "Cast polypropylene (CPP)",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (125–150 °C)"
+   }
+  ],
+  "otrTest": 0.05,
+  "wvtrTest": 0.0494,
+  "mechanicalIndex": 42,
+  "gelboPinholes": 120.0,
+  "eprCategory": "III",
+  "monoMaterial": false,
+  "recyclabilityIndex": 10,
+  "applications": [
+   "Retort pouches, pickles, acidic sauces"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_AL_MLLDPE",
+  "name": "PET 12 / Al foil 9 / mLLDPE 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 71.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "AL_FOIL",
+    "name": "Aluminium foil (9 µm)",
+    "thicknessUm": 9.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   },
+   {
+    "materialId": "MLLDPE",
+    "name": "Metallocene LLDPE sealant (mLLDPE)",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (95–125 °C)"
+   }
+  ],
+  "otrTest": 0.05,
+  "wvtrTest": 0.0497,
+  "mechanicalIndex": 54,
+  "gelboPinholes": 120.0,
+  "eprCategory": "III",
+  "monoMaterial": false,
+  "recyclabilityIndex": 10,
+  "applications": [
+   "Long-life powders, spices, export snacks"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_EVOH",
+  "name": "PET 12 / PE-EVOH-PE coex 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 62.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "EVOH_COEX",
+    "name": "PE/EVOH/PE coextruded barrier film",
+    "thicknessUm": 50.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   }
+  ],
+  "otrTest": 2.44,
+  "wvtrTest": 4.3,
+  "mechanicalIndex": 42,
+  "gelboPinholes": 12.0,
+  "eprCategory": "II",
+  "monoMaterial": false,
+  "recyclabilityIndex": 40,
+  "applications": [
+   "Cheese, processed meat, sauces (transparent high barrier)"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_LDPE",
+  "name": "PET 12 / LDPE 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 62.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "LDPE",
+    "name": "LDPE film",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (105–130 °C)"
+   }
+  ],
+  "otrTest": 107.0,
+  "wvtrTest": 10.5,
+  "mechanicalIndex": 37,
+  "gelboPinholes": 3.0,
+  "eprCategory": "II",
+  "monoMaterial": false,
+  "recyclabilityIndex": 40,
+  "applications": [
+   "Clear packs for frozen foods and pulses"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_METPET_IONOMER",
+  "name": "PET 12 / Met-PET 12 / Ionomer 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 74.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "MET_PET",
+    "name": "Metallised PET (12 µm)",
+    "thicknessUm": 12.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   },
+   {
+    "materialId": "IONOMER",
+    "name": "Ionomer sealant film (Surlyn-type)",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (90–120 °C)"
+   }
+  ],
+  "otrTest": 1.48,
+  "wvtrTest": 1.04,
+  "mechanicalIndex": 59,
+  "gelboPinholes": 35.0,
+  "eprCategory": "III",
+  "monoMaterial": false,
+  "recyclabilityIndex": 25,
+  "applications": [
+   "Oily namkeen and spices filled on manual sealers"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_METPET_LDPE",
+  "name": "PET 12 / Met-PET 12 / LDPE 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 74.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "MET_PET",
+    "name": "Metallised PET (12 µm)",
+    "thicknessUm": 12.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   },
+   {
+    "materialId": "LDPE",
+    "name": "LDPE film",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (105–130 °C)"
+   }
+  ],
+  "otrTest": 1.48,
+  "wvtrTest": 1.04,
+  "mechanicalIndex": 49,
+  "gelboPinholes": 35.0,
+  "eprCategory": "III",
+  "monoMaterial": false,
+  "recyclabilityIndex": 25,
+  "applications": [
+   "Dry snacks, tea, low-fat powders"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PET_METPET_MLLDPE",
+  "name": "PET 12 / Met-PET 12 / mLLDPE 50",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 74.0,
+  "layers": [
+   {
+    "materialId": "BOPET",
+    "name": "BOPET film",
+    "thicknessUm": 12.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "MET_PET",
+    "name": "Metallised PET (12 µm)",
+    "thicknessUm": 12.0,
+    "function": "barrier",
+    "role": "Gas and moisture barrier"
+   },
+   {
+    "materialId": "MLLDPE",
+    "name": "Metallocene LLDPE sealant (mLLDPE)",
+    "thicknessUm": 50.0,
+    "function": "seal",
+    "role": "Heat-seal layer (95–125 °C)"
+   }
+  ],
+  "otrTest": 1.48,
+  "wvtrTest": 1.03,
+  "mechanicalIndex": 64,
+  "gelboPinholes": 35.0,
+  "eprCategory": "III",
+  "monoMaterial": false,
+  "recyclabilityIndex": 25,
+  "applications": [
+   "Chips, namkeen, milk powder, coffee"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PLAIN_ANTIFOG_BOPP",
+  "name": "Unperforated anti-fog BOPP (25 µm)",
+  "gasMode": "breathable",
+  "perforation": "none",
+  "totalGaugeUm": 25.0,
+  "layers": [
+   {
+    "materialId": "ANTIFOG_BOPP",
+    "name": "Anti-fog heat-sealable BOPP",
+    "thicknessUm": 25.0,
+    "function": "seal",
+    "role": "Heat-seal layer (115–140 °C)"
+   }
+  ],
+  "otrTest": 1450.0,
+  "wvtrTest": 3.9,
+  "mechanicalIndex": 16,
+  "gelboPinholes": 5.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Low-respiration produce only"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PLAIN_LDPE",
+  "name": "Unperforated LDPE bag (30 µm)",
+  "gasMode": "breathable",
+  "perforation": "none",
+  "totalGaugeUm": 30.0,
+  "layers": [
+   {
+    "materialId": "LDPE",
+    "name": "LDPE film",
+    "thicknessUm": 30.0,
+    "function": "seal",
+    "role": "Heat-seal layer (105–130 °C)"
+   }
+  ],
+  "otrTest": 7000.0,
+  "wvtrTest": 30.0,
+  "mechanicalIndex": 15,
+  "gelboPinholes": 2.0,
+  "eprCategory": "II",
+  "monoMaterial": true,
+  "recyclabilityIndex": 90,
+  "applications": [
+   "Low-respiration produce, short chilled storage"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ },
+ {
+  "structureId": "PLA_PBS",
+  "name": "PLA 30 / PBS-PHA 40 (compostable laminate)",
+  "gasMode": "barrier",
+  "perforation": "none",
+  "totalGaugeUm": 70.0,
+  "layers": [
+   {
+    "materialId": "PLA",
+    "name": "PLA film (compostable)",
+    "thicknessUm": 30.0,
+    "function": "print",
+    "role": "Strength, stiffness and printing support"
+   },
+   {
+    "materialId": "PBS_PHA",
+    "name": "PBS/PHA bio-blend film",
+    "thicknessUm": 40.0,
+    "function": "seal",
+    "role": "Heat-seal layer (90–115 °C)"
+   }
+  ],
+  "otrTest": 202.0,
+  "wvtrTest": 36.2,
+  "mechanicalIndex": 27,
+  "gelboPinholes": 18.0,
+  "eprCategory": "IV",
+  "monoMaterial": false,
+  "recyclabilityIndex": 60,
+  "applications": [
+   "Compostable packs for dry, short shelf-life goods"
+  ],
+  "notes": null,
+  "provenance": "prototype estimate"
+ }
+]

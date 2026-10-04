@@ -1,0 +1,18 @@
+/* Shared by ProvenanceBadge, ConfidenceBadge and StatusPill. */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; flex: none;
+  height: 22px; padding: 0 8px; border-radius: 999px;
+  font-size: 12px; font-weight: 500; line-height: 1; white-space: nowrap;
+  color: var(--tone); background: var(--tone-tint); border: 1px solid var(--tone-line);
+}
+.dashed { border-style: dashed; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
+.glyph { font-size: 11px; line-height: 1; }
+.key { color: var(--muted); font-weight: 400; }
+.status { text-transform: uppercase; letter-spacing: .04em; font-size: 11px; }
+
+.badge[data-tone="green"]   { --tone: var(--produce); --tone-tint: var(--produce-tint); --tone-line: var(--produce-line); }
+.badge[data-tone="blue"]    { --tone: var(--dairy);   --tone-tint: var(--dairy-tint);   --tone-line: var(--dairy-line); }
+.badge[data-tone="orange"]  { --tone: var(--snacks);  --tone-tint: var(--snacks-tint);  --tone-line: var(--snacks-line); }
+.badge[data-tone="amber"]   { --tone: var(--warn);    --tone-tint: var(--grains-tint);  --tone-line: var(--grains-line); }
+.badge[data-tone="neutral"] { --tone: var(--muted);   --tone-tint: transparent;         --tone-line: var(--border-strong); }

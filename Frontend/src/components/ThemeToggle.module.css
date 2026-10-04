@@ -1,0 +1,7 @@
+.iconBtn {
+  width: 40px; height: 40px; display: inline-grid; place-items: center;
+  border-radius: var(--r-control); border: 1px solid transparent; background: transparent;
+  color: var(--muted); cursor: pointer;
+}
+.iconBtn:hover { color: var(--text); background: var(--surface-2); }
+.iconBtn svg { width: 20px; height: 20px; }

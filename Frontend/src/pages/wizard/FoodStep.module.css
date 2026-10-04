@@ -1,0 +1,53 @@
+.searchRow { margin-top: var(--sp-6); max-width: 640px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-4); }
+.filter {
+  min-height: 34px; padding: 0 var(--sp-3); border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--border-strong); color: var(--muted); font-size: 14px;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+.filter:hover { color: var(--text); background: var(--surface-2); }
+.filter[aria-pressed="true"] { background: var(--accent-tint); border-color: var(--accent); color: var(--text); }
+
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--sp-3); }
+.card {
+  position: relative; width: 100%; display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-4); border-radius: var(--r-card); text-align: left; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  transition: border-color .2s, box-shadow .2s, translate .2s;
+}
+.card:hover, .card:focus-visible { border-color: var(--cat-line); box-shadow: var(--shadow-md); translate: 0 -2px; }
+.card[aria-pressed="true"] { border-color: var(--accent); background: linear-gradient(var(--accent-tint), var(--accent-tint)), var(--surface); }
+.card .cardIcon { width: 40px; height: 40px; border-radius: 10px; flex: none; }
+.card .cardIcon svg { width: 20px; height: 20px; }
+.cardText { display: grid; min-width: 0; }
+.cardName { font-weight: 500; }
+.cardCat { font-size: 13px; color: var(--muted); }
+.selected {
+  position: absolute; top: 10px; right: 12px; width: 22px; height: 22px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 12px; background: var(--accent); color: var(--on-accent);
+}
+.skelCard {
+  display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-4);
+  border-radius: var(--r-card); background: var(--surface); border: 1px solid var(--border);
+}
+.skelText { flex: 1; display: grid; gap: 8px; }
+.empty { color: var(--muted); font-style: italic; }
+
+.customHead { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+.customForm { margin-top: var(--sp-5); display: grid; gap: var(--sp-5); max-width: 640px; }
+.customActions { display: flex; gap: var(--sp-3); flex-wrap: wrap; }
+
+/* ---------- Selected food ---------- */
+.selectedRow { margin-top: var(--sp-5); }
+.selectedRow:empty { display: none; }
+.selectedPanel { border-color: var(--accent); }
+.selectedHead { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; }
+.selectedHead .cardIcon { width: 44px; height: 44px; border-radius: 12px; flex: none; }
+.selectedHead .cardIcon svg { width: 22px; height: 22px; }
+.selectedText { flex: 1; min-width: 180px; }
+.selectedEyebrow { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.selectedSkel { display: grid; gap: var(--sp-2); margin-top: var(--sp-3); }
+.summary { margin-top: var(--sp-4); font-size: 15px; }
+.editor { margin-top: var(--sp-5); padding-top: var(--sp-5); border-top: 1px solid var(--border); }
+.selectedActions { display: flex; flex-wrap: wrap; gap: var(--sp-2); }

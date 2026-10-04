@@ -1,0 +1,45 @@
+.pipeline { padding: var(--sp-9) 0; border-top: 1px solid var(--border); scroll-margin-top: var(--nav-h); }
+.grid { display: grid; grid-template-columns: 5fr 7fr; gap: var(--sp-8); align-items: start; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; gap: var(--sp-7); } }
+
+.intro { position: sticky; top: calc(var(--nav-h) + var(--sp-7)); }
+@media (max-width: 860px) { .intro { position: static; } }
+.eyebrow { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.intro h2 { margin-top: var(--sp-3); font-size: clamp(1.75rem, 3vw, 2.25rem); }
+.sub { margin-top: var(--sp-3); color: var(--muted); }
+.cta { margin-top: var(--sp-6); }
+
+.stages { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: var(--sp-5); }
+/* The rail behind the numbered nodes. */
+.stages::before {
+  content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px;
+  background: linear-gradient(var(--border-strong), var(--accent));
+  border-radius: 2px;
+}
+.stage { position: relative; display: grid; grid-template-columns: 36px 1fr; gap: var(--sp-4); }
+.node {
+  position: relative; z-index: 1;
+  width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 14px; font-weight: 500;
+  background: var(--surface); color: var(--accent); border: 1px solid var(--border-strong);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+.stage:last-child .node { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.body {
+  padding: var(--sp-4) var(--sp-5); border-radius: var(--r-card);
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+.body h3 { font-size: 1.0625rem; }
+.body p { margin-top: var(--sp-1); color: var(--muted); font-size: 15px; }
+.chips { list-style: none; margin: var(--sp-3) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.chips li {
+  padding: 2px 10px; border-radius: 999px; font-size: 13px;
+  color: var(--muted); border: 1px solid var(--border-strong);
+}
+.stage:last-child .body { border-color: var(--accent); background: linear-gradient(var(--accent-tint), var(--accent-tint)), var(--surface); }
+
+/* Scroll reveal (only armed by JS when motion is allowed). */
+.stages[data-reveal] > .stage > * { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+.stages[data-reveal] > .stage > .node { transform: scale(.6); }
+.stages[data-reveal] > .stage[data-shown] > * { opacity: 1; transform: none; }
+.stages[data-reveal] > .stage[data-shown] > .body { transition-delay: .08s; }

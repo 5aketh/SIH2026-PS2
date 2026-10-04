@@ -1,0 +1,19 @@
+.hero { position: relative; }
+.stage {
+  position: relative;
+  --lid: 0; --side: 0; --fold: 0; --out: 0; --head: 1; --hint: 0;
+  --s: .9; --shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .stage { --s: .7; }
+}
+
+/* ---------- Animated mode (scroll-driven unpacking) ---------- */
+:global(.is-animated) .hero { height: calc(100vh + 400vh); }
+:global(.is-animated) .stage {
+  position: sticky; top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}

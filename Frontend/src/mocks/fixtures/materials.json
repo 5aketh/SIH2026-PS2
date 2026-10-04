@@ -1,0 +1,1916 @@
+{
+ "families": [
+  "bio-based",
+  "coated",
+  "evoh",
+  "foil",
+  "ionomer",
+  "metallised",
+  "polyamide",
+  "polyester",
+  "polyethylene",
+  "polypropylene"
+ ],
+ "details": {
+  "AL_FOIL": {
+   "materialId": "AL_FOIL",
+   "name": "Aluminium foil (9 µm)",
+   "family": "foil",
+   "polymerClass": "AL",
+   "indicators": {
+    "oxygenBarrier": 100,
+    "moistureBarrier": 100,
+    "mechanicalStrength": 17,
+    "sealability": 0,
+    "sustainability": 14
+   },
+   "properties": {
+    "densityGcm3": 2.7,
+    "referenceThicknessUm": 9.0,
+    "otr": {
+     "value": 0.05,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 0.05,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": null,
+    "sealability": "none",
+    "gelboPinholes": [
+     45,
+     120
+    ],
+    "costInrPerKg": [
+     340.0,
+     420.0
+    ],
+    "carbonKgCo2ePerKg": 8.2,
+    "eprCategory": "III",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "high",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 15392 (foil for packaging)",
+    "EU 10/2011 (adjacent plastics)"
+   ],
+   "applications": [
+    "Long-life powders, spices and retort pouches"
+   ],
+   "notes": "Near-total barrier until flex-cracking. Cost, carbon and Gelbo figures from the Blueprint's PET/Al/PE laminate row.",
+   "provenance": "prototype estimate",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "PET_AL_CPP",
+     "name": "PET 12 / Al foil 9 / CPP 50"
+    },
+    {
+     "structureId": "PET_AL_MLLDPE",
+     "name": "PET 12 / Al foil 9 / mLLDPE 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "MET_PET",
+     "name": "Metallised PET (12 µm)",
+     "indicators": {
+      "oxygenBarrier": 72,
+      "moistureBarrier": 64,
+      "mechanicalStrength": 67,
+      "sealability": 0,
+      "sustainability": 51
+     }
+    },
+    {
+     "materialId": "MET_BOPP",
+     "name": "Metallised BOPP, heat-sealable (20 µm)",
+     "indicators": {
+      "oxygenBarrier": 51,
+      "moistureBarrier": 76,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 61
+     }
+    },
+    {
+     "materialId": "COATED_BOPP",
+     "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+     "indicators": {
+      "oxygenBarrier": 58,
+      "moistureBarrier": 51,
+      "mechanicalStrength": 43,
+      "sealability": 0,
+      "sustainability": 82
+     }
+    }
+   ]
+  },
+  "ANTIFOG_LDPE": {
+   "materialId": "ANTIFOG_LDPE",
+   "name": "Anti-fog LDPE/mLLDPE film",
+   "family": "polyethylene",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 3,
+    "moistureBarrier": 26,
+    "mechanicalStrength": 37,
+    "sealability": 60,
+    "sustainability": 83
+   },
+   "properties": {
+    "densityGcm3": 0.92,
+    "referenceThicknessUm": 30.0,
+    "otr": {
+     "value": 7000.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 30.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     100,
+     125
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     0,
+     2
+    ],
+    "costInrPerKg": [
+     135.0,
+     150.0
+    ],
+    "carbonKgCo2ePerKg": 2.1,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10146"
+   ],
+   "applications": [
+    "Fresh-cut vegetables",
+    "Leafy greens",
+    "Laser micro-perforated produce packs"
+   ],
+   "notes": "Contains migratory anti-fog additive (polyglycerol fatty-acid esters) to stop condensation fogging.",
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "MP_ANTIFOG_LDPE",
+     "name": "Micro-perforated anti-fog LDPE (30 µm)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "indicators": {
+      "oxygenBarrier": 12,
+      "moistureBarrier": 42,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "ANTIFOG_BOPP": {
+   "materialId": "ANTIFOG_BOPP",
+   "name": "Anti-fog heat-sealable BOPP",
+   "family": "polypropylene",
+   "polymerClass": "PP",
+   "indicators": {
+    "oxygenBarrier": 16,
+    "moistureBarrier": 50,
+    "mechanicalStrength": 43,
+    "sealability": 60,
+    "sustainability": 83
+   },
+   "properties": {
+    "densityGcm3": 0.905,
+    "referenceThicknessUm": 25.0,
+    "otr": {
+     "value": 1450.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 3.9,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     115,
+     140
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     2,
+     5
+    ],
+    "costInrPerKg": [
+     155.0,
+     175.0
+    ],
+    "carbonKgCo2ePerKg": 2.15,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10910"
+   ],
+   "applications": [
+    "Micro-perforated MAP packs for tomatoes, mangoes and berries"
+   ],
+   "notes": null,
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "MP_ANTIFOG_BOPP",
+     "name": "Micro-perforated anti-fog BOPP (25 µm)"
+    },
+    {
+     "structureId": "PLAIN_ANTIFOG_BOPP",
+     "name": "Unperforated anti-fog BOPP (25 µm)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "indicators": {
+      "oxygenBarrier": 12,
+      "moistureBarrier": 42,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "BOPET": {
+   "materialId": "BOPET",
+   "name": "BOPET film",
+   "family": "polyester",
+   "polymerClass": "PET",
+   "indicators": {
+    "oxygenBarrier": 37,
+    "moistureBarrier": 29,
+    "mechanicalStrength": 67,
+    "sealability": 0,
+    "sustainability": 78
+   },
+   "properties": {
+    "densityGcm3": 1.4,
+    "referenceThicknessUm": 12.0,
+    "otr": {
+     "value": 110.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 25.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": null,
+    "sealability": "none",
+    "gelboPinholes": [
+     1,
+     3
+    ],
+    "costInrPerKg": [
+     150.0,
+     175.0
+    ],
+    "carbonKgCo2ePerKg": 2.8,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 12252",
+    "US FDA 21 CFR 177.1630"
+   ],
+   "applications": [
+    "Printable, heat-resistant outer ply",
+    "Laminate stiffness"
+   ],
+   "notes": null,
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "PET_AL_CPP",
+     "name": "PET 12 / Al foil 9 / CPP 50"
+    },
+    {
+     "structureId": "PET_AL_MLLDPE",
+     "name": "PET 12 / Al foil 9 / mLLDPE 50"
+    },
+    {
+     "structureId": "PET_EVOH",
+     "name": "PET 12 / PE-EVOH-PE coex 50"
+    },
+    {
+     "structureId": "PET_LDPE",
+     "name": "PET 12 / LDPE 50"
+    },
+    {
+     "structureId": "PET_METPET_IONOMER",
+     "name": "PET 12 / Met-PET 12 / Ionomer 50"
+    },
+    {
+     "structureId": "PET_METPET_LDPE",
+     "name": "PET 12 / Met-PET 12 / LDPE 50"
+    },
+    {
+     "structureId": "PET_METPET_MLLDPE",
+     "name": "PET 12 / Met-PET 12 / mLLDPE 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "COATED_BOPP",
+     "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+     "indicators": {
+      "oxygenBarrier": 58,
+      "moistureBarrier": 51,
+      "mechanicalStrength": 43,
+      "sealability": 0,
+      "sustainability": 82
+     }
+    },
+    {
+     "materialId": "BOPE",
+     "name": "Biaxially oriented PE (BOPE)",
+     "indicators": {
+      "oxygenBarrier": 11,
+      "moistureBarrier": 45,
+      "mechanicalStrength": 50,
+      "sealability": 30,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "BOPP",
+     "name": "BOPP film",
+     "indicators": {
+      "oxygenBarrier": 14,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 43,
+      "sealability": 30,
+      "sustainability": 83
+     }
+    }
+   ]
+  },
+  "BOPP": {
+   "materialId": "BOPP",
+   "name": "BOPP film",
+   "family": "polypropylene",
+   "polymerClass": "PP",
+   "indicators": {
+    "oxygenBarrier": 14,
+    "moistureBarrier": 48,
+    "mechanicalStrength": 43,
+    "sealability": 30,
+    "sustainability": 83
+   },
+   "properties": {
+    "densityGcm3": 0.905,
+    "referenceThicknessUm": 20.0,
+    "otr": {
+     "value": 1800.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 4.8,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": [
+     110,
+     140
+    ],
+    "sealability": "low",
+    "gelboPinholes": [
+     2,
+     5
+    ],
+    "costInrPerKg": [
+     140.0,
+     160.0
+    ],
+    "carbonKgCo2ePerKg": 2.1,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10910",
+    "US FDA 21 CFR 177.1520"
+   ],
+   "applications": [
+    "Printed outer ply for snack packs",
+    "Bakery and confectionery wraps"
+   ],
+   "notes": null,
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "OPP_METOPP",
+     "name": "BOPP 20 / Met-BOPP 20"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "BOPE",
+     "name": "Biaxially oriented PE (BOPE)",
+     "indicators": {
+      "oxygenBarrier": 11,
+      "moistureBarrier": 45,
+      "mechanicalStrength": 50,
+      "sealability": 30,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "COATED_BOPP": {
+   "materialId": "COATED_BOPP",
+   "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+   "family": "coated",
+   "polymerClass": "PP",
+   "indicators": {
+    "oxygenBarrier": 58,
+    "moistureBarrier": 51,
+    "mechanicalStrength": 43,
+    "sealability": 0,
+    "sustainability": 82
+   },
+   "properties": {
+    "densityGcm3": 0.91,
+    "referenceThicknessUm": 20.0,
+    "otr": {
+     "value": 8.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 3.5,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": null,
+    "sealability": "none",
+    "gelboPinholes": [
+     5,
+     10
+    ],
+    "costInrPerKg": [
+     210.0,
+     250.0
+    ],
+    "carbonKgCo2ePerKg": 2.3,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10910"
+   ],
+   "applications": [
+    "Recyclable mono-PP barrier laminates"
+   ],
+   "notes": null,
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "MONO_PP",
+     "name": "Coated BOPP 20 / CPP 30 (mono-PP)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "BOPET",
+     "name": "BOPET film",
+     "indicators": {
+      "oxygenBarrier": 37,
+      "moistureBarrier": 29,
+      "mechanicalStrength": 67,
+      "sealability": 0,
+      "sustainability": 78
+     }
+    },
+    {
+     "materialId": "MET_PET",
+     "name": "Metallised PET (12 µm)",
+     "indicators": {
+      "oxygenBarrier": 72,
+      "moistureBarrier": 64,
+      "mechanicalStrength": 67,
+      "sealability": 0,
+      "sustainability": 51
+     }
+    },
+    {
+     "materialId": "BOPP",
+     "name": "BOPP film",
+     "indicators": {
+      "oxygenBarrier": 14,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 43,
+      "sealability": 30,
+      "sustainability": 83
+     }
+    }
+   ]
+  },
+  "BOPE": {
+   "materialId": "BOPE",
+   "name": "Biaxially oriented PE (BOPE)",
+   "family": "polyethylene",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 11,
+    "moistureBarrier": 45,
+    "mechanicalStrength": 50,
+    "sealability": 30,
+    "sustainability": 83
+   },
+   "properties": {
+    "densityGcm3": 0.93,
+    "referenceThicknessUm": 25.0,
+    "otr": {
+     "value": 2600.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 6.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     120,
+     140
+    ],
+    "sealability": "low",
+    "gelboPinholes": [
+     1,
+     3
+    ],
+    "costInrPerKg": [
+     150.0,
+     170.0
+    ],
+    "carbonKgCo2ePerKg": 2.1,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10146"
+   ],
+   "applications": [
+    "Printable outer ply for recyclable mono-PE packs"
+   ],
+   "notes": null,
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "MONO_PE",
+     "name": "BOPE 25 / mLLDPE 50 (mono-PE)"
+    },
+    {
+     "structureId": "MONO_PE_EVOH",
+     "name": "BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "BOPP",
+     "name": "BOPP film",
+     "indicators": {
+      "oxygenBarrier": 14,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 43,
+      "sealability": 30,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    }
+   ]
+  },
+  "BOPA": {
+   "materialId": "BOPA",
+   "name": "Biaxially oriented nylon (BOPA)",
+   "family": "polyamide",
+   "polymerClass": "PA",
+   "indicators": {
+    "oxygenBarrier": 48,
+    "moistureBarrier": 2,
+    "mechanicalStrength": 100,
+    "sealability": 0,
+    "sustainability": 28
+   },
+   "properties": {
+    "densityGcm3": 1.14,
+    "referenceThicknessUm": 15.0,
+    "otr": {
+     "value": 30.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 260.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": null,
+    "sealability": "none",
+    "gelboPinholes": [
+     0,
+     3
+    ],
+    "costInrPerKg": [
+     300.0,
+     360.0
+    ],
+    "carbonKgCo2ePerKg": 9.0,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": true,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "US FDA 21 CFR 177.1500",
+    "EU 10/2011"
+   ],
+   "applications": [
+    "Vacuum pouches for meat and cheese",
+    "Export produce with rough transit"
+   ],
+   "notes": "Puncture and flex-crack resistant; oxygen barrier drops at high humidity.",
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "BOPA_EVOH",
+     "name": "BOPA 15 / PE-EVOH-PE coex 50"
+    },
+    {
+     "structureId": "BOPA_IONOMER",
+     "name": "BOPA 15 / Ionomer 60"
+    },
+    {
+     "structureId": "BOPA_MLLDPE",
+     "name": "BOPA 15 / mLLDPE 60 (vacuum pouch)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "BOPET",
+     "name": "BOPET film",
+     "indicators": {
+      "oxygenBarrier": 37,
+      "moistureBarrier": 29,
+      "mechanicalStrength": 67,
+      "sealability": 0,
+      "sustainability": 78
+     }
+    },
+    {
+     "materialId": "MET_PET",
+     "name": "Metallised PET (12 µm)",
+     "indicators": {
+      "oxygenBarrier": 72,
+      "moistureBarrier": 64,
+      "mechanicalStrength": 67,
+      "sealability": 0,
+      "sustainability": 51
+     }
+    },
+    {
+     "materialId": "COATED_BOPP",
+     "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+     "indicators": {
+      "oxygenBarrier": 58,
+      "moistureBarrier": 51,
+      "mechanicalStrength": 43,
+      "sealability": 0,
+      "sustainability": 82
+     }
+    }
+   ]
+  },
+  "CPP": {
+   "materialId": "CPP",
+   "name": "Cast polypropylene (CPP)",
+   "family": "polypropylene",
+   "polymerClass": "PP",
+   "indicators": {
+    "oxygenBarrier": 12,
+    "moistureBarrier": 42,
+    "mechanicalStrength": 37,
+    "sealability": 60,
+    "sustainability": 84
+   },
+   "properties": {
+    "densityGcm3": 0.9,
+    "referenceThicknessUm": 30.0,
+    "otr": {
+     "value": 2300.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 8.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     125,
+     150
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     1,
+     4
+    ],
+    "costInrPerKg": [
+     140.0,
+     160.0
+    ],
+    "carbonKgCo2ePerKg": 2.0,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10910",
+    "US FDA 21 CFR 177.1520"
+   ],
+   "applications": [
+    "Retort and hot-fill sealant",
+    "Mono-PP laminates"
+   ],
+   "notes": null,
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "MONO_PP",
+     "name": "Coated BOPP 20 / CPP 30 (mono-PP)"
+    },
+    {
+     "structureId": "PET_AL_CPP",
+     "name": "PET 12 / Al foil 9 / CPP 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "HDPE": {
+   "materialId": "HDPE",
+   "name": "HDPE film",
+   "family": "polyethylene",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 15,
+    "moistureBarrier": 48,
+    "mechanicalStrength": 47,
+    "sealability": 60,
+    "sustainability": 84
+   },
+   "properties": {
+    "densityGcm3": 0.955,
+    "referenceThicknessUm": 40.0,
+    "otr": {
+     "value": 1600.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 4.5,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": [
+     125,
+     145
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     4,
+     8
+    ],
+    "costInrPerKg": [
+     120.0,
+     135.0
+    ],
+    "carbonKgCo2ePerKg": 1.95,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10146",
+    "US FDA 21 CFR 177.1520"
+   ],
+   "applications": [
+    "Cereal and flour liners",
+    "Dry-goods bags"
+   ],
+   "notes": null,
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "HDPE_MONO",
+     "name": "HDPE 40 single-layer bag"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "indicators": {
+      "oxygenBarrier": 12,
+      "moistureBarrier": 42,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "IONOMER": {
+   "materialId": "IONOMER",
+   "name": "Ionomer sealant film (Surlyn-type)",
+   "family": "ionomer",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 6,
+    "moistureBarrier": 31,
+    "mechanicalStrength": 47,
+    "sealability": 90,
+    "sustainability": 79
+   },
+   "properties": {
+    "densityGcm3": 0.94,
+    "referenceThicknessUm": 50.0,
+    "otr": {
+     "value": 5000.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 20.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     90,
+     120
+    ],
+    "sealability": "high",
+    "gelboPinholes": [
+     0,
+     3
+    ],
+    "costInrPerKg": [
+     380.0,
+     450.0
+    ],
+    "carbonKgCo2ePerKg": 2.6,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": true
+   },
+   "standards": [
+    "US FDA 21 CFR 177.1330",
+    "EU 10/2011"
+   ],
+   "applications": [
+    "Pickles, oily curries, paneer and processed meat",
+    "Contamination-tolerant seals"
+   ],
+   "notes": "Seals through oil, grease and particulates; resists acidic and fatty products (Blueprint failure-mode matrix).",
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "BOPA_IONOMER",
+     "name": "BOPA 15 / Ionomer 60"
+    },
+    {
+     "structureId": "PET_METPET_IONOMER",
+     "name": "PET 12 / Met-PET 12 / Ionomer 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "MLLDPE",
+     "name": "Metallocene LLDPE sealant (mLLDPE)",
+     "indicators": {
+      "oxygenBarrier": 8,
+      "moistureBarrier": 34,
+      "mechanicalStrength": 53,
+      "sealability": 90,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "ANTIFOG_LDPE",
+     "name": "Anti-fog LDPE/mLLDPE film",
+     "indicators": {
+      "oxygenBarrier": 3,
+      "moistureBarrier": 26,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "LDPE": {
+   "materialId": "LDPE",
+   "name": "LDPE film",
+   "family": "polyethylene",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 7,
+    "moistureBarrier": 32,
+    "mechanicalStrength": 33,
+    "sealability": 60,
+    "sustainability": 84
+   },
+   "properties": {
+    "densityGcm3": 0.92,
+    "referenceThicknessUm": 50.0,
+    "otr": {
+     "value": 4200.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 18.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": [
+     105,
+     130
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     0,
+     2
+    ],
+    "costInrPerKg": [
+     115.0,
+     130.0
+    ],
+    "carbonKgCo2ePerKg": 2.05,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10146",
+    "US FDA 21 CFR 177.1520",
+    "EU 10/2011"
+   ],
+   "applications": [
+    "Produce and bread bags",
+    "General-purpose sealant ply",
+    "Milk pouches"
+   ],
+   "notes": null,
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "LDPE_MONO",
+     "name": "LDPE 50 single-layer pouch"
+    },
+    {
+     "structureId": "MACRO_LDPE",
+     "name": "LDPE bag with macro-perforations (40 µm)"
+    },
+    {
+     "structureId": "PET_LDPE",
+     "name": "PET 12 / LDPE 50"
+    },
+    {
+     "structureId": "PET_METPET_LDPE",
+     "name": "PET 12 / Met-PET 12 / LDPE 50"
+    },
+    {
+     "structureId": "PLAIN_LDPE",
+     "name": "Unperforated LDPE bag (30 µm)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "ANTIFOG_LDPE",
+     "name": "Anti-fog LDPE/mLLDPE film",
+     "indicators": {
+      "oxygenBarrier": 3,
+      "moistureBarrier": 26,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "indicators": {
+      "oxygenBarrier": 12,
+      "moistureBarrier": 42,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    }
+   ]
+  },
+  "MET_BOPP": {
+   "materialId": "MET_BOPP",
+   "name": "Metallised BOPP, heat-sealable (20 µm)",
+   "family": "metallised",
+   "polymerClass": "PP",
+   "indicators": {
+    "oxygenBarrier": 51,
+    "moistureBarrier": 76,
+    "mechanicalStrength": 43,
+    "sealability": 60,
+    "sustainability": 61
+   },
+   "properties": {
+    "densityGcm3": 0.905,
+    "referenceThicknessUm": 20.0,
+    "otr": {
+     "value": 20.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 0.4,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     110,
+     135
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     10,
+     25
+    ],
+    "costInrPerKg": [
+     170.0,
+     200.0
+    ],
+    "carbonKgCo2ePerKg": 2.4,
+    "eprCategory": "III",
+    "compostable": false,
+    "metallised": true,
+    "lightBarrier": "high",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10910"
+   ],
+   "applications": [
+    "Chips and namkeen packs",
+    "Biscuit wraps"
+   ],
+   "notes": null,
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "OPP_METOPP",
+     "name": "BOPP 20 / Met-BOPP 20"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "EVOH_COEX",
+     "name": "PE/EVOH/PE coextruded barrier film",
+     "indicators": {
+      "oxygenBarrier": 68,
+      "moistureBarrier": 47,
+      "mechanicalStrength": 40,
+      "sealability": 60,
+      "sustainability": 72
+     }
+    },
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "MET_PET": {
+   "materialId": "MET_PET",
+   "name": "Metallised PET (12 µm)",
+   "family": "metallised",
+   "polymerClass": "PET",
+   "indicators": {
+    "oxygenBarrier": 72,
+    "moistureBarrier": 64,
+    "mechanicalStrength": 67,
+    "sealability": 0,
+    "sustainability": 51
+   },
+   "properties": {
+    "densityGcm3": 1.4,
+    "referenceThicknessUm": 12.0,
+    "otr": {
+     "value": 1.5,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 1.15,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": null,
+    "sealability": "none",
+    "gelboPinholes": [
+     15,
+     35
+    ],
+    "costInrPerKg": [
+     220.0,
+     260.0
+    ],
+    "carbonKgCo2ePerKg": 3.6,
+    "eprCategory": "III",
+    "compostable": false,
+    "metallised": true,
+    "lightBarrier": "high",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 12252",
+    "US FDA 21 CFR 177.1630"
+   ],
+   "applications": [
+    "Snack, coffee and milk-powder laminates",
+    "Light and oxygen barrier ply"
+   ],
+   "notes": "Barrier, cost and carbon taken from the Blueprint's Met-PET/PE (12/40) row and attributed to the metallised ply.",
+   "provenance": "prototype estimate",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "PET_METPET_IONOMER",
+     "name": "PET 12 / Met-PET 12 / Ionomer 50"
+    },
+    {
+     "structureId": "PET_METPET_LDPE",
+     "name": "PET 12 / Met-PET 12 / LDPE 50"
+    },
+    {
+     "structureId": "PET_METPET_MLLDPE",
+     "name": "PET 12 / Met-PET 12 / mLLDPE 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "COATED_BOPP",
+     "name": "Barrier-coated BOPP (AlOx/PVOH, recyclable PP)",
+     "indicators": {
+      "oxygenBarrier": 58,
+      "moistureBarrier": 51,
+      "mechanicalStrength": 43,
+      "sealability": 0,
+      "sustainability": 82
+     }
+    },
+    {
+     "materialId": "BOPET",
+     "name": "BOPET film",
+     "indicators": {
+      "oxygenBarrier": 37,
+      "moistureBarrier": 29,
+      "mechanicalStrength": 67,
+      "sealability": 0,
+      "sustainability": 78
+     }
+    },
+    {
+     "materialId": "MET_BOPP",
+     "name": "Metallised BOPP, heat-sealable (20 µm)",
+     "indicators": {
+      "oxygenBarrier": 51,
+      "moistureBarrier": 76,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 61
+     }
+    }
+   ]
+  },
+  "MLLDPE": {
+   "materialId": "MLLDPE",
+   "name": "Metallocene LLDPE sealant (mLLDPE)",
+   "family": "polyethylene",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 8,
+    "moistureBarrier": 34,
+    "mechanicalStrength": 53,
+    "sealability": 90,
+    "sustainability": 83
+   },
+   "properties": {
+    "densityGcm3": 0.918,
+    "referenceThicknessUm": 50.0,
+    "otr": {
+     "value": 4000.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "prototype estimate"
+    },
+    "wvtr": {
+     "value": 16.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "prototype estimate"
+    },
+    "sealRangeC": [
+     95,
+     125
+    ],
+    "sealability": "high",
+    "gelboPinholes": [
+     0,
+     2
+    ],
+    "costInrPerKg": [
+     140.0,
+     160.0
+    ],
+    "carbonKgCo2ePerKg": 2.1,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": true
+   },
+   "standards": [
+    "IS 10146",
+    "US FDA 21 CFR 177.1520"
+   ],
+   "applications": [
+    "Sealant ply for oily snacks, spices and wet foods",
+    "Vacuum pouches"
+   ],
+   "notes": "High hot-tack sealant that seals through oil and powder contamination (Blueprint Challenge 2).",
+   "provenance": "prototype estimate",
+   "source": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+   "usedInStructures": [
+    {
+     "structureId": "BOPA_MLLDPE",
+     "name": "BOPA 15 / mLLDPE 60 (vacuum pouch)"
+    },
+    {
+     "structureId": "MONO_PE",
+     "name": "BOPE 25 / mLLDPE 50 (mono-PE)"
+    },
+    {
+     "structureId": "PET_AL_MLLDPE",
+     "name": "PET 12 / Al foil 9 / mLLDPE 50"
+    },
+    {
+     "structureId": "PET_METPET_MLLDPE",
+     "name": "PET 12 / Met-PET 12 / mLLDPE 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "IONOMER",
+     "name": "Ionomer sealant film (Surlyn-type)",
+     "indicators": {
+      "oxygenBarrier": 6,
+      "moistureBarrier": 31,
+      "mechanicalStrength": 47,
+      "sealability": 90,
+      "sustainability": 79
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "indicators": {
+      "oxygenBarrier": 12,
+      "moistureBarrier": 42,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "PBS_PHA": {
+   "materialId": "PBS_PHA",
+   "name": "PBS/PHA bio-blend film",
+   "family": "bio-based",
+   "polymerClass": "PBS",
+   "indicators": {
+    "oxygenBarrier": 28,
+    "moistureBarrier": 22,
+    "mechanicalStrength": 30,
+    "sealability": 60,
+    "sustainability": 100
+   },
+   "properties": {
+    "densityGcm3": 1.25,
+    "referenceThicknessUm": 40.0,
+    "otr": {
+     "value": 320.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 45.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": [
+     90,
+     115
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     3,
+     6
+    ],
+    "costInrPerKg": [
+     420.0,
+     540.0
+    ],
+    "carbonKgCo2ePerKg": 1.65,
+    "eprCategory": "IV",
+    "compostable": true,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 17088 (compostable plastics)"
+   ],
+   "applications": [
+    "Compostable sealant ply",
+    "Produce film"
+   ],
+   "notes": null,
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "MP_PBS_PHA",
+     "name": "Micro-perforated PBS/PHA bio-blend (40 µm)"
+    },
+    {
+     "structureId": "PLA_PBS",
+     "name": "PLA 30 / PBS-PHA 40 (compostable laminate)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "PLA",
+     "name": "PLA film (compostable)",
+     "indicators": {
+      "oxygenBarrier": 24,
+      "moistureBarrier": 6,
+      "mechanicalStrength": 20,
+      "sealability": 60,
+      "sustainability": 100
+     }
+    },
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "CPP",
+     "name": "Cast polypropylene (CPP)",
+     "indicators": {
+      "oxygenBarrier": 12,
+      "moistureBarrier": 42,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "EVOH_COEX": {
+   "materialId": "EVOH_COEX",
+   "name": "PE/EVOH/PE coextruded barrier film",
+   "family": "evoh",
+   "polymerClass": "PE",
+   "indicators": {
+    "oxygenBarrier": 68,
+    "moistureBarrier": 47,
+    "mechanicalStrength": 40,
+    "sealability": 60,
+    "sustainability": 72
+   },
+   "properties": {
+    "densityGcm3": 0.985,
+    "referenceThicknessUm": 50.0,
+    "otr": {
+     "value": 2.5,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 5.2,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": [
+     110,
+     135
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     5,
+     12
+    ],
+    "costInrPerKg": [
+     320.0,
+     380.0
+    ],
+    "carbonKgCo2ePerKg": 3.45,
+    "eprCategory": "II",
+    "compostable": false,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": true,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 10146",
+    "US FDA 21 CFR 177.1360"
+   ],
+   "applications": [
+    "High oxygen barrier for meat, cheese and sauces",
+    "Recycle-ready PE barrier pouches"
+   ],
+   "notes": "OTR range 1.5–3.5 in the Blueprint; midpoint used. EVOH core under 5 % keeps the film in the PE recycling stream.",
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "BOPA_EVOH",
+     "name": "BOPA 15 / PE-EVOH-PE coex 50"
+    },
+    {
+     "structureId": "MONO_PE_EVOH",
+     "name": "BOPE 25 / PE-EVOH-PE coex 50 (recycle-ready PE)"
+    },
+    {
+     "structureId": "PET_EVOH",
+     "name": "PET 12 / PE-EVOH-PE coex 50"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "MET_BOPP",
+     "name": "Metallised BOPP, heat-sealable (20 µm)",
+     "indicators": {
+      "oxygenBarrier": 51,
+      "moistureBarrier": 76,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 61
+     }
+    },
+    {
+     "materialId": "ANTIFOG_BOPP",
+     "name": "Anti-fog heat-sealable BOPP",
+     "indicators": {
+      "oxygenBarrier": 16,
+      "moistureBarrier": 50,
+      "mechanicalStrength": 43,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    },
+    {
+     "materialId": "HDPE",
+     "name": "HDPE film",
+     "indicators": {
+      "oxygenBarrier": 15,
+      "moistureBarrier": 48,
+      "mechanicalStrength": 47,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    }
+   ]
+  },
+  "PLA": {
+   "materialId": "PLA",
+   "name": "PLA film (compostable)",
+   "family": "bio-based",
+   "polymerClass": "PLA",
+   "indicators": {
+    "oxygenBarrier": 24,
+    "moistureBarrier": 6,
+    "mechanicalStrength": 20,
+    "sealability": 60,
+    "sustainability": 100
+   },
+   "properties": {
+    "densityGcm3": 1.24,
+    "referenceThicknessUm": 30.0,
+    "otr": {
+     "value": 550.0,
+     "unit": "cc/m²·day·atm",
+     "conditions": "23 °C, 0 % RH",
+     "provenance": "source-backed"
+    },
+    "wvtr": {
+     "value": 185.0,
+     "unit": "g/m²·day",
+     "conditions": "38 °C, 90 % RH",
+     "provenance": "source-backed"
+    },
+    "sealRangeC": [
+     80,
+     105
+    ],
+    "sealability": "medium",
+    "gelboPinholes": [
+     8,
+     18
+    ],
+    "costInrPerKg": [
+     280.0,
+     350.0
+    ],
+    "carbonKgCo2ePerKg": 1.4,
+    "eprCategory": "IV",
+    "compostable": true,
+    "metallised": false,
+    "lightBarrier": "low",
+    "humiditySensitive": false,
+    "contaminationTolerantSeal": false
+   },
+   "standards": [
+    "IS 17088 (compostable plastics)",
+    "EU 10/2011"
+   ],
+   "applications": [
+    "Breathable produce film",
+    "Compostable windows and wraps"
+   ],
+   "notes": null,
+   "provenance": "source-backed",
+   "source": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+   "usedInStructures": [
+    {
+     "structureId": "MP_PLA",
+     "name": "Micro-perforated compostable PLA film (30 µm)"
+    },
+    {
+     "structureId": "PLA_PBS",
+     "name": "PLA 30 / PBS-PHA 40 (compostable laminate)"
+    }
+   ],
+   "similar": [
+    {
+     "materialId": "PBS_PHA",
+     "name": "PBS/PHA bio-blend film",
+     "indicators": {
+      "oxygenBarrier": 28,
+      "moistureBarrier": 22,
+      "mechanicalStrength": 30,
+      "sealability": 60,
+      "sustainability": 100
+     }
+    },
+    {
+     "materialId": "LDPE",
+     "name": "LDPE film",
+     "indicators": {
+      "oxygenBarrier": 7,
+      "moistureBarrier": 32,
+      "mechanicalStrength": 33,
+      "sealability": 60,
+      "sustainability": 84
+     }
+    },
+    {
+     "materialId": "ANTIFOG_LDPE",
+     "name": "Anti-fog LDPE/mLLDPE film",
+     "indicators": {
+      "oxygenBarrier": 3,
+      "moistureBarrier": 26,
+      "mechanicalStrength": 37,
+      "sealability": 60,
+      "sustainability": 83
+     }
+    }
+   ]
+  }
+ }
+}

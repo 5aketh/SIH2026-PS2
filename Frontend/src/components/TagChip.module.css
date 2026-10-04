@@ -1,0 +1,10 @@
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 34px; padding: 0 var(--sp-3); border-radius: 999px;
+  background: transparent; border: 1px solid var(--border-strong); color: var(--muted);
+  font-size: 14px; cursor: pointer; transition: background-color .15s, color .15s, border-color .15s;
+}
+.chip:hover { color: var(--text); background: var(--surface-2); }
+.check { display: none; }
+.chip[aria-pressed="true"] { background: var(--accent-tint); border-color: var(--accent); color: var(--text); }
+.chip[aria-pressed="true"] .check { display: inline; color: var(--accent); }

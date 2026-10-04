@@ -1,0 +1,79 @@
+[
+  {
+    "id": "BLUEPRINT_MATRIX",
+    "title": "AI Food Packaging Architecture Blueprint: physicochemical parameter matrix",
+    "citation": "Project Blueprint, 'Ingestion Pipeline, Physicochemical Parameter Matrix' table (values cited there to ICMR-NIN IFCT 2017 and post-harvest literature). Verify against the primary source before relying on them.",
+    "url": null,
+    "retrievedOn": "2026-09-28"
+  },
+  {
+    "id": "BLUEPRINT_MATERIALS",
+    "title": "AI Food Packaging Architecture Blueprint: benchmark packaging materials table",
+    "citation": "Project Blueprint, Layer 4 table of barrier, mechanical and sustainability metrics (OTR at 23 °C/0 %RH, WVTR at 38 °C/90 %RH, Gelbo flex, EPR category, INR/kg, kg CO2e/kg). Verify against supplier datasheets.",
+    "url": null,
+    "retrievedOn": "2026-09-28"
+  },
+  {
+    "id": "BLUEPRINT_IMPACT",
+    "title": "AI Food Packaging Architecture Blueprint: quantified impact section",
+    "citation": "Project Blueprint, shelf-life extension figures (tomato 7-9 days ambient; Alphonso mango 10-12 days ambient).",
+    "url": null,
+    "retrievedOn": "2026-09-28"
+  },
+  {
+    "id": "TEAM_REPORT",
+    "title": "SIH Food Packaging Intelligence Team Report, Appendix A.1",
+    "citation": "PackWise team report, example food record for tomato (moisture 94 %, pH 4.5, fat 0.2 %).",
+    "url": null,
+    "retrievedOn": "2026-09-25"
+  },
+  {
+    "id": "KADER_2002",
+    "title": "Postharvest Technology of Horticultural Crops (3rd ed.)",
+    "citation": "Kader, A.A. (ed.) (2002). Postharvest Technology of Horticultural Crops, 3rd ed. UC ANR Publication 3311. Recommended CA/MA atmospheres and chilling thresholds.",
+    "url": null,
+    "retrievedOn": null
+  },
+  {
+    "id": "ROBERTSON_2016",
+    "title": "Food Packaging: Principles and Practice (3rd ed.)",
+    "citation": "Robertson, G.L. (2016). Food Packaging: Principles and Practice, 3rd ed. CRC Press. Tolerable oxygen gain ranges; typical MAP gas mixtures; Labuza moisture-gain model.",
+    "url": null,
+    "retrievedOn": null
+  },
+  {
+    "id": "PAUL_CLARKE_2002",
+    "title": "Modeling of modified atmosphere packaging based on designs with a membrane and perforations",
+    "citation": "Paul, D.R. & Clarke, R. (2002). Journal of Membrane Science 208(1-2), 269-283. Fickian diffusion through micro-perforations with end correction.",
+    "url": null,
+    "retrievedOn": null
+  },
+  {
+    "id": "FSSAI_2018",
+    "title": "Food Safety and Standards (Packaging) Regulations, 2018",
+    "citation": "FSSAI (2018). Overall migration limits per IS 9845; resin standards IS 10146 (PE), IS 10910 (PP), IS 12252 (PET).",
+    "url": null,
+    "retrievedOn": null
+  },
+  {
+    "id": "PWM_RULES",
+    "title": "Plastic Waste Management Rules, 2016 (as amended 2022) and EPR Guidelines",
+    "citation": "MoEFCC. EPR categories: I rigid, II flexible single/multi-layer plastic, III multilayer with at least one non-plastic layer, IV compostable plastic.",
+    "url": null,
+    "retrievedOn": null
+  },
+  {
+    "id": "PROTOTYPE_LIT",
+    "title": "Prototype compilation of typical literature values",
+    "citation": "Typical values compiled for the PackWise prototype from general food-science literature. Not verified per field: check against IFCT 2017 / USDA FoodData Central before use.",
+    "url": null,
+    "retrievedOn": null
+  },
+  {
+    "id": "PROTOTYPE_ENGINEERING",
+    "title": "Prototype engineering estimates",
+    "citation": "Engineering estimates chosen for the PackWise prototype (not measured). Replace with supplier datasheets or lab tests (ASTM D3985, F1249, F392, F88).",
+    "url": null,
+    "retrievedOn": null
+  }
+]

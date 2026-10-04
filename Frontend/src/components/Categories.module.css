@@ -1,0 +1,20 @@
+.cats { position: relative; z-index: 4; padding: var(--sp-6) 0 var(--sp-9); scroll-margin-top: var(--nav-h); }
+.head { text-align: center; max-width: 620px; margin: 0 auto var(--sp-7); }
+.head h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+.head p { margin-top: var(--sp-3); color: var(--muted); }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+/* ---------- Animated mode: the grid is overlaid inside the sticky stage ---------- */
+:global(.is-animated) .cats {
+  position: absolute; inset: 0;
+  display: flex; align-items: center;
+  padding: var(--sp-5) 0;
+  pointer-events: none;
+}
+/* data-resolved is set on the stage by the unpack engine once p >= 0.95. */
+:global(.is-animated) [data-resolved] .cats { pointer-events: auto; }
+:global(.is-animated) .inner { transform: scale(var(--fit, 1)); transform-origin: 50% 50%; }
+:global(.is-animated) .head { margin-bottom: var(--sp-6); opacity: var(--head); transform: translateY(calc((1 - var(--head)) * 16px)); }
+:global(.is-animated) .grid { grid-template-columns: repeat(3, 1fr); }

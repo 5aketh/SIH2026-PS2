@@ -1,0 +1,15 @@
+.term {
+  position: relative; display: inline; cursor: help;
+  text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: 3px;
+}
+.term:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+.tip {
+  position: absolute; left: 0; bottom: calc(100% + 8px); z-index: 30;
+  width: max-content; max-width: min(280px, 80vw); padding: var(--sp-2) var(--sp-3); border-radius: var(--r-control);
+  background: var(--text); color: var(--bg); box-shadow: var(--shadow-md);
+  font-size: 13px; font-weight: 400; line-height: 1.4; letter-spacing: 0; text-transform: none; white-space: normal; text-align: left;
+  /* display:none (not just hidden) so a closed tooltip can't widen the page on narrow screens. */
+  display: none; pointer-events: none;
+}
+.term:hover .tip, .term:focus .tip { display: block; }
+@media print { .tip { display: none; } .term { text-decoration: none; } }
